@@ -1,0 +1,13 @@
+#include <stdio.h>
+int main()
+{	 int a,b,c,d;
+	 printf("输入为: ");
+	 scanf("%d %d",&a,&b);
+	 c=(a%10)*10+(a-a%10)/10;
+	 d=(b%10)*10+(b-b%10)/10;
+	 if(a*b==c*d)
+	 printf("输出为: %d*%d=%d*%d\n",a,b,c,d);
+	 else
+	 printf("输出为: %d*%d<>%d*%d",a,b,c,d);
+	 return 0;
+}
