@@ -12,3 +12,22 @@ int main()
 	}
 	return 0;
 }
+
+#include <stdio.h>
+float abs(float n)
+{	  if(n>=0)
+	  return n;
+	  else
+	  return -n;
+}
+int main()
+{	float a,x,t;
+	printf("请输入一个正数:");
+	scanf("%f",&a);
+	for(x=a/2;abs(t-x)>1E-5;)
+	{	t=x;
+		x=(x+a/x)/2;
+	}
+	printf("数%.2f的平方根为%f\n",a,t);
+	return 0;
+}
