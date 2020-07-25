@@ -140,3 +140,48 @@ int main()
     }while(x!=495);
     return 0;
 }
+
+#include <stdio.h>
+int main()
+{	int a[10],b[10],i;
+	float average,sum=0;
+	printf("请输入10名职工的工号和工资:");
+	for(i=0;i<10;i++)
+	{	
+		scanf("%d %d",&a[i],&b[i]);
+	}
+	for(i=0;i<10;i++)
+	{
+		sum+=b[i];
+	}
+	average=sum/10;
+	printf("工资低于平均值的职工的工号和工资有:");
+	for(i=0;i<10;i++)
+	{	if(b[i]<average)
+		printf("%d %d\n",a[i],b[i]);
+		else
+		continue;
+	}
+	return 0;
+}
+
+#include <stdio.h>
+int main()
+{	printf("请输入10个数:");
+	int i;
+	float a[20];
+	for(i=0;i<10;i++)
+	{
+		scanf("%f",&a[i]);
+	}
+	for(i=10;i<20;i++)
+	{	
+		a[i]=a[19-i];
+	}
+	printf("原地逆序后,为:");
+	for(i=10;i<20;i++)
+	{
+		printf("%.2f ",a[i]);
+	}
+	return 0;
+}
