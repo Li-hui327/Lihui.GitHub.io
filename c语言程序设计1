@@ -1,5 +1,5 @@
-#include <stdio.h>
-int main()
+#include <stdio.h>				1、打印倒三角形九九乘法表；
+int main()						
 {	int i,j;
 	for (i=1;i<10;i++)
 	{	for (j=i;j<10;j++)
@@ -13,7 +13,7 @@ int main()
 	return 0;
 }
 
-#include <stdio.h>
+#include <stdio.h>				2、用迭代法求一个数的平方根；
 float abs(float n)
 {	  if(n>=0)
 	  return n;
@@ -31,8 +31,8 @@ int main()
 	printf("数%.2f的平方根为%f\n",a,t);
 	return 0;
 }
-
-#include <stdio.h>
+		
+#include <stdio.h>				3、求运动员的平均得分；			
 int main()
 {	float score[10];
 	int i,j,k;
@@ -53,4 +53,34 @@ int main()
 	{	sum+=score[i];
 	}
 	printf("该运动员的平均得分为:%.2f\n",sum/8);
+}
+
+#include <stdio.h> 				4、一个数如果恰好等于它的因子之和（包括1，但不包括这个数本身），这个数就称为“完数”。例：
+int main()					   28=1+2+4+7+14，编写一个程序，找出1000以内的所有完数，要求输出格式为：28 it's force
+{	int x,i,sum=0;				   are 1,2,4,7,14。
+	for(x=1;x<=1000;x++)
+	{	for(i=1;i<x;i++)
+		{	if(x%i==0)
+			{	
+				sum+=i;
+			}
+			else
+			continue;
+		}
+		if(sum==x)
+		{ printf("%d it's factors are",x); 
+		  for(i=1;i<x;i++)
+		  {	if(x%i==0)
+			printf("%d,",i);
+			else 
+			continue;
+		  }
+		  putchar('\n');
+		  sum=0;
+		  continue;
+		}
+		else
+		{ sum=0;  continue;}
+	}
+	return 0;
 }
