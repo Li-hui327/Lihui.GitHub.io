@@ -150,7 +150,7 @@ int main()					 该数组中的数仍然按从小到大有序排列。
 #include <stdio.h>				8、编写一个程序，输出n阶杨辉三角形，下面是一个n=5的杨辉三角形
 int main()						1
 {	int i,n,j;					1   1
-	printf("请输入一个数:");			   1   2   1
+	printf("请输入一个数:");			   	1   2   1
 	scanf("%d",&n);					1   3   3   1
 	for(i=0;i<n;i++)				1   4   6   4   1
 	{	for(j=i;j<n;j++)
