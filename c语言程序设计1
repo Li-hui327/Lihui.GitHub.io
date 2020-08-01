@@ -84,3 +84,91 @@ int main()					   28=1+2+4+7+14，编写一个程序，找出1000以内的所有
 	}
 	return 0;
 }
+
+#define N 10		
+#include <stdio.h> 				5、开灯问题。有编号为1~n的n个学生和n湛灯，1号学生将所有的灯关掉，2号学生将编号为2的倍数的灯都打
+int main()					 开，3号学生将编号为3的倍数的灯作相反处理（该灯若是打开的，则关掉；该灯若是关掉的，则打开），以后
+{	int light[N]={1,1,1,1,1,1,1,1,1,1};	 的学生都将自己编号的倍数的灯作相反处理。问经过n个学生操作后，哪些灯是打开的？
+	int i,j;
+	for(i=0;i<N;i++)
+	{	
+		light[i]=0;
+	}
+	for(i=1;i<N;i+=2)
+	{
+		light[i]=1;
+	}
+	for(i=2;i<N;i+=3)
+	{	if(light[i]=0)
+		light[i]=1;
+		else
+		light[i]=0;
+	}
+	for(i=3;i<N;i++)
+	{	for(j=i;j<N;j+=(i+1))
+		{	if(light[j]=0)
+			light[j]=1;
+			else
+			light[j]=0;
+		}
+	}
+	printf("灯是开着的编号有:");
+	for(i=0;i<N;i++)
+	{	if(light[i]=1)
+	printf("%d ",++i);
+		else
+		continue;
+	}
+	return 0;
+}
+
+6、游戏问题。有12名小朋友手拉手站成一个圆圈，从第一名小朋友开始报数，报到7的那名小朋友退到圈外，然后他的下一位重新报1.这样继续下去，直到最后
+只剩下一名小朋友，问这名小朋友原来站在什么位置上？
+
+#define N 10
+#include <stdio.h>				7、假定有一个一维数组中的数按从小到大有序排列，现要求从键盘上输入一个数，并插入到该数组中，使得
+int main()					 该数组中的数仍然按从小到大有序排列。
+{	float number[N+1]={1,2,3,4,5,6,7,8,9,10},x;
+	printf("请输入一个数:");
+	scanf("%f",&x);
+	number[N]=x;
+	int i,j,t;
+	for(i=0;i<N+1;i++)
+	{	for(j=N-1;j>=i;j--)
+		{	if(number[j]>number[j+1])
+			{ t=number[j]; number[j]=number[j+1]; number[j+1]=t; }
+		}
+	}
+	printf("排序后为:");
+	for(i=0;i<N+1;i++)
+	{
+		printf("%.1f ",number[i]);
+	}
+	return 0;
+}
+
+#include <stdio.h>				8、编写一个程序，输出n阶杨辉三角形，下面是一个n=5的杨辉三角形
+int main()						1
+{	int i,n,j;					1   1
+	printf("请输入一个数:");			   1   2   1
+	scanf("%d",&n);					1   3   3   1
+	for(i=0;i<n;i++)				1   4   6   4   1
+	{	for(j=i;j<n;j++)
+		{
+			printf(" ");
+		}
+		if(i==0)
+		{ printf("%d\n",i+1); continue; }
+		else if(i==1)
+		{ printf("%d %d\n",i,i); continue; } 
+		else if(i==2)
+		{printf("1 %d 1\n",i); continue; }
+		else if(i==3)
+		{ printf("1 %d %d 1\n",i,i); continue; }
+		else if(i==4)
+		{ printf("1 %d %d %d 1\n",i,(i-1)*2,i); continue; }
+		else
+		continue;
+	}
+	return 0;
+}
