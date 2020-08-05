@@ -196,3 +196,40 @@ int main()						1
 	}
 	return 0;
 }
+
+#include <stdio.h> 				9、假定有10个候选人，他们分别用编号1~10表示，有20个人参加投票，每个投票人只能把票投给一个候选人，
+int main()					 输入每个投票人投给某个候选人的编号，编程统计每个候选人的得票数，并按照得票数从高到低输出每个候选人
+{	int a[10],number,max=0,i,j=0,t;		 人的编号和得票数。
+	for(i=0;i<10;i++)
+	{
+		a[i]=0;
+	}
+	printf("请输入候选人的编号:");
+	for(i=0;i<20;i++)
+	{	scanf("%d",&number);
+		switch (number)
+		{	case 1 : a[0]++;  break;
+			case 2 : a[1]++;  break;
+			case 3 : a[2]++;  break;
+			case 4 : a[3]++;  break;
+			case 5 : a[4]++;  break;
+			case 6 : a[5]++;  break;
+			case 7 : a[6]++;  break;
+			case 8 : a[7]++;  break;
+			case 9 : a[8]++;  break;
+			case 10 : a[9]++;  break;
+		}
+	}
+	printf("候选人编号  得票数\n");
+	do{
+	for(i=0;i<10;i++)
+	{	if(max<=a[i])
+		{ max=a[i];  t=i; continue; }
+	}
+	printf("    %d        %d\n",t+1,max);
+	max=0;
+	a[t]=0;
+	j++;
+	}while(j<10);
+	return 0;
+}
