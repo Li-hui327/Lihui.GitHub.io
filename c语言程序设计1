@@ -306,3 +306,38 @@ int main()					  没有鞍点
 	}
 	return 0;
 }
+
+#include <stdio.h>				12、生成n*n的螺旋方阵，例示：
+int main()					  1  2  3  4  5
+{	printf("生成一个n*n的螺旋矩阵\n");	   16 17 18 19 6
+	printf("请输入n:");		        15 24 25 20 7
+	int n,m=1,round=1;			  14 23 22 21 8
+	scanf("%d",&n);				   13 12 11 10 9 
+	int a[n][n],i,j;
+	for(i=0;i<n;i++)
+	{
+		a[0][i]=m++;
+	}
+	for(i=n-1;i>=n/2;i--)
+	{	for(j=round;j<=i;j++)
+		{ a[j][i]=m++;  }
+		
+		for(j=i;j>=round;j--)
+		{ a[i][j-1]=m++; }
+		
+		for(j=i;j>round;j--)
+		{ a[j-1][round-1]=m++; }
+		
+		for(j=round;j<i;j++)
+		{ a[round][j]=m++;	}
+		round++;
+	}
+	for(i=0;i<n;i++)
+	{	for(j=0;j<n;j++)
+		{
+			printf("%2d ",a[i][j]);
+		}
+		putchar('\n');
+	}
+	return 0;  
+}
