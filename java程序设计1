@@ -1,0 +1,75 @@
+public class HelloJava {                        //这是我用eclipse IDE开发的第一个java程序
+	public static void main(String[] args) {
+		System.out.println("    *");
+		System.out.println("   ***");
+		System.out.println("  *****");
+		System.out.println(" *******");
+		System.out.println("*********");
+	}
+
+}
+
+public class Test1 {                            //第二个java程序
+	public static void main(String[] args) 
+	{
+		for(int i=0;i<=5;i++) {
+			System.out.println("这时的i值为 "+i);
+		}
+	}
+
+}
+
+public class Person {                           //定义类
+	public static void main(String[] args) {
+	    Person zhang = new Person(); // 创建第一个实例
+	    zhang.name = "张子同";
+	    String isMan = zhang.issex() ? "女" : "男";
+	    System.out.println("姓名：" + zhang.name + "性别：" + isMan + "年龄：" + zhang.age);
+	    Person li = new Person(); // 创建第二个实例
+	    li.name = "李子文";
+	    li.sex = true;
+	    li.age = 15;
+	    String isWoman = li.issex() ? "女" : "男";
+	    System.out.println("姓名：" + li.name + "性别：" + isWoman + "年龄：" + li.age);
+	}
+		
+	 String name;
+	 private int age;
+	 private boolean sex;
+	 public boolean issex() {
+		    return sex;
+		}
+		public void setSex(boolean sex) {
+		    this.sex = sex;
+		}
+	 
+	}
+
+import java.util.Scanner;                       //打印杨辉三角
+public class YHtriangle {
+	public static int num(int x, int y) {
+	    if (y == 1 || y == x) {
+	        return 1;
+	    }
+	    int c = num(x - 1, y - 1) + num(x - 1, y);
+	    return c;
+	}
+	public static void calculate(int row) {
+	    for (int i = 1; i <= row; i++) {
+	        for (int j = 1; j <= row - i; j++) {
+	            System.out.print(" ");
+	        }
+	        for (int j = 1; j <= i; j++) { // 打印空格后面的字符, 从第1 列开始往后打印
+	            System.out.print(num(i, j) + " ");
+	        }
+	        System.out.println();
+	    }
+	}
+	public static void main(String[] args) {
+		System.out.print("打印杨辉三角形的行数：");
+		Scanner scanner = new Scanner(System.in);
+	    int row = scanner.nextInt();
+	    calculate(row);
+	}
+
+}
