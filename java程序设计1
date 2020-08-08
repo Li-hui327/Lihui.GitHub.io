@@ -73,3 +73,98 @@ public class YHtriangle {
 	}
 
 }
+
+public class StransformI {			//字符串转化为整型
+	public static void main(String[] args) {
+	    String str ="123";
+	    int n = 0;
+	    n = Integer.parseInt(str);
+	    System.out.println("Integer.parseInt(str) : " + n);
+
+	    n = 0;
+	    n = Integer.valueOf(str).intValue();
+	    System.out.println("Integer.parseInt(str) : " + n);
+	}
+
+}
+
+public class ItransformS {			//整型转化为字符串型
+	public static void main(String[] args) {
+	    int num = 10;
+
+	    
+	    num = 10;
+	    String str = String.valueOf(num);
+	    System.out.println("str:" + str);
+
+	    
+	    num = 10;
+	    String str2 = Integer.toString(num);
+	    System.out.println("str2:" + str2);
+
+	    
+	    String str3 = num + "";
+	    System.out.println("str3:" + str3);
+	}
+
+}
+
+public class ConnectChar {			//字符串的拼接方法一
+	public static void main(String[] args) {
+	    int[] no = new int[] { 501, 101, 204, 102, 334 }; 
+	    String[] names = new String[] { "张城", "刘丽丽", "李国旺", "孟红霞", "贺宁" }; 
+	    String[] classes = new String[] { "数学", "语文", "数学", "英语", "英语" }; 
+	    System.out.println("本次考试学生信息如下：");
+	    
+	    for (int i = 0; i < no.length; i++) {
+	        System.out.println("学号：" + no[i] + "|姓名：" + names[i] + "|课程：" + classes[i] + "|班级：" + "初二（三）班");
+	    }
+	}
+
+}
+
+public class ConcatChar {			//字符串的拼接方法二
+	public static void main(String[] args) {
+	    String info = "三国演义、";
+	    info = info.concat("西游记、");
+	    info = info.concat("水浒传、");
+	    info = info.concat("红楼梦");
+	    System.out.println(info);
+	    String cn = "中国";
+	    System.out.println(cn.concat("北京").concat("海淀区").concat("人民公园"));
+	}
+
+public class CharIntFloat {			//字符串、整型、浮点型的拼接
+	public static void main(String[] args) {
+	    String book = "三国演义"; 
+	    int price = 59; 
+	    float readtime = 2.5f; 
+	    System.out.println("我买了一本图书，名字是：" + book + "\n价格是：" + price + "元" +"\n我每天阅读" + readtime + "小时");
+	}
+
+}
+
+import java.util.Scanner;			//管理员密码设置
+public class InformationM {
+	public static void main(String[] args) {
+	    String sys = "学生信息管理";
+	    System.out.println("欢迎进入《" + sys + "》系统");
+	    System.out.println("请设置一个管理员密码：");
+	    
+	    Scanner input = new Scanner(System.in);
+	    String pass = input.next();
+	    
+	    int length = pass.length();
+	    if (length > 6 & length < 12) {
+	        System.out.println("密码长度符合规定。");
+	        System.out.println("已生效，请牢记密码：" + pass);
+	    } else if (length >= 12) {
+	        System.out.println("密码过长。");
+	    } else {
+	        System.out.println("密码过短。");
+	    }
+	    
+	    
+	}
+
+}
