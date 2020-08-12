@@ -13,7 +13,8 @@ tags:
   [Visual Studio Pro](https://www.aiweibk.com/)   
   [pudn](http://en.pudn.com/User/login)   
   [Google Cloud Platform](https://console.cloud.google.com/)            [Google学术搜索](https://scholar.google.com.hk/?hl=zh-CN)         
-  [登录-百川云](https://bcyun.pw/auth/login)             [牧萧的博客](https://github.com/MuXiao985/MuXiao985.GitHub.io)
+  [登录-百川云](https://bcyun.pw/auth/login)             [牧萧的博客](https://github.com/MuXiao985/MuXiao985.GitHub.io)    
+  [xda论坛](https://forum.xda-developers.com/)           [java电子书](http://www.javazx.com/forum.php?mod=viewthread&tid=8588)
   
 
 
