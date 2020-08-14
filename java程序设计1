@@ -384,3 +384,12 @@ public class Test03 {			       //三角函数运算
 	}
  
 }
+
+public class Test04 {			      //指数运算
+	public static void main(String[] args) {
+        System.out.println("4 的立方值：" + Math.pow(4, 3));
+        System.out.println("16 的平方根：" + Math.sqrt(16));
+        System.out.println("10 为底 2 的对数：" + Math.log10(2));
+    }
+
+}
