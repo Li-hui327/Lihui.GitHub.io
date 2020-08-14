@@ -264,3 +264,90 @@ public class SFappend {				//输出必修课程
   }
 
 }
+
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+public class FindGroup {			//从大段的字符串中找出电话号码(使用正则表达式可以实现简单的网络爬虫)
+	public static void main(String[] args) {
+        // 使用字符串模拟从网络上得到的网页源码
+        String str = "我想找一套适合自己的JAVA教程，尽快联系我13500006666" + "交朋友，电话号码是13611125565" + "出售二手电脑，联系方式15899903312";
+        // 创建一个Pattern对象，并用它建立一个Matcher对象
+        // 该正则表达式只抓取13X和15X段的手机号
+        // 实际要抓取哪些电话号码，只要修改正则表达式即可
+        Matcher m = Pattern.compile("((13\\d)|(15\\d))\\d{8}").matcher(str);
+        // 将所有符合正则表达式的子串（电话号码）全部输出
+        while (m.find()) {
+            System.out.println(m.group());
+        }
+    }
+
+}
+
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+public class StartEnd {				//start()和end()方法主要用于子串在目标字符串中的位置
+	 public static void main(String[] args) {
+	        
+	        String regStr = "Java is very easy!";
+	        System.out.println("目标字符串是：" + regStr);
+	        Matcher m = Pattern.compile("\\w+").matcher(regStr);
+	        while (m.find()) {
+	            System.out.println(m.group() + "子串的起始位置：" + m.start() + "，其结束位置：" + m.end()+"。");
+	        }
+	    }
+
+}
+
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+public class MatchesTest {			//matches方法要求整个字符串和pattern完全匹配时才返回true
+	public static void main(String[] args) {
+        String[] mails = { "kongyeeku@163.com", "kongyeeku@gmail.com", "ligang@crazyit.org", "wawa@abc.xx" };
+        String mailRegEx = "\\w{3,20}@\\w+\\.(com|org|cn|net|gov)";
+        Pattern mailPattern = Pattern.compile(mailRegEx);
+        Matcher matcher = null;
+        for (String mail : mails) {
+            if (matcher == null) {
+                matcher = mailPattern.matcher(mail);
+            } else {
+                matcher.reset(mail);
+            }
+            String result = mail + (matcher.matches() ? "是" : "不是") + "一个有效的邮件地址！";
+            System.out.println(result);
+        }
+    }
+
+}
+
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+public class ReplaceTest {			//利用正则表达式对目标字符串进行替换
+	public static void main(String[] args) {
+        String[] msgs = { "Java has regular expressions in 1.4", "regular expressions now expressing in Java",
+                "Java represses oracular expressions" };
+        Pattern p = Pattern.compile("re\\w*");
+        Matcher matcher = null;
+        for (int i = 0; i < msgs.length; i++) {
+            if (matcher == null) {
+                matcher = p.matcher(msgs[i]);
+            } else {
+                matcher.reset(msgs[i]);
+            }
+            System.out.println(matcher.replaceAll("哈哈 "));
+        }
+    }
+
+}
+
+import java.util.Arrays;
+public class StringReg {			//使用String类提供的正则表达式功能来进行替换和分割
+	public static void main(String[] args) {
+        String[] msgs = { "Java has regular expressions in 1.4", "regular expressions now expressing in Java",
+                "Java represses oracular expressions" };
+        for (String msg : msgs) {
+            System.out.println(msg.replaceFirst("re\\w*", "哈哈 "));
+            System.out.println(Arrays.toString(msg.split(" ")));
+        }
+    }
+
+}
