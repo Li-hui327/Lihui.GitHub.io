@@ -351,3 +351,36 @@ public class StringReg {			//使用String类提供的正则表达式功能来进
     }
 
 }
+
+public class Test01 {			       //求最大值、最小值和绝对值
+	 public static void main(String[] args) {
+	        System.out.println("10 和 20 的较大值：" + Math.max(10, 20));
+	        System.out.println("15.6 和 15 的较小值：" + Math.min(15.6, 15));
+	        System.out.println("-12 的绝对值：" + Math.abs(-12));
+	    }
+
+}
+
+import java.util.Scanner;		       //求整运算
+public class Test02 {
+	public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        System.out.println("请输入一个数字： ");
+        double num = input.nextDouble();
+        System.out.println("大于或等于 "+ num +" 的最小整数：" + Math.ceil(num));
+        System.out.println("小于或等于 "+ num +" 的最大整数：" + Math.floor(num));
+        System.out.println("将 "+ num +" 加上 0.5 之后最接近的整数：" + Math.round(num));
+        System.out.println("最接近 "+num+" 的整数：" + Math.rint(num));
+    }
+
+}
+
+public class Test03 {			       //三角函数运算
+	public static void main(String[] args) {
+        System.out.println("90 度的正弦值：" + Math.sin(Math.PI/2));
+        System.out.println("0 度的余弦值：" + Math.cos(0));
+        System.out.println("1 的反正切值：" + Math.atan(1));
+        System.out.println("120 度的弧度值：" + Math.toRadians(120.0));
+	}
+ 
+}
