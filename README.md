@@ -16,7 +16,8 @@ tags:
   [Google Cloud Platform](https://console.cloud.google.com/) [Google学术搜索](https://scholar.google.com.hk/?hl=zh-CN)         
   [登录-百川云](https://bcyun.pw/auth/login) [牧萧的博客](https://github.com/MuXiao985/MuXiao985.GitHub.io)    
   [xda论坛](https://forum.xda-developers.com/) [java电子书](http://www.javazx.com/forum.php?mod=viewthread&tid=8588)   
-  [迷雾通1](https://is.gd/getmiwutong) [迷雾通2](https://waa.ai/getmiwutong)
+  [迷雾通1](https://is.gd/getmiwutong) [迷雾通2](https://waa.ai/getmiwutong)         
+  [小小影视](https://www.xiaoysw.com/)
   
 
 
