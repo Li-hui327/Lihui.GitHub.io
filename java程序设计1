@@ -393,3 +393,139 @@ public class Test04 {			      //指数运算
     }
 
 }
+
+import java.util.Random;		      //使用Randon类提供的方法生成随机数
+public class Test05 {
+	public static void main(String[] args) {
+        Random r = new Random();
+        double d1 = r.nextDouble(); 		// 生成[0,1.0]区间的小数
+        double d2 = r.nextDouble() * 7; 	// 生成[0,7.0]区间的小数
+        int i1 = r.nextInt(10); 			// 生成[0,10]区间的整数
+        int i2 = r.nextInt(18) - 3; 		// 生成[-3,15]区间的整数
+        long l1 = r.nextLong(); 			// 生成一个随机长整型值
+        boolean b1 = r.nextBoolean(); 		// 生成一个随机布尔型值
+        float f1 = r.nextFloat(); 			// 生成一个随机浮点型值
+        System.out.println("生成的[0,1.0]区间的小数是：" + d1);
+        System.out.println("生成的[0,7.0]区间的小数是：" + d2);
+        System.out.println("生成的[0,10]区间的整数是：" + i1);
+        System.out.println("生成的[-3,15]区间的整数是：" + i2);
+        System.out.println("生成一个随机长整型值：" + l1);
+        System.out.println("生成一个随机布尔型值：" + b1);
+        System.out.println("生成一个随机浮点型值：" + f1);
+        System.out.print("下期七星彩开奖号码预测：");
+        for (int i = 1; i < 8; i++) {
+            int num = r.nextInt(9); // 生成[0,9]区间的整数
+            System.out.print(num);
+        }
+    }
+
+}
+
+public class Test06 {			    //使用math类的random()类方法实现随机生成一个2~100的偶数的功能
+	public static void main(String[] args) {
+        int min = 2; 			// 定义随机数的最小值
+        int max = 102; 			// 定义随机数的最大值
+        						// 产生一个2~100的数
+        int s = (int) min + (int) (Math.random() * (max - min));
+        if (s % 2 == 0) {
+            					// 如果是偶数就输出
+            System.out.println("随机数是：" + s);
+        } 
+        else {
+            					// 如果是奇数就加1后输出
+            System.out.println("随机数是：" + (s + 1));
+        }
+    }
+
+}
+
+import java.text.DecimalFormat;		//使用DecimalFormat类将数字转换成各种格式
+import java.util.Scanner;
+public class Test07 {
+	public static void main(String[] args) {
+        								// 实例化DecimalFormat类的对象，并指定格式
+        DecimalFormat df1 = new DecimalFormat("0.0");
+        DecimalFormat df2 = new DecimalFormat("#.#");
+        DecimalFormat df3 = new DecimalFormat("000.000");
+        DecimalFormat df4 = new DecimalFormat("###.###");
+        Scanner scan = new Scanner(System.in);
+        System.out.print("请输入一个float类型的数字：");
+        float f = scan.nextFloat();
+        								// 对输入的数字应用格式，并输出结果
+        System.out.println("0.0 格式：" + df1.format(f));
+        System.out.println("#.# 格式：" + df2.format(f));
+        System.out.println("000.000 格式：" + df3.format(f));
+        System.out.println("###.### 格式：" + df4.format(f));
+    }
+
+}
+
+import java.util.Scanner;
+import java.math.BigInteger;
+public class Test08 {			//应用BigInteger类的实例
+	public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        System.out.println("请输入一个整型数字：");
+        								// 保存用户输入的数字
+        int num = input.nextInt();
+
+        								// 使用输入的数字创建BigInteger对象
+        BigInteger bi = new BigInteger(num + "");
+
+        								// 计算大数字加上99的结果
+        System.out.println("加法操作结果：" + bi.add(new BigInteger("99")));
+
+        								// 计算大数字减去25的结果
+        System.out.println("减法操作结果：" + bi.subtract(new BigInteger("25")));
+
+        								// 计算大数字乘以3的结果
+        System.out.println("乘法橾作结果：" + bi.multiply(new BigInteger("3")));
+
+        								// 计算大数字除以2的结果
+        System.out.println("除法操作结果：" + bi.divide(new BigInteger("2")));
+
+        								// 计算大数字除以3的商
+        System.out.println("取商操作结果：" + bi.divideAndRemainder(new BigInteger("3"))[0]);
+
+        								// 计算大数字除以3的余数
+        System.out.println("取余操作结果：" + bi.divideAndRemainder(new BigInteger("3"))[1]);
+
+        								// 计算大数字的2次方
+        System.out.println("取 2 次方操作结果：" + bi.pow(2));
+
+        								// 计算大数字的相反数
+        System.out.println("取相反数操作结果：" + bi.negate());
+    }
+
+}
+
+import java.util.Scanner;
+import java.math.BigDecimal;
+public class Test09 {			//使用BigDecimal类提供的方法对数字执行运算，并输出结果
+	public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        System.out.println("请输入一个数字：");
+
+        										// 保存用户输入的数字
+        double num = input.nextDouble();
+
+        										// 使用输入的数字创建BigDecimal对象
+        BigDecimal bd = new BigDecimal(num);
+
+        										// 计算大数字加上99.154的结果
+        System.out.println("加法操作结果：" + bd.add(new BigDecimal(99.154)));
+
+        										// 计算大数字减去-25.157904的结果
+        System.out.println("减法操作结果：" + bd.subtract(new BigDecimal(-25.157904)));
+
+        										// 计算大数字乘以3.5的结果
+        System.out.println("乘法操作结果：" + bd.multiply(new BigDecimal(3.5)));
+
+        										// 计算大数字除以3.14的结果，并保留小数后2位
+        System.out.println("除法操作结果(保留 2 位小数)：" + bd.divide(new BigDecimal(3.14), 2, BigDecimal.ROUND_CEILING));
+
+        										// 计算大数字除以3.14的结果，并保留小数后5位
+        System.out.println("除法操作结果(保留 5 位小数)：" + bd.divide(new BigDecimal(3.14), 5, BigDecimal.ROUND_CEILING));
+    }
+
+}
