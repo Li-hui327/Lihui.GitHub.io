@@ -378,3 +378,33 @@ int main()					  1  2  3  4  5
 	}
 	return 0;  
 }
+
+#include <stdio.h>			//回文是从前向后读和从后向前读都一样的字符串，输入一个字符串，判断该字符串是否是回文后输出
+#include <string.h>
+int main()
+{	char str[10],ch[10];
+	printf("请输入一个字符串:");
+	gets(str);
+	int count,i,k=1;
+	count=strlen(str);
+	for(i=count-1;i>=0;i--)
+	{
+		ch[count-1-i]=str[i];
+	}
+	for(i=0;i<count-1;i++)
+	{	if(str[i]!=ch[i])
+		k=0;
+	}
+	if(k==1)
+	{printf("字符串");
+	puts(str);
+	printf("是回文\n"); 
+	}
+	else
+	{printf("字符串");
+	puts(str);
+	printf("不是回文\n"); 
+	
+	}
+	return 0;
+}
