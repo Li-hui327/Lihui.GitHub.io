@@ -529,3 +529,203 @@ public class Test09 {			//使用BigDecimal类提供的方法对数字执行运�
     }
 
 }
+
+import java.util.Scanner;
+public class Decimal {			//接受用户输入的一个浮点数，把它的整数部分和小数部分分别输出
+	public static void main(String[] args) {
+		System.out.println("请输入一个浮点数：");
+		Scanner input=new Scanner(System.in);
+		String number=" ";
+		number=input.next();
+		String[] number1=number.split("\\.");
+		for(int i=0;i<number1.length;i++) {
+			System.out.println(number1[i]);
+		}
+	}
+
+}
+
+import java.util.Date;
+import java.util.Scanner;
+public class Test10 {		//某一天特定时间要去做一件事，而且那个时间已经过去一分钟之后才想起来这件事还没有办，这时系统将会提示已经过去了多
+	public static void main(String[] args) {	长时间
+        Scanner input = new Scanner(System.in);
+        System.out.println("请输入要做的事情：");
+        String title = input.next();
+        Date date1 = new Date(); // 获取当前日期
+        System.out.println("[" + title + "] 这件事发生时间为：" + date1);
+        try {
+            Thread.sleep(60000);// 暂停 1 分钟
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        Date date2 = new Date();
+        System.out.println("现在时间为：" + date2);
+        if (date2.before(date1)) {
+            System.out.println("你还有 " + (date2.getTime() - date1.getTime()) / 1000 + " 秒需要去完成【" + title + "】这件事！");
+        } else {
+            System.out.println("【" + title + "】事情已经过去了 " + (date2.getTime() - date1.getTime()) / 1000 + " 秒");
+        }
+    }
+
+}
+
+import java.util.Calendar;
+public class Test11 {			//打印日历
+	public static void main(String[] args) {
+        Calendar calendar = Calendar.getInstance();
+     
+        calendar.set(2020, 7, 1); // 实际的calendar对象所表示的日期为2020年8月1日
+
+        // 判断2020年8月1日为一周中的第几天
+        int index = calendar.get(Calendar.DAY_OF_WEEK) - 1;
+        char[] title = { '日', '一', '二', '三', '四', '五', '六' }; // 存放曰历的头部
+        int daysArray[][] = new int[6][7];// 存放日历的数据
+        int daysInMonth = 31; // 该月的天数
+        int day = 1; // 自动增长
+        for (int i = index; i < 7; i++) {
+            // 填充第一周的日期数据，即日历中的第一行
+            daysArray[0][i] = day++;
+        }
+        for (int i = 1; i < 6; i++) {
+            // 填充其他周的日历数据，控制行
+            for (int j = 0; j < 7; j++) {
+                // 如果当前day表示的是本月最后一天，则停止向数组中继续赋值
+                if (day > daysInMonth) {
+                    i = 6;
+                    break;
+                }
+                daysArray[i][j] = day++;
+            }
+        }
+        System.out.println("------------------2020 年 8月--------------------\n");
+        for (int i = 0; i < title.length; i++) {
+            System.out.print(title[i] + "\t");
+        }
+        System.out.print("\n");
+        // 输出二元数组daysArray中的元素
+        for (int i = 0; i < 6; i++) {
+            for (int j = 0; j < 7; j++) {
+                if (daysArray[i][j] == 0) {
+                    if (i != 0) {
+                        // 如果到月末，则完成显示日历的任务，停止该方法的执行
+                        return;
+                    }
+                    System.out.print("\t");
+                    continue;
+                }
+                System.out.print(daysArray[i][j] + "\t");
+            }
+            System.out.print("\n");
+        }
+    }
+
+}
+
+import java.util.Date;
+import java.text.SimpleDateFormat;
+public class Test12 {			//使用 SimpleDateFormat 类格式化当前日期并打印，日期格式为“xxxx 年 xx 月 xx 日星期 xxx 点 xx 分 xx 秒”
+	public static void main(String[] args) {
+        Date now = new Date(); // 创建一个Date对象，获取当前时间
+        // 指定格式化格式
+        SimpleDateFormat f = new SimpleDateFormat("今天是 " + "yyyy 年 MM 月 dd 日 E HH 点 mm 分 ss 秒");
+        System.out.println(f.format(now)); // 将当前时间袼式化为指定的格式
+    }
+
+}
+
+import java.util.Calendar;
+public class Test13 {						      //假设，每周曰到周六为整的一周，每周从周日开始算起。其中每周的周一、周二、周五需要去学校上课，
+	// 定义一周所要上课的天数。定义为周一、周二、周五共3天上课		//总共再上9天本学期就结束了。
+    public static final int HAVEClass_OF_WEEK = 3;		      //计算上完 9 次课后的日期及星期，以及从当天起到本学期结束总共需要度过的天数
+    // 定义需要上的课次
+    public static final int COURSENUM = 9;
+
+    public static void main(String[] args) {
+        int weekCount = -1; // 定义上完全部课程需要多少周，取整数
+        int surplusDay = -1; // 取整后多余的天数
+        int count = 0; // 获取上了多少次课
+        int surplusClass = -1; // 取整后所剩的课程数
+        int total = 0; // 上课所花的时间总数
+        Calendar calendar = Calendar.getInstance();
+        // 获取今天是周几
+        int weekdays = (calendar.get(Calendar.DAY_OF_WEEK) - 1);
+        /*
+         * 定义一周中所要上课的天数，若上课一天则count+1 周一、周二、周五上课 今天是周三，这个星期只有周五上课
+         */
+        switch (weekdays) {
+        case 0:
+        case 1: // 上课
+            count++;
+        case 2: // 上课
+            count++;
+        case 3:
+        case 4:
+        case 5: // 上课
+            count++;
+        case 6:
+            break;
+        }
+        /*
+         * 计算今天是周几，如果不是周末，则计算到周六还有几天 （因为周日是一周的开始）
+         */
+        if ( weekdays != 0)
+            surplusDay = 6 - weekdays;
+        // 获取上课所用多少周，取整
+        weekCount = (COURSENUM - count) / HAVEClass_OF_WEEK;
+        // 获取取整后剩下的课程数
+        surplusClass = (COURSENUM - count) - (weekCount * HAVEClass_OF_WEEK);
+        /*
+         * 计算取整周后剩下的次数（从每周日开始算起） 若不剩课程，则日期-1（因为取整后的最后一天为周六，不上课） 则计算周五的日期
+         * 若还剩1节课，肯定是周一上课，所以天数+2天 若还剩2节课，则周一、周二上课，所以天数+3天 若还剩3节课，则周一、周二、周五上课，所以天数+6天
+         */
+        switch (surplusClass) {
+        case 0:
+            surplusDay = surplusDay - 1;
+            break;
+        case 1:
+            surplusDay += 2;
+            break;
+        case 2:
+            surplusDay += 3;
+            break;
+        case 5:
+            surplusDay += 6;
+            break;
+        }
+        // 要上课所用的总天数
+        total = surplusDay + (weekCount * 7);
+        // 设置课程结束当天的日期
+        calendar.set(Calendar.DAY_OF_MONTH, calendar.get(Calendar.DAY_OF_MONTH) + total);
+        String strWeek = "";
+        int week = (calendar.get(Calendar.DAY_OF_WEEK) - 1);
+        switch (week) {
+        case 1:
+            strWeek = "一";
+            break;
+        case 2:
+            strWeek = "二";
+            break;
+        case 3:
+            strWeek = "三";
+            break;
+        case 4:
+            strWeek = "四";
+            break;
+        case 5:
+            strWeek = "五";
+            break;
+        case 6:
+            strWeek = "六";
+            break;
+        case 7:
+            strWeek = "日";
+            break;
+        }
+        // 如果取整后剩下的课程数为零，直接取周五的日期
+        System.out.println("距离本学期结束还有 " + total + " 天，日期为：" + calendar.get(Calendar.YEAR) + "-"
+                + (calendar.get(Calendar.MONTH) + 1) + "-" + calendar.get(Calendar.DATE) + "，星期" + strWeek);
+    }
+
+}
+
