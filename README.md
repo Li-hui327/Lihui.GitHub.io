@@ -3,7 +3,8 @@ title: new article
 date: 2020-08-06 11:01:55
 tags:  
 
-# Hello World!
+# Hello World!   
+win rar路径 "C:\ProgramData\Microsoft\Windows\Start Menu\Programs\WinRAR\WinRAR 中文帮助.lnk"
 
 收藏网站   
 
