@@ -729,3 +729,73 @@ public class Test13 {						      //假设，每周曰到周六为整的一周，
 
 }
 
+public class Demo {			//装箱和拆箱以及包装类的应用
+	public static void main(String[] args) {
+        int m = 500;
+        String s = Integer.toString(m);
+        System.out.println("s = " + s);
+    }
+}
+
+class Demo1 {
+	
+}
+public class ObjectDemo01 {		//toString()用法
+	public static void main(String[] args) {
+        Demo1 d = new Demo1(); // 实例化Demo对象
+        System.out.println("不加toString()输出：" + d);
+        System.out.println("加上toString()输出：" + d.toString());
+    }
+
+}
+
+public class Person {			//toString()用法
+	private String name;
+    private int age;
+
+    public Person(String name, int age) {
+        this.name = name;
+        this.age = age;
+    }
+
+    public String toString() {
+        return "姓名：" + this.name + ",年龄" + this.age;
+    }
+
+    public static void main(String[] args) {
+        Person per = new Person("C语言中文网", 30);// 实例化Person对象
+        System.out.println("对象信息：" + per);// 打印对象调用toString()方法
+    }
+
+}
+
+import java.util.Scanner;
+public class Test01 {				//实现用户登录的验证功能。要求用户从键盘输入登录用户名和密码，当用户输入的用户名等于 admin 
+	// 验证用户名和密码			 //并且密码也等于 admin 时，则表示该用户为合法用户，提示登录成功，否则提示用户名或者密码错误信息。
+    public static boolean validateLogin(String uname, String upwd) {
+        boolean con = false;
+        if (uname.equals("admin") && upwd.equals("admin")) { // 比较两个 String 对象
+            con = true;
+        } else {
+            con = false;
+        }
+        return con;
+    }
+
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        System.out.println("------欢迎使用大数据管理平台------");
+        System.out.println("用户名：");
+        String username = input.next(); // 获取用户输入的用户名
+        System.out.println("密码：");
+        String pwd = input.next(); // 获取用户输入的密码
+        boolean con = validateLogin(username, pwd);
+        if (con) {
+            System.out.println("登录成功！");
+        } else {
+            System.out.println("用户名或密码有误！");
+        }
+    }
+
+}
+
