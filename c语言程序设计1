@@ -408,3 +408,114 @@ int main()
 	}
 	return 0;
 }
+
+#include <stdio.h>		//函数的定义
+void func()
+{
+	printf("这是我的第一个函数! \n");
+}
+int main()
+{	
+	func();
+	return 0;
+}
+
+#include <stdio.h>			//函数的定义
+void func(int x,int y)
+{	int sum=x+y;
+	printf("%d+%d=%d \n",x,y,sum);
+}
+int main()
+{	int a,b;
+	printf("请输入两个整数: ");
+	scanf("%d %d",&a,&b);
+	func(a,b);
+	return 0;
+}
+
+#include <stdio.h>				//用函数求四个数中的最大值
+int max2(int a,int b)
+{	if(a>b)
+	return a;
+	else 
+	return b;
+}
+int max4(int a,int b,int c,int d)
+{	int res;
+	res=max2(a,b);
+	res=max2(res,c);
+	res=max2(res,d);
+	return res;
+}
+int main()
+{	int a,b,c,d;
+	printf("请输入四个整数: ");
+	scanf("%d %d %d %d",&a,&b,&c,&d);
+	
+	printf("最大数: %d \n",max4(a,b,c,d));
+	return 0;
+}
+
+#include <stdio.h>				//利用函数计算n的阶乘
+int getsum(int n)
+{	if(n==1)
+	return 1;
+	else
+	{	int temp=getsum(n-1);
+		return temp*n;
+	}
+}
+int main()
+{	int n;
+	printf("计算n的阶乘,请输入n: ");
+	scanf("%d",&n);
+	printf("%d的阶乘为%d \n",n,getsum(n));
+	return 0;
+}
+
+#include <stdio.h>				//dev-c++中实参的求值顺序
+int func(int x,int y)
+{	int z;
+	if(x>y)
+	z=1;
+	else if(x==y)
+	z=0;
+	else
+	z=-1;
+	return z;
+}
+int main()
+{	int i=2,p;
+	printf("对实参的求值顺序:  右→左 \n");
+	//p=func(i,++i);
+    p=func(i,i++);
+	printf("%d \n",p);
+	return 0;
+}
+
+#include <stdio.h>				//全局变量与局部变量的例子
+int x=5;
+int foo(int y)
+{	int z=1;
+	return (x+y+z);
+}
+int main()
+{	int a=2;
+	x=foo(a);
+	a=foo(x);
+	printf("a=%d \n",a);
+	return 0;
+}
+
+int add(int x,int y)					//外部函数
+{
+	return x+y;
+}
+
+#include <stdio.h>
+extern int add(int x,int y);
+int main()
+{	
+	printf("%d \n",add(1,2));
+	return 0;
+}
