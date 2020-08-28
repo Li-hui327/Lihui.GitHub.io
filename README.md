@@ -10,7 +10,7 @@ win rar路径 "C:\ProgramData\Microsoft\Windows\Start Menu\Programs\WinRAR\WinRA
 
   [菜鸟教程](https://www.runoob.com)      
   [仪表板-Microsoft365开发人员中心](https://developer.microsoft.com/zh-cn/microsoft-365/dev-program)   
-  [微软壁纸](https://wallpaperhub.app)  [啊噗啊噗动态壁纸](http://www.upupoo.com/) [壁次元](https://www.biacgn.com) [彼岸图网](http://pic.netbian.com/4kdongman/) [彼岸桌面](http://www.netbian.com/dongman/) [ZOL桌面壁纸](http://desk.zol.com.cn/dongman/) [wallhaven](https://wallhaven.cc/) [WallpapersCraft](https://wallpaperscraft.com/) [Unsplash](https://unsplash.com/) [极简壁纸](https://bz.zzzmh.cn/) [SimpleDesktops](http://simpledesktops.com/) [Wallpapersite](https://wallpapersite.com/)
+  [微软壁纸](https://wallpaperhub.app)  [啊噗啊噗动态壁纸](http://www.upupoo.com/) [壁次元](https://www.biacgn.com) [彼岸图网](http://pic.netbian.com/4kdongman/) [彼岸桌面](http://www.netbian.com/dongman/) [ZOL桌面壁纸](http://desk.zol.com.cn/dongman/) [wallhaven](https://wallhaven.cc/) [WallpapersCraft](https://wallpaperscraft.com/) [Unsplash](https://unsplash.com/) [极简壁纸](https://bz.zzzmh.cn/) [SimpleDesktops](http://simpledesktops.com/) [Wallpapersite](https://wallpapersite.com/) [GameWallpapers](https://www.gamewallpapers.com/) [CGWallapers](https://www.cgwallpapers.com/) [WallpaperCave] (https://wallpapercave.com/)
   
 [强力卸载](https://geekuninstaller.com/)  
   [Visual Studio Pro](https://www.aiweibk.com/) [F-Droid](https://f-droid.org/zh_Hans/packages/) [APKMirror](https://www.apkmirror.com/) [pudn](http://en.pudn.com/User/login) [吾爱破解](https://www.52pojie.cn/)  [接码平台](https://www.bfkdim.com)
