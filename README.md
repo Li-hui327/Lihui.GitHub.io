@@ -19,7 +19,7 @@ win rar路径 "C:\ProgramData\Microsoft\Windows\Start Menu\Programs\WinRAR\WinRA
   [xda论坛](https://forum.xda-developers.com/) [java电子书](http://www.javazx.com/forum.php?mod=viewthread&tid=8588)   
   [迷雾通1](https://is.gd/getmiwutong) [迷雾通2](https://waa.ai/getmiwutong)         
   [小小影视](https://www.xiaoysw.com/) [小蚁影视](https://007ys.cn/)  [新奇遇电影](https://www.newqiyu.com/) [影视天堂](https://www.ystt5.com/) [电影狗](http://www.dianyinggou.com/) [酷看影视](https://www.21629.net/) [蒙面大侠](https://www.mengmiandaxia.com/) 
- [剧汇TV](https://www.juhuitv.com/) [海外影院](https://www.haiwaiyy.org/)   
+ [剧汇TV](https://www.juhuitv.com/) [海外影院](https://www.haiwaiyy.org/) [全网VIP视频在线解析平台](http://www.1p3.cc/detail_318.html)   
  [博客园](https://www.cnblogs.com/)
 
 
