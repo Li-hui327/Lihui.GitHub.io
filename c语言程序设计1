@@ -519,3 +519,21 @@ int main()
 	printf("%d \n",add(1,2));
 	return 0;
 }
+
+#include <stdio.h>				//求e的近似值
+float factorial(float x)
+{	  float sum;
+	  for(sum=1;x>1;x--)
+	  {   sum=sum*x;
+	  }
+	  return sum;
+}
+int main()
+{	float n,e=1;
+	for(n=1;(1/factorial(n))>1E-6;n++)
+	{	e+=1/factorial(n);
+	}
+	printf("e=%f",e);
+	return 0;
+}
+© 2020 GitHub, Inc.
