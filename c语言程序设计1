@@ -555,4 +555,17 @@ int main()
 	return 0;
 }
 
+#include <stdio.h>
+#include <math.h>
+int main()
+{	float a,b,c,s,x;
+	printf("请输入三角形的三条边长:");
+	scanf("%f %f %f",&a,&b,&c);
+	s=(a+b+c)/2;
+	if (a+b>c && a-b<c)
+	{   x=s*(s-a)*(s-b)*(s-c); printf("能构成三角形，面积为%.2f\n",sqrt(x)); }
+	else
+	printf("不能构成三角形\n");
+	return 0;
+}
 © 2020 GitHub, Inc.
