@@ -536,4 +536,23 @@ int main()
 	printf("e=%f",e);
 	return 0;
 }
+
+#include <stdio.h>
+int main()
+{	int h1,m1,s1,h2,m2,s2,a,b,c;
+	char c1,c2,c3,c4;
+	printf("输入为: ");
+	scanf("%d%c%d%c%d %d%c%d%c%d",&h1,&c1,&m1,&c2,&s1,&h2,&c3,&m2,&c4,&s2);
+	a=3600*h1+60*m1+s1;
+	b=3600*h2+60*m2+s2;
+	c=b-a;
+	if(c>7200 && c<36000)
+	printf("输出为: 时间间隔=0%d:%d:%d  对不起,你不能享受公交优惠.\n",c/3600,(c%3600)/60,c%3600%60);
+	else if(c>=36000)
+	printf("输出为: 时间间隔=%d:%d:%d  对不起,你不能享受公交优惠.\n",c/3600,(c%3600)/60,c%3600%60);
+	else
+	printf("输出为: 时间间隔=0%d:%d:%d  你能享受公交优惠1元.\n",c/3600,(c%3600)/60,c%3600%60);
+	return 0;
+}
+© 2020 GitHub, Inc.
 © 2020 GitHub, Inc.
