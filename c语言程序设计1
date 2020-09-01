@@ -555,7 +555,7 @@ int main()
 	return 0;
 }
 
-#include <stdio.h>
+#include <stdio.h>				//输入一个三角形的3条边的边长，判断其是否能够构成一个三角形。
 #include <math.h>
 int main()
 {	float a,b,c,s,x;
@@ -568,4 +568,5 @@ int main()
 	printf("不能构成三角形\n");
 	return 0;
 }
+
 © 2020 GitHub, Inc.
