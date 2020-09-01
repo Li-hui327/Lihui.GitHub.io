@@ -537,7 +537,7 @@ int main()
 	return 0;
 }
 
-#include <stdio.h>
+#include <stdio.h>				//输入某乘客先后两次乘坐公交车的上车时间（假定在同一天内），程序判断时间间隔是否大于2小时并输出相应的信息。
 int main()
 {	int h1,m1,s1,h2,m2,s2,a,b,c;
 	char c1,c2,c3,c4;
@@ -554,5 +554,5 @@ int main()
 	printf("输出为: 时间间隔=0%d:%d:%d  你能享受公交优惠1元.\n",c/3600,(c%3600)/60,c%3600%60);
 	return 0;
 }
-© 2020 GitHub, Inc.
+
 © 2020 GitHub, Inc.
