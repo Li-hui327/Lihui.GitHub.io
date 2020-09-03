@@ -14,7 +14,7 @@ date: 2020-08-06 11:01:55
   
 [强力卸载](https://geekuninstaller.com/)  
   [Visual Studio Pro](https://www.aiweibk.com/) [F-Droid](https://f-droid.org/zh_Hans/packages/) [APKMirror](https://www.apkmirror.com/) [pudn](http://en.pudn.com/User/login) [吾爱破解](https://www.52pojie.cn/)  [接码平台](https://www.bfkdim.com)
-  [Google Cloud Platform](https://console.cloud.google.com/) [Google学术搜索](https://scholar.google.com.hk/?hl=zh-CN)         
+  [Google Cloud Platform](https://console.cloud.google.com/) [Google学术镜像](https://ac.scmor.com/)         
   [登录-百川云](https://bcyun.pw/auth/login) [牧萧的博客](https://github.com/MuXiao985/MuXiao985.GitHub.io)    
   [xda论坛](https://forum.xda-developers.com/) [java电子书](http://www.javazx.com/forum.php?mod=viewthread&tid=8588)   
   [迷雾通1](https://is.gd/getmiwutong) [迷雾通2](https://waa.ai/getmiwutong)         
