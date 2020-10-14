@@ -1,12 +1,4 @@
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="utf-8">
-<title>我的java学习（Lihui)</title>
-    <style type="text/css">   </style>
-</head>    
-<body>    
-<p>
+
 public class HelloJava {                        //这是我用eclipse IDE开发的第一个java程序
 	public static void main(String[] args) {
 		System.out.println("    *");
@@ -17,8 +9,7 @@ public class HelloJava {                        //这是我用eclipse IDE开发�
 	}
 
 }
-</p>
-<p>
+
 public class Test1 {                            //第二个java程序
 	public static void main(String[] args) 
 	{
@@ -28,8 +19,7 @@ public class Test1 {                            //第二个java程序
 	}
 
 }
-</p>
-<p>
+
 public class Person {                           //定义类
 	public static void main(String[] args) {
 	    Person zhang = new Person(); // 创建第一个实例
@@ -55,8 +45,7 @@ public class Person {                           //定义类
 		}
 	 
 	}
-</p>
-<p>
+
 import java.util.Scanner;                       //打印杨辉三角
 public class YHtriangle {
 	public static int num(int x, int y) {
@@ -85,8 +74,7 @@ public class YHtriangle {
 	}
 
 }
-</p>
-<p>
+
 public class StransformI {			//字符串转化为整型
 	public static void main(String[] args) {
 	    String str ="123";
@@ -100,8 +88,7 @@ public class StransformI {			//字符串转化为整型
 	}
 
 }
-</p>
-<p>
+
 public class ItransformS {			//整型转化为字符串型
 	public static void main(String[] args) {
 	    int num = 10;
@@ -122,8 +109,7 @@ public class ItransformS {			//整型转化为字符串型
 	}
 
 }
-</p>
-<p>
+
 public class ConnectChar {			//字符串的拼接方法一
 	public static void main(String[] args) {
 	    int[] no = new int[] { 501, 101, 204, 102, 334 }; 
@@ -137,8 +123,7 @@ public class ConnectChar {			//字符串的拼接方法一
 	}
 
 }
-</p>
-<p>
+
 public class ConcatChar {			//字符串的拼接方法二
 	public static void main(String[] args) {
 	    String info = "三国演义、";
@@ -149,8 +134,7 @@ public class ConcatChar {			//字符串的拼接方法二
 	    String cn = "中国";
 	    System.out.println(cn.concat("北京").concat("海淀区").concat("人民公园"));
 	}
-</p>
-<p>
+
 public class CharIntFloat {			//字符串、整型、浮点型的拼接
 	public static void main(String[] args) {
 	    String book = "三国演义"; 
@@ -160,8 +144,7 @@ public class CharIntFloat {			//字符串、整型、浮点型的拼接
 	}
 
 }
-</p>
-<p>
+
 import java.util.Scanner;			//管理员密码设置
 public class InformationM {
 	public static void main(String[] args) {
@@ -186,8 +169,7 @@ public class InformationM {
 	}
 
 }
-</p>
-<p>
+
 public class SubstringNews {			//截取新闻标题
 	public static void main(String[] args) {
 	    // 定义存储新闻标题的数组
@@ -207,8 +189,7 @@ public class SubstringNews {			//截取新闻标题
 	}
 
 }
-</p>
-<p>
+
 import java.util.Scanner;
 public class EqualsIgnoreCase {			//会员系统
 	public static void main(String[] args) {
@@ -229,8 +210,7 @@ public class EqualsIgnoreCase {			//会员系统
 	}
 
 }
-</p>
-<p>
+
 import java.util.Scanner;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -258,8 +238,7 @@ public class ProveNumber {			//正则表达式验证电话号码
 	System.out.println("注册结束。");
 	}
 }
-</p>
-<p>
+
 import java.lang.StringBuffer;
 import java.util.Scanner;
 public class SFappend {				//输出必修课程
@@ -286,8 +265,7 @@ public class SFappend {				//输出必修课程
   }
 
 }
-</p>
-<p>
+
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 public class FindGroup {			//从大段的字符串中找出电话号码(使用正则表达式可以实现简单的网络爬虫)
@@ -305,8 +283,7 @@ public class FindGroup {			//从大段的字符串中找出电话号码(使用�
     }
 
 }
-</p>
-<p>
+
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 public class StartEnd {				//start()和end()方法主要用于子串在目标字符串中的位置
@@ -321,8 +298,7 @@ public class StartEnd {				//start()和end()方法主要用于子串在目标字
 	    }
 
 }
-</p>
-<p>
+
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 public class MatchesTest {			//matches方法要求整个字符串和pattern完全匹配时才返回true
@@ -343,8 +319,7 @@ public class MatchesTest {			//matches方法要求整个字符串和pattern完�
     }
 
 }
-</p>
-<p>
+
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 public class ReplaceTest {			//利用正则表达式对目标字符串进行替换
@@ -364,8 +339,7 @@ public class ReplaceTest {			//利用正则表达式对目标字符串进行替�
     }
 
 }
-</p>
-<p>
+
 import java.util.Arrays;
 public class StringReg {			//使用String类提供的正则表达式功能来进行替换和分割
 	public static void main(String[] args) {
@@ -378,8 +352,7 @@ public class StringReg {			//使用String类提供的正则表达式功能来进
     }
 
 }
-</p>
-<p>
+
 public class Test01 {			       //求最大值、最小值和绝对值
 	 public static void main(String[] args) {
 	        System.out.println("10 和 20 的较大值：" + Math.max(10, 20));
@@ -388,8 +361,7 @@ public class Test01 {			       //求最大值、最小值和绝对值
 	    }
 
 }
-</p>
-<p>
+
 import java.util.Scanner;		       //求整运算
 public class Test02 {
 	public static void main(String[] args) {
@@ -403,8 +375,7 @@ public class Test02 {
     }
 
 }
-</p>
-<p>
+
 public class Test03 {			       //三角函数运算
 	public static void main(String[] args) {
         System.out.println("90 度的正弦值：" + Math.sin(Math.PI/2));
@@ -414,8 +385,7 @@ public class Test03 {			       //三角函数运算
 	}
  
 }
-</p>
-<p>
+
 public class Test04 {			      //指数运算
 	public static void main(String[] args) {
         System.out.println("4 的立方值：" + Math.pow(4, 3));
@@ -424,8 +394,7 @@ public class Test04 {			      //指数运算
     }
 
 }
-</p>
-<p>
+
 import java.util.Random;		      //使用Randon类提供的方法生成随机数
 public class Test05 {
 	public static void main(String[] args) {
@@ -452,8 +421,7 @@ public class Test05 {
     }
 
 }
-</p>
-<p>
+
 public class Test06 {			    //使用math类的random()类方法实现随机生成一个2~100的偶数的功能
 	public static void main(String[] args) {
         int min = 2; 			// 定义随机数的最小值
@@ -471,8 +439,7 @@ public class Test06 {			    //使用math类的random()类方法实现随机生�
     }
 
 }
-</p>
-<p>
+
 import java.text.DecimalFormat;		//使用DecimalFormat类将数字转换成各种格式
 import java.util.Scanner;
 public class Test07 {
@@ -493,8 +460,7 @@ public class Test07 {
     }
 
 }
-</p>
-<p>
+
 import java.util.Scanner;
 import java.math.BigInteger;
 public class Test08 {			//应用BigInteger类的实例
@@ -533,8 +499,7 @@ public class Test08 {			//应用BigInteger类的实例
     }
 
 }
-</p>
-<p>
+
 import java.util.Scanner;
 import java.math.BigDecimal;
 public class Test09 {			//使用BigDecimal类提供的方法对数字执行运算，并输出结果
@@ -565,8 +530,7 @@ public class Test09 {			//使用BigDecimal类提供的方法对数字执行运�
     }
 
 }
-</p>
-<p>
+
 import java.util.Scanner;
 public class Decimal {			//接受用户输入的一个浮点数，把它的整数部分和小数部分分别输出
 	public static void main(String[] args) {
@@ -581,8 +545,7 @@ public class Decimal {			//接受用户输入的一个浮点数，把它的整�
 	}
 
 }
-</p>
-<p>
+
 import java.util.Date;
 import java.util.Scanner;
 public class Test10 {		//某一天特定时间要去做一件事，而且那个时间已经过去一分钟之后才想起来这件事还没有办，这时系统将会提示已经过去了多
@@ -607,8 +570,7 @@ public class Test10 {		//某一天特定时间要去做一件事，而且那个�
     }
 
 }
-</p>
-<p>
+
 import java.util.Calendar;
 public class Test11 {			//打印日历
 	public static void main(String[] args) {
@@ -660,8 +622,7 @@ public class Test11 {			//打印日历
     }
 
 }
-</p>
-<p>
+
 import java.util.Date;
 import java.text.SimpleDateFormat;
 public class Test12 {			//使用 SimpleDateFormat 类格式化当前日期并打印，日期格式为“xxxx 年 xx 月 xx 日星期 xxx 点 xx 分 xx 秒”
@@ -673,8 +634,7 @@ public class Test12 {			//使用 SimpleDateFormat 类格式化当前日期并打
     }
 
 }
-</p>
-<p>
+
 import java.util.Calendar;
 public class Test13 {						      //假设，每周曰到周六为整的一周，每周从周日开始算起。其中每周的周一、周二、周五需要去学校上课，
 	// 定义一周所要上课的天数。定义为周一、周二、周五共3天上课		//总共再上9天本学期就结束了。
@@ -769,8 +729,7 @@ public class Test13 {						      //假设，每周曰到周六为整的一周，
     }
 
 }
-</p>
-<p>
+
 public class Demo {			//装箱和拆箱以及包装类的应用
 	public static void main(String[] args) {
         int m = 500;
@@ -790,8 +749,7 @@ public class ObjectDemo01 {		//toString()用法
     }
 
 }
-</p>
-<p>
+
 public class Person {			//toString()用法
 	private String name;
     private int age;
@@ -800,8 +758,7 @@ public class Person {			//toString()用法
         this.name = name;
         this.age = age;
     }
-</p>
-<p>
+
     public String toString() {
         return "姓名：" + this.name + ",年龄" + this.age;
     }
@@ -812,8 +769,7 @@ public class Person {			//toString()用法
     }
 
 }
-</p>
-<p>
+
 import java.util.Scanner;
 public class Test01 {				//实现用户登录的验证功能。要求用户从键盘输入登录用户名和密码，当用户输入的用户名等于 admin 
 	// 验证用户名和密码			 //并且密码也等于 admin 时，则表示该用户为合法用户，提示登录成功，否则提示用户名或者密码错误信息。
@@ -826,8 +782,7 @@ public class Test01 {				//实现用户登录的验证功能。要求用户从�
         }
         return con;
     }
-</p>
-<p>
+
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
         System.out.println("------欢迎使用大数据管理平台------");
@@ -844,7 +799,3 @@ public class Test01 {				//实现用户登录的验证功能。要求用户从�
     }
 
 }
-</p>
-
-</body>
-</html>
