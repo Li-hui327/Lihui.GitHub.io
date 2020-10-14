@@ -3,7 +3,22 @@
 <head>
 <meta charset="utf-8">
 <title>我的博客（Lihui)</title>
-    <style type="text/css">   </style>
+    <style type="text/css">   
+    ul.pagination {
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+}
+
+ul.pagination li {display: inline;}
+
+ul.pagination li a {
+    color: black;
+    float: left;
+    padding: 8px 16px;
+    text-decoration: none;
+}
+    </style>
 </head>    
 <body>    
     
@@ -27,7 +42,9 @@ JavaScript<br>
  <a href="#C19">日记 19</a> <a href="#C20">日记 20</a> <a href="#C21">日记 21</a></p>
                                                                                                                       </div>
     
-                    
+<ul class="pagination">
+                      <li><a href="#">«</a></li>
+                                     <li><a href="#">1</a></li>
 <div id="content" style="background-color:#EEEEEE;height:200px;width:1000px;float:left;">
 
     <h1><a id="C1">我的第一篇日记</a></h1>
@@ -74,7 +91,8 @@ JavaScript<br>
     <p>我今天学习的html是定义水平线，也学习了html注释。</p>
         <!--这是一段-->
     <hr />
-    
+    <li><a class="active" href="#">2</a></li>
+                                  
     <h1><a id="C4">我的第四篇日记</a></h1>
     <p>今天起床有点晚，到图书馆时已经九点多了，唉，感觉自己挺狼狈的，我今天只是把离散数学和线性代数的作业解决了，然后还是遗留了许多问题，😔😔😔！<br>
         我今天学习html，学习的是html折行，已经显示出来了，还学习了html文本格式化，如：<b>网抑云</b> <i>网抑云</i> <code>网抑云</code>  还有<sub> 网</sub><sup>抑云</sup>等等。</p>
@@ -97,7 +115,8 @@ JavaScript<br>
     <h2>html学习</h2>
     <p>我学习的是如何跳出框架，如：<a href="https://music.163.com" style="text-decoration:none;" target="_top">网易云</a> 
         以及发送邮件<a href="mailto:muxiaolin2@789404.onmicrosoft.com?Subject=Hello%20again" style="text-decoration:none;" target="_top">发送邮件</a> </p>
-    
+    <li><a href="#">3</a></li>
+                   
     <h1><a id="C7">我的第七篇日记</a></h1>
     <p>我今天上了一天的课，先是数据库，老师基本与我讲完第二章了，我感觉还是有点难度，再是verilog，老师没有讲，而是要我们直接做lab4和lab5，我经过了之前的练习之后，感觉比较熟练
     ，所以我做的比较快，但是还是赶不上别人的速度，有人在一个小时内就做好了，而我还需要一个多小时的时间去做，这还需要同学的帮忙，我虽然可以照着老师的做出来，但是有些原理我还是不
@@ -129,7 +148,8 @@ JavaScript<br>
     <h2>html学习</h2>
     <p>今天学习的是css，知道如何制作没有下划线的链接，因此我将所有的链接都变成没有下划线的了，以后可能也不再用下划线了，同时我学习了css的使用方法，比较浅显，有三种使用方法，在这里我就不
                                                                                 一一阐述了，结束。</p>        
-    
+    <li><a href="#">4</a></li>
+                   
     <h1><a id="C11">我的第十一篇日记</a></h1>
     <p>今天早上起来先学html，接着就学英语，感觉英语欠了许多，唉，没办法，每次想学英语时，总是提不起劲来，英语单词好像也有好几天没背了，在大学里想学英语对我来说，真的好难，接着下午我去做了一下<br>
        英语试卷，发现听力错的有点多，我发现大部分听力第一句是关键，如果第一句我没听懂，那后面的基本就是靠蒙了 。</p>
@@ -165,6 +185,8 @@ JavaScript<br>
             </tr>
         </table>
     </p>
+   <li><a href="#">5</a></li>
+                  
 <h1><a id="C14">我的第十四篇日记</a></h1>
 <p>今天稍微学习了一下数字电路，然后做了一下英语试卷，感觉自己有点吃力，单词积累量比较少，唉。</p>
 <h2>html学习</h2>
@@ -180,7 +202,8 @@ JavaScript<br>
 <p>今天上午上了一节数据库课，老师讲了第三章的开头，讲到中间了，我大致能了解，但还是不太深入，我有点为我的数据库担心，感觉平常时候还是要多看一下书，多记一些概念。不然感觉考试没法过。</p>
 <h2>html学习</h2>
 <p>今天学习的是html列表，自己只是学了一个大概。</p>
-
+<li><a href="#">6</a></li>
+               
 <h1><a id="C18">我的第十八篇日记</a></h1>
 <p>今天上午第一节课是线性代数，因为有很多人去当志愿者了，所以没有来上课，老师就并没有往后讲，而是在与我们复习前面所学知识，第二节课是体育课，与同学打了半个小时左右的兵乓球，感觉很好，
     哈哈，下午上的是c语言课，老师与我讲了很多以前没有讲过的细节，感觉很好，但就是下午上课对我来说有点吃力，因为晚上没有早点睡，很容易犯困，真的是没办法解决。晚上举行了迎新晚会，我待在寝室里，
@@ -224,7 +247,9 @@ Username: <input type="text" name="user">
                  <div id="footer" style="background-color:#FFA500;clear:both;text-align:center;">
 版权 © github.com</div>
                  </div>
-
+<li><a href="#">7</a></li>
+  <li><a href="#">»</a></li>
+</ul>
 
   </body>
 </html>
