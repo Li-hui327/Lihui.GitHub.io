@@ -1,246 +1,1233 @@
-<!DOCTYPE html>
-<html>
+<!DOCTYPE HTML>
+<html class="small-scroll-bar no-js bg" lang="zh-cmn-Hans">
 <head>
-<meta charset="utf-8">
-<title>我的博客（Lihui)</title>
-    <style type="text/css">   
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+    <meta charset="UTF-8">
+    <!--IE 8浏览器的页面渲染方式-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+    <!--默认使用极速内核：针对国内浏览器产商-->
+    <meta name="renderer" content="webkit">
+    <!--chrome Android 地址栏颜色-->
+            <meta name="theme-color" content="#3a3f51"/>
     
-    </style>
-</head>    
-<body>    
+    <meta http-equiv="x-dns-prefetch-control" content="on">
+
+    <title>听风博客 - 相逢的人会再相逢</title>
+            <link rel="icon" type="image/ico" href="/favicon.ico">
+        <meta name="description" content="我们这一生很短，我们终将会失去它，所以不妨大胆一点！听风博客个人网站，是记录日常、工作、技术、资源分享的一个网站。" />
+<meta name="keywords" content="typecho,php,blog,听风博客,记录点滴,学习,成长,个人网站,技术,分享,回忆,个人记录,网络技术" />
+<meta name="generator" content="Typecho 1.2/18.10.23" />
+<meta name="template" content="handsome" />
+<link rel="pingback" href="https://www.hewenjie.cn/action/xmlrpc" />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://www.hewenjie.cn/action/xmlrpc?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://www.hewenjie.cn/action/xmlrpc?wlw" />
+<link rel="alternate" type="application/rss+xml" title="指尖小站 &raquo; RSS 2.0" href="https://www.hewenjie.cn/feed/" />
+<link rel="alternate" type="application/rdf+xml" title="指尖小站 &raquo; RSS 1.0" href="https://www.hewenjie.cn/feed/rss/" />
+<link rel="alternate" type="application/atom+xml" title="指尖小站 &raquo; ATOM 1.0" href="https://www.hewenjie.cn/feed/atom/" />
+
+<link rel="amphtml" href="https://www.hewenjie.cn/ampindex">
+
+
     
-    <div id="container" style="width:500px">
+    
+    <script type="text/javascript">
 
-<div id="header" style="background-color:#FFA500;">
-<h1 style="margin-bottom:0; style="font-family:verdana; text-align:center;">我的博客</h1></div>
-    <p>   <a id="A1">顶部</a>    </p>
-<div id="menu" style="background-color:#FFD700;height:300px;width:400px;float:left;">
-<b>菜单</b><br>
-HTML<br>
-CSS<br>
-JavaScript<br>
-    <p>目录</p>
-    <hr />
-    <p> <a href="#C1">日记 1</a>  <a href="#C2">日记 2</a>  <a href="#C3">日记 3</a>  <a href="#C4">日记 4</a> 
-     <a href="#C5">日记 5</a> 
-     <a href="#C6">日记 6</a> 
-     <a href="#C7">日记 7</a> <a href="#C8">日记 8</a> <a href="#C9">日记 9</a> <a href="#C10">日记 10</a> <a href="#C11">日记 11</a> <a href="#C12">日记 12</a>
-    <a href="#C13">日记 13</a> <a href="#C14">日记 14</a> <a href="#C15">日记 15</a> <a href="#C16">日记 16</a> <a href="#C17">日记 17</a> <a href="#C18">日记 18</a>
- <a href="#C19">日记 19</a> <a href="#C20">日记 20</a> <a href="#C21">日记 21</a></p>
-                                                                                                                      </div>
+        window['LocalConst'] = {
+            //base
+            BASE_SCRIPT_URL: 'https://www.hewenjie.cn/usr/themes/handsome/',
+            BLOG_URL: 'https://www.hewenjie.cn/',
+            BLOG_URL_N: 'https://www.hewenjie.cn',
+            STATIC_PATH: 'https://cdn.jsdelivr.net/gh/He-WenJie/Handsome@master/assets/',
+            BLOG_URL_PHP: 'https://www.hewenjie.cn/',
+            VDITOR_CDN: 'https://cdn.jsdelivr.net/npm/vditor@3.4.5',
+            MATHJAX_SVG_CDN: 'https://cdn.jsdelivr.net/npm/mathjax@3.0.5/es5/tex-svg.js',
+            THEME_VERSION: '7.3.12020081501',
+            THEME_VERSION_PRO: '7.3.1',
+
+            //comment
+            COMMENT_NAME_INFO: '必须填写昵称或姓名',
+            COMMENT_EMAIL_INFO: '必须填写电子邮箱地址',
+            COMMENT_EMAIL_LEGAL_INFO: '邮箱地址不合法',
+            COMMENT_CONTENT_INFO: '必须填写评论内容',
+            COMMENT_SUBMIT_ERROR: '提交失败，请重试！',
+            COMMENT_CONTENT_LEGAL_INFO: '提交失败,评论被拦截或者进入审核区域',
+            COMMENT_CONTENT_CHECK_INFO: '评论进入审核区域，请勿重复评论',
+            COMMENT_TITLE: '评论通知',
+
+            //login
+            LOGIN_TITLE: '登录通知',
+            LOGIN_USERNAME_INFO: '必须填写用户名',
+            LOGIN_PASSWORD_INFO: '请填写密码',
+            LOGIN_SUBMIT_ERROR: '登录失败，请重新登录',
+            LOGIN_SUBMIT_INFO: '用户名或者密码错误，请重试',
+            LOGIN_SUBMIT_SUCCESS: '登录成功',
+            CLICK_TO_REFRESH: '点击以刷新页面',
+            LOGOUT_SUCCESS_REFRESH: '退出成功，正在刷新当前页面',
+
+            LOGOUT_ERROR: '退出失败，请重试',
+            LOGOUT_SUCCESS: '退出成功',
+            SUBMIT_PASSWORD_INFO: '密码错误，请重试',
+
+            //comment
+            ChANGYAN_APP_KEY: '',
+            CHANGYAN_CONF: '',
+
+            COMMENT_SYSTEM: '0',
+            COMMENT_SYSTEM_ROOT: '0',
+            COMMENT_SYSTEM_CHANGYAN: '1',
+            COMMENT_SYSTEM_OTHERS: '2',
+            EMOJI: '表情',
+            COMMENT_NEED_EMAIL: '1',
+            COMMENT_REJECT_PLACEHOLDER: '居然什么也不说，哼',
+            COMMENT_PLACEHOLDER: '说点什么吧……',
+
+            //pjax
+            IS_PJAX: '1',
+            IS_PAJX_COMMENT: '1',
+            PJAX_ANIMATE: 'loading-bar',
+            PJAX_TO_TOP: '0',
+            TO_TOP_SPEED: '100',
+
+
+            USER_COMPLETED: {"data":"<!--\u5f69\u8272\u5de6\u4fa7\u680f-->\r\nlet leftHeader=document.querySelectorAll(\"span.nav-icon>svg,span.nav-icon>i\");let leftHeaderColorArr=[\"#FF69B4\",\"#58c7ea\",\"#E066FF\",\"#FF69B4\",\"#FFA54F\",\"#90EE90\",\"#0043ff\",\"#cc00ff\",\"#878787\",\"#A0522D\",\"#FF7256\",\"#FFA500\",\"#8B0000\",\"#7CFC00\",\"#4EEE94\",\"#00FFFF\",\"#EE0000\"];leftHeader.forEach(tag=>{tagsColor=leftHeaderColorArr[Math.floor(Math.random()*leftHeaderColorArr.length)];tag.style.color=tagsColor});  \r\n<!--\u5f69\u8272\u6807\u7b7e\u4e91-->\r\nlet tags = document.querySelectorAll(\"#tag_cloud-2 a\");\r\nlet infos = document.querySelectorAll(\".badge\");\r\nlet colorArr = [\"#428BCA\", \"#AEDCAE\", \"#ECA9A7\", \"#DA99FF\", \"#FFB380\", \"#D9B999\"];\r\ntags.forEach(tag => {\r\n    tagsColor = colorArr[Math.floor(Math.random() * colorArr.length)];\r\n    tag.style.backgroundColor = tagsColor;\r\n});\r\ninfos.forEach(info => {\r\n    infosColor = colorArr[Math.floor(Math.random() * colorArr.length)];\r\n    info.style.backgroundColor = infosColor;\r\n});"},
+
+            //ui
+            OPERATION_NOTICE: '操作通知',
+            SCREENSHOT_BEGIN: '正在生成当前页面截图……',
+            SCREENSHOT_NOTICE: '点击顶部下载按钮保存当前卡片',
+            SCREENSHORT_ERROR: '由于图片跨域原因导致截图失败',
+            SCREENSHORT_SUCCESS: '截图成功',
+
+            //music
+            MUSIC_NOTICE: '播放通知',
+            MUSIC_FAILE: '当前音乐地址无效，自动为您播放下一首',
+            MUSIC_FAILE_END: '当前音乐地址无效',
+            MUSIC_LIST_SUCCESS: '歌单歌曲加载成功',
+
+            //option
+            TOC_TITLE: '文章目录',
+            HEADER_FIX: '固定头部',
+            ASIDE_FIX: '固定导航',
+            ASIDE_FOLDED: '折叠导航',
+            ASIDE_DOCK: '置顶导航',
+            CONTAINER_BOX: '盒子模型',
+            DARK_MODE: '深色模式',
+            DARK_MODE_AUTO: '深色模式（自动）',
+            DARK_MODE_FIXED: '深色模式（固定）',
+            EDITOR_CHOICE: 'origin',
+
+
+            CDN_NAME: '',
+            LAZY_LOAD: '',
+            PAGE_ANIMATE: '',
+            THEME_COLOR: '14',
+            THEME_COLOR_EDIT: 'white-white-white',
+            THEME_HEADER_FIX: '1',
+            THEME_ASIDE_FIX: '1',
+            THEME_ASIDE_FOLDED: '',
+            THEME_ASIDE_DOCK: '',
+            THEME_CONTAINER_BOX: '1',
+            THEME_HIGHLIGHT_CODE: '1',
+            THEME_MATHJAX: '',
+            THEME_TOC: '1',
+            THEME_DARK_MODE: 'auto',
+            THEME_DARK_MODE_VALUE: 'auto',
+            SHOW_SETTING_BUTTON: '1',
+
+            THEME_DARK_HOUR: '18',
+            THEME_LIGHT_HOUR: '6',
+            THUMB_STYLE: 'normal',
+            AUTO_READ_MODE: '',
+
+            //代码高亮
+            CODE_STYLE_LIGHT: 'solarized-light',
+            CODE_STYLE_DARK: 'solarized-dark',
+
+            //other
+            OFF_SCROLL_HEIGHT: '50',
+            SHOW_IMAGE_ALT: '1',
+            USER_LOGIN: '',
+            USE_CACHE: '1',
+            POST_SPEECH: '1',
+        };
+
+        if ('serviceWorker' in navigator) {
+            if (LocalConst.USE_CACHE) {
+                navigator.serviceWorker.register(LocalConst.BLOG_URL + 'sw.min.js?v=7.3.12020081501')
+                    .then(function (reg) {
+
+                    }).catch(function (error) {
+                    console.log('cache failed with ' + error); // registration failed
+                });
+            } else {
+                navigator.serviceWorker.getRegistrations()
+                    .then(function (registrations) {
+                        for (let registration of registrations) {
+                            registration.unregister();
+                            // 清除缓存
+                            window.caches && caches.keys && caches.keys().then(function (keys) {
+                                keys.forEach(function (key) {
+                                    caches.delete(key);
+                                });
+                            });
+                            console.log("unregister success")
+                        }
+                    });
+            }
+        }
+    </script>
+
+
     
 
-<div id="content" style="background-color:#EEEEEE;height:200px;width:1000px;float:left;">
+    <!-- 第三方CDN加载CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
 
-    <h1><a id="C1">我的第一篇日记</a></h1>
-  <p>今天是我第一天学习html，也是我第一次稍微知道怎样用github搭建自己的博客了，不过我还是不太会使用Gridea，哈哈，不过我相信我一定会使用它的，我还需要时间去学，加油努力吧！</p>
-  <p>关于github我知道了几点：1、网页是在pages上发表的；2、默认起始页面是index。</p>
-  <p>我今天一个下午全部用来娱乐了，丝毫没有学习，真的感觉挺遗憾的，我还是没有改掉我爱玩的习惯，我相信我会逐步改变的，哈哈。</p>
-  <p>我今天学习的是菜鸟教程html实例。</p>
-  <p>我今天上了离散数学，老师讲的是第三章：命题逻辑的推理理论，讲到了推理规则。老师顺带着把第一章的习题讲了一下，老师安排28号考前三章内容。</p>
+
+    <!-- 本地css静态资源 -->
+
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/He-WenJie/Handsome@master/assets/css/origin/function.min.css?v=7.3.12020081501" type="text/css"/>
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/gh/He-WenJie/Handsome@master/assets/css/handsome.min.css?v=7.3.12020081501"
+          type="text/css"/>
+
+        
     
-    <h1><a id="C2">我的第二篇日记</a></h1>
-    <p>我想先说一句古诗。</p>
-    <p>千山鸟飞绝，万径人踪灭。孤舟蓑笠翁，独钓寒江雪。</p>
-    <p>我今天学会怎样写html链接，如右所示：        <a href="https://www.runoob.com" style="text-decoration:none;" target="_blank">菜鸟教程</a>    
-    <a href="https://xydh.fun/muxiao" style="text-decoration:none;" target="_blank"> 牧萧的导航</a> 
-               <a href="https://music.163.com" style="text-decoration:none;" target="_blank">网易云音乐</a>
-                          <a href="https://www.youku.com" style="text-decoration:none;" target="_blank">优酷</a> </p>
-    <p>我还学习了html的属性，如下：</p>
-    <p>HTML 元素可以设置属性
-属性可以在元素中添加附加信息
-属性一般描述于开始标签
-        属性总是以名称/值对的形式出现，比如：name="value"。</p>
-    <p>属性值应该始终被包括在引号内。
-
-双引号是最常用的，不过使用单引号也没有问题。
-
-        Remark提示: 在某些个别的情况下，比如属性值本身就含有双引号，那么您必须使用单引号，例如：name='John "ShotGun" Nelson'</p>
-    <p>属性和属性值对大小写不敏感。
-
-不过，万维网联盟在其 HTML 4 推荐标准中推荐小写的属性/属性值。
-
-        而新版本的 (X)HTML 要求使用小写属性。</p>
-    <h2>专业课程学习体会</h2>
-    <p>我今天的课有线性代数，体育，C语言课程实践，verilog，体育没什么好说的，主要说其余三门。</p>
-    <p>线性代数老师已经把第一章讲完了，总的说来，不懂的地方比懂的地方多，解题有很多巧妙的技巧，但我不会用，恕我愚钝，哈哈，不过在上c语言的时候，我已把线性代数的一部分大致弄懂了，
-        虽然花的代价有点大，不过我觉得还行，verilog我感觉自己完全没有听，我在学html，哈哈，我有点三心二意了，这可是不好的习惯。</p>
-    <p>总的来说，我今天感觉自我良好，学习了一些，不过还是有些小遗憾，比如说今天没有学英语，不过还是有所得的。</p>
+    <!--主题组件css文件加载-->
     
-    <h1><a id="C3">我的第三篇日记</a></h1>
-    <p> 我今天只上了一节课，数据库系统概论，全程老师都与我讲概念，我承认老师讲的很好，老师很会举例子，但是我还是有点心不在焉，老师讲的太抽象了，我比较喜欢实际动手操作。</p>
-    <hr />
-    <p>之后我和一个同学又去做了一下verilog，我在做的过程中四处碰壁，做的很不顺利，唉，我觉得自己挺笨拙的，今天说好的要看verilog，结果还是没有看，唉，今天计划要做许多，但是下午连数据库的
-        作业都没有做完，大部分时间用来看电影了，唉😔。</p>
-    <hr />
-    <p>我今天学习的html是定义水平线，也学习了html注释。</p>
-        <!--这是一段-->
-    <hr />
-                  
-                                  
-    <h1><a id="C4">我的第四篇日记</a></h1>
-    <p>今天起床有点晚，到图书馆时已经九点多了，唉，感觉自己挺狼狈的，我今天只是把离散数学和线性代数的作业解决了，然后还是遗留了许多问题，😔😔😔！<br>
-        我今天学习html，学习的是html折行，已经显示出来了，还学习了html文本格式化，如：<b>网抑云</b> <i>网抑云</i> <code>网抑云</code>  还有<sub> 网</sub><sup>抑云</sup>等等。</p>
+    <!--引入英文字体文件-->
+            <link rel="stylesheet preload" href="https://cdn.jsdelivr.net/gh/He-WenJie/Handsome@master/assets/css/features/font.min.css?v=7.3.12020081501" as="style"/>
+    
+    <style type="text/css">
+        
+        html.bg {
+        background: #EFEFEF
+        }
+        .cool-transparent .off-screen+* .app-content-body {
+        background: #EFEFEF
+        }
+@media (max-width:767px){
+    html.bg {
+        background: #EFEFEF
+        }
+        .cool-transparent .off-screen+* .app-content-body {
+        background: #EFEFEF
+        }
+}
+/*底部页脚*/
+.github-badge {
+  display: inline-block;
+  border-radius: 4px;
+  text-shadow: none;
+  font-size: 12px;
+  color: #fff;
+  line-height: 15px;
+  background-color: #abbac3;
+  margin-bottom: 5px
+}
+.github-badge .badge-subject {
+  display: inline-block;
+  background-color: #4d4d4d;
+  padding: 4px 4px 4px 6px;
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px
+}
+.github-badge .badge-value {
+  display: inline-block;
+  padding: 4px 6px 4px 4px;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px
+}
+.github-badge .bg-blue {
+  background-color: #007ec6
+}
+.github-badge .bg-orange {
+  background-color: #ffa500
+}
+.github-badge .bg-red {
+  background-color: #f00
+}
+.github-badge .bg-green {
+  background-color: #3bca6e
+}
+.github-badge .bg-purple {
+  background-color: #ab34e9
+}
+/*优化底部栏*/
+.wrapper {
+  padding: 11px;
+}
+/*文章标题居中*/
+.panel h2{
+    text-align: center; 
+}
+.panel-small h2{
+    text-align: center; 
+}
+.panel-picture h3{
+    text-align: center; 
+}
+.post-item-foot-icon{
+    text-align: center;
+}
+/*文章内打赏图标跳动*/
+.btn-pay {
+    animation: star 0.5s ease-in-out infinite alternate;
+}
+
+@keyframes star {
+    from {
+        transform: scale(1);
+    }
+
+    to {
+        transform: scale(1.1);
+    }
+}
+/* 右侧列表导航栏图标颜色 */
+.sidebar-icon svg.feather.feather-thumbs-up{color: #ff0000;}
+.sidebar-icon svg.feather.feather-message-square{color:#495dc3;}
+.sidebar-icon svg.feather.feather-gift{color:#52DE97;}#aside .wrapper:hover {
+	background: url(https://cdn.jsdelivr.net/gh/He-WenJie/Handsome@master/assets/img/snow.gif);
+	background-size: cover;
+	color: #999;
+}    </style>
+
+    <!--全站jquery-->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@2.2.4/dist/jquery.min.js"></script>
+
+    <!--网站统计代码-->
+    <script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?cfa689adf568d7830785be181f9835a7";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+
+</head>
+
+<body id="body" class="fix-padding">
+
+
+<!-- aside -->
   
-    <h1><a id="C5">我的第五篇日记</a></h1>
-    <p>今天学习的是html超链接，好像我开始学过，现在再学习一下，在以往的基础上加深了一下，今天学习的是target属性，如：
-    </p> <a href="https://music.163.com" style="text-decoration:none;" target="_blank">网抑云音乐</a>
-    <hr />
-    <p>当你点击网抑云音乐时，它会弹出一个新窗口，而不是直接跳转，怎么样，挺神奇吧，我也觉得挺神奇的。不过，我今天还是有失去的，比如说我打了三个多小时的英雄联盟，
-    离散数学没有复习，然而明天就要进行一次小小的测验，数据库作业也没有做完，总的来说，挺心累的，java项目将近一个月没有复习巩固了，一切都还在路上，唉😔！继续努力吧</p>
-    <hr />
+  <div id="alllayout" class="app app-aside-fix container app-header-fixed ">  <!-- headnav -->
+  <header id="header" class="app-header navbar box-shadow-bottom-lg" role="menu">
+    <!-- navbar header（交集处） -->
+    <div class="text-ellipsis navbar-header bg-white">
+    <button class="pull-right visible-xs" ui-toggle-class="show animated animated-lento fadeIn" target=".navbar-collapse">
+        <span class="menu-icons"><i data-feather="search"></i></span>
+    </button>
+    <button class="pull-left visible-xs" ui-toggle-class="off-screen animated" target=".app-aside" ui-scroll="app">
+        <span class="menu-icons"><i data-feather="menu"></i></span>
+    </button>
+    <!-- brand -->
+    <a href="https://www.hewenjie.cn/" class="navbar-brand text-lt">
+        <span id="navbar-brand-day">
+                                                <i class="fontello fontello-home"></i>
+                            <span class="hidden-folded m-l-xs">指尖小站</span>
+                    </span>
+            </a>
+    <!-- / brand -->
+    </div>
+    <!-- / navbar header -->
+
+    <!-- navbar collapse（顶部导航栏） -->
+    <div class="collapse pos-rlt navbar-collapse bg-white">
+    <!-- statitic info-->
+        <ul class="nav navbar-nav hidden-sm">
+        <li class="dropdown pos-stc">
+            <a id="statistic_pane" data-status="false" href="#" data-toggle="dropdown" class="dropdown-toggle feathericons dropdown-toggle"
+               aria-expanded="false">
+                <i data-feather="pie-chart"></i>
+                <span class="caret"></span>
+            </a>
+            <div class="dropdown-menu wrapper w-full bg-white">
+                <div class="row">
+                    <div class="col-sm-8 b-l b-light">
+                        <div class="m-l-xs m-t-xs m-b-sm font-bold">动态日历<span class="info-icons"><i
+                                        data-feather="info"
+                                                                                  data-toggle="tooltip" title="统计近10个月的文章和作者评论数目"></i>
+                            </span></div>
+                        <div class="text-center">
+                            <nav class="loading-echart text-center m-t-lg m-b-lg">
+                                <p class="infinite-scroll-request"><i class="animate-spin fontello fontello-refresh"></i>Loading...</p>
+                            </nav>
+                            <div id="post-calendar" class="top-echart hide"></div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4 b-l b-light">
+                        <div class="m-l-xs m-t-xs m-b-sm font-bold">分类雷达图</div>
+                        <div class="text-center">
+                            <nav class="loading-echart text-center m-t-lg m-b-lg">
+                                <p class="infinite-scroll-request"><i class="animate-spin fontello fontello-refresh"></i>Loading...</p>
+                            </nav>
+                            <div id="category-radar" class="top-echart hide"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-4 b-l b-light">
+                        <div class="m-l-xs m-t-xs m-b-sm font-bold">发布统计图</div>
+                        <div class="text-center">
+                            <nav class="loading-echart text-center m-t-lg m-b-lg">
+                                <p class="infinite-scroll-request"><i class="animate-spin fontello fontello-refresh"></i>Loading...</p>
+                            </nav>
+                            <div id="posts-chart" class="top-echart hide"></div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4 b-l b-light">
+                        <div class="m-l-xs m-t-xs m-b-sm font-bold">分类统计图</div>
+                        <div class="text-center">
+                            <nav class="loading-echart text-center m-t-lg m-b-lg">
+                                <p class="infinite-scroll-request"><i class="animate-spin fontello fontello-refresh"></i>Loading...</p>
+                            </nav>
+                            <div id="categories-chart" class="top-echart hide"></div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4 b-l b-light">
+                        <div class="m-l-xs m-t-xs m-b-sm font-bold">标签统计图</div>
+                        <div class="text-center">
+                            <nav class="loading-echart text-center m-t-lg m-b-lg">
+                                <p class="infinite-scroll-request"><i class="animate-spin fontello fontello-refresh"></i>Loading...</p>
+                            </nav>
+                            <div id="tags-chart" class="top-echart hide"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </li>
+    </ul>
     
-    <h1><a id="C6">我的第六篇日记</a></h1>
-    <p>今天第一节课是离散数学，老师进行了一次课堂小测验，我自我感觉良好，老师已经讲到第四章第二节了，老师上课速度挺快的，可能是最开始接触的是比较容易理解的吧，到后面可能就越来越难了。
-        第二节是线性代数，老师讲的内容不多，但对我来说，我有些难以理解，可能是书还没吃透，好像我一直到现在都没好好的看一下书，唉，怪我。</p>
-    <hr />
-    <p>今天第三节课是毛概，不得不说，老师的要求是真的多，我有点无语，老师要我们的ppt做的出众，做的出彩，对我这个菜鸟来说，有点吃力。<hr /> <br>
-    今天我看了一下我的名次，在我们班排倒数了，我唯一的遗憾就是我的电路挂科了，所以成绩上不去，今天开了一个动员大会，就是希望大家踊跃报名参加拔尖生选拔，可是我没有那个资格，因为
-    我有不及格的成绩。😔😔😔！<hr /> </p>
-    <h2>html学习</h2>
-    <p>我学习的是如何跳出框架，如：<a href="https://music.163.com" style="text-decoration:none;" target="_top">网易云</a> 
-        以及发送邮件<a href="mailto:muxiaolin2@789404.onmicrosoft.com?Subject=Hello%20again" style="text-decoration:none;" target="_top">发送邮件</a> </p>
-    
-                   
-    <h1><a id="C7">我的第七篇日记</a></h1>
-    <p>我今天上了一天的课，先是数据库，老师基本与我讲完第二章了，我感觉还是有点难度，再是verilog，老师没有讲，而是要我们直接做lab4和lab5，我经过了之前的练习之后，感觉比较熟练
-    ，所以我做的比较快，但是还是赶不上别人的速度，有人在一个小时内就做好了，而我还需要一个多小时的时间去做，这还需要同学的帮忙，我虽然可以照着老师的做出来，但是有些原理我还是不
-    懂，只知其然，但不知其所以然，唉，总的来说，我还是不会。下午第一节课是数字电路，由于昨晚睡得比较晚，这节课我是在迷迷糊糊中度过的，挺困的，不过我还是听了讲的，第二节课我感觉
-    老师讲的很到位，但是我不太会做题，真的很奇怪，可能是我书没有看太仔细的问题，这需要花些功夫来看书了。总结下来，我发现我需要学习的还有很多，我仔细想了一下，只有我不玩游戏，不
-    看电影，才能把它做好，不然我会很吃力，但我感觉我挺难做到的，但是，不积硅步，无以至千里；不积小流，无以成江海。学习重在积累，但是也要面对现实，不能好高骛远，需要脚踏实地。</p>
-    <hr />
-    <h2>html学习</h2>
-    <p>我学习了一下图片链接，如图示： <img src="https://pic.downk.cc/item/5f74452f160a154a67c5a5f3.jpg">  </p>
-    
-    <h1><a id="C8">我的第八篇日记</a></h1>
-    <p>今天上午上了两节课，第一节是离散数学，感觉老师已经把离散数学第四章讲完了，接踵而至的就是作业了，老师很早就公布了作业，但是我还没有看过，哈哈。<br>
-    第二节课是数字电路，我认为老师讲的还行，只是内容感觉很深奥了，因为涉及到要根据表达式画数字电路图，准确的说，我不会画，老师自己也承认题目出的难的话，是很难想出来的，不过我还是必须要把它学好。
-    </p>
-    <h2>html学习</h2>
-    <p>今天学习html头部，title是定义文档的标题，base是定义所有链接的URL，然后就是图片，补一张好看的壁纸：<img src="https://pic.downk.cc/item/5f506bc6160a154a671edd0a.jpg"> </p>
-    
-    <h1><a id="C9">我的第九篇日记</a></h1>
-    <p>今天是国庆节以及中秋节，我们已然放假，我上午去图书馆学习了一下，下午便回宿舍打游戏，哈哈，我到现在依然改变不了喜欢玩游戏的习惯，结束。</p>
-    <h2>html学习</h2>
-    <p>今天依然学习html头部，学习了html link元素、style元素和meta元素，知道了可以在style中直接添加样式来渲染html文档，已经显示出来了。</p>
-    
-    <h1><a id="C10">我的第十篇日记</a></h1>
-    <p>分享几个我比较喜欢的动漫图片网站，我觉得还行，只是美女比较多，哈哈！<a href="https://konachan.net/" style="text-decoration:none;" target="_blank">K站</a> 
-        <a href="https://www.enterdesk.com/" style="text-decoration:none;" target="_blank">回车桌面</a>
-        <a href="https://bz.zzzmh.cn/" style="text-decoration:none;" target="_blank">极简壁纸</a> 这些都是我比较喜欢的壁纸网站 <br> 再推荐一个我喜欢的音乐网站，界面挺好的，
-        <a href="http://music.junyuewl.com/" style="text-decoration:none;" target="_blank">音乐狂</a> <br>
-    再附上一个精美的壁纸：<img src="https://pic.downk.cc/item/5f77d198160a154a67ea31a7.jpg"> </p>
-    <h2>html学习</h2>
-    <p>今天学习的是css，知道如何制作没有下划线的链接，因此我将所有的链接都变成没有下划线的了，以后可能也不再用下划线了，同时我学习了css的使用方法，比较浅显，有三种使用方法，在这里我就不
-                                                                                一一阐述了，结束。</p>        
-    
-                   
-    <h1><a id="C11">我的第十一篇日记</a></h1>
-    <p>今天早上起来先学html，接着就学英语，感觉英语欠了许多，唉，没办法，每次想学英语时，总是提不起劲来，英语单词好像也有好几天没背了，在大学里想学英语对我来说，真的好难，接着下午我去做了一下<br>
-       英语试卷，发现听力错的有点多，我发现大部分听力第一句是关键，如果第一句我没听懂，那后面的基本就是靠蒙了 。</p>
-    <h2>html学习</h2>
-    <p>今天学习的是css样式，背景颜色属性和早期背景颜色属性稍微有点了解，然后学习的是html样式实例-字体，字体颜色，以及字体大小。再附上一张精美的图：<img src="https://pic.downk.cc/item/5f7a8787160a154a678f5b8e.jpg">
-    </p>
-    
-    <h1><a id="C12">我的第十二篇日记</a></h1>
-    <p>今天一天没有什么特别的，像往常一样。</p>
-    <h2>html学习</h2>
-    <p>学习了html文本对齐方式、内部样式表以及外部样式，这些都还属于css的范畴，接下来学习的是图像，先附上几张精美的图：
-        <img src="https://e.im5i.com/2020/10/06/3116da6228d2e6300bdb3fbf7b3dcc41.jpg" alt="3116da6228d2e6300bdb3fbf7b3dcc41.jpg" border="0" />
-        <img src="https://e.im5i.com/2020/10/06/2.jpg" alt="2.jpg" border="0" />
-        <a href="https://macimg.com/image/Kvoo"><img src="https://e.im5i.com/2020/10/06/3.jpg" alt="3.jpg" border="0" /></a>
-        <a href="https://macimg.com/image/KBLW"><img src="https://e.im5i.com/2020/10/06/4.jpg" alt="4.jpg" border="0" /></a>
-        <a href="https://macimg.com/image/KuFx"><img src="https://e.im5i.com/2020/10/06/5.jpg" alt="5.jpg" border="0" /></a>
-    
-    <h1><a id="C13">我的第十三篇日记</a></h1>
-    <p>今天学习的是英语，因为今天有一个英语作业截止，所以今天一天都待在寝室里，我本来打算去理发的，但是学校理发一次38元，感觉血亏，外面才只要25，所以我打算明天去理发。</p>
-    <h2>html学习</h2>
-    <p>今天继续学习的是html图像，以及html表格，我试着做了表格，如表：
-        <table border="1" cellpadding="10">
-            <tr>
-                <th>影视</th>   <th>音乐</th>
-            </tr>
-            <tr>
-                <td><a href="https://www.pianku.tv/" style="text-decoration:none;" target="_blank">片库</a></td>  
-                <td><a href="http://music.junyuewl.com/" style="text-decoration:none;" target="_blank">音乐狂</a><td>
-            </tr>
-            <tr>
-                <td><a href="http://www.nangua5.com/" style="text-decoration:none;" target="_blank">南瓜影视</a></td>
-                <td><a href="http://music.y444.cn/" style="text-decoration:none;" target="_blank">下歌吧</a></td>
-            </tr>
-        </table>
-    </p>
-   
+    <!-- search form -->
+
+    <form id="searchform1" class="searchform navbar-form navbar-form-sm navbar-left shift" method="post"
+          role="search">
+        <div class="form-group">
+            <div class="input-group rounded bg-white-pure box-shadow-wrap-normal">
+                <input  autocomplete="off" id="search_input" type="search" name="s" class="transparent rounded form-control input-sm no-borders padder" required placeholder="输入关键词搜索…">
+                <!--搜索提示-->
+                <ul id="search_tips_drop" class="small-scroll-bar dropdown-menu hide" style="display: block;top: 
+                30px; left: 0px;">
+                </ul>
+                <span id="search_submit" class="transparent input-group-btn">
+                  <button  type="submit" class="transparent btn btn-sm">
+                      <span class="feathericons" id="icon-search"><i data-feather="search"></i></span>
+                      <span class="feathericons animate-spin  hide" id="spin-search"><i
+                                  data-feather="loader"></i></span>
+                      <!--                      <i class="fontello fontello-search" id="icon-search"></i>-->
+                      <!--                      <i class="animate-spin  fontello fontello-spinner hide" id="spin-search"></i>-->
+                  </button>
+              </span>
+            </div>
+        </div>
+    </form>
+    <a href="" style="display: none" id="searchUrl"></a>
+    <!-- / search form -->
+        <ul class="nav navbar-nav navbar-right">
+                    <li class="music-box hidden-xs hidden-sm">
+                <div id="skPlayer"></div>
+            </li>
+            <li class="dropdown "><a class="skPlayer-list-switch dropdown-toggle
+            feathericons"><i
+                            data-feather="disc"></i><span class="visible-xs-inline"></span></a></li>
+                                    <!--闲言碎语-->
+            <li class="dropdown">
+                <a href="#" data-toggle="dropdown" class="feathericons dropdown-toggle">
+                    <i data-feather="twitch"></i>
+                    <span class="visible-xs-inline">
+              闲言碎语              </span>
+                    <span class="badge badge-sm up bg-danger pull-right-xs"></span>
+                </a>
+                <!-- dropdown -->
+                <div class="dropdown-menu w-xl animated fadeInUp">
+                    <div class="panel bg-white">
+                        <div class="panel-heading b-light bg-light">
+                            <strong>
+                                闲言碎语                            </strong>
+                        </div>
+                        <div class="list-group" id="smallRecording">
+                                                    </div>
+                    </div>
+                </div>
+            </li>
+            <!--/闲言碎语-->
+                            <!--登录管理-->
+            <li class="dropdown" id="easyLogin">
+                <a onclick="return false" data-toggle="dropdown" class="dropdown-toggle clear" data-toggle="dropdown">
+                                            <span class="feathericons"><i data-feather="key"></i></span>
+                                        <b class="caret"></b><!--下三角符号-->
+                </a>
+                <!-- dropdown(已经登录) -->
+                                    <div class="dropdown-menu w-lg wrapper bg-white animated fadeIn" aria-labelledby="navbar-login-dropdown">
+                        <form id="Login_form" action="https://www.hewenjie.cn/index.php/action/login?_=360aac1ae04cb3219244d077e034c645" method="post">
+                            <div class="form-group">
+                                <label for="navbar-login-user">用户名</label>
+                                <input type="text" name="name" id="navbar-login-user" class="form-control" placeholder="用户名或电子邮箱"></div>
+                            <div class="form-group">
+                                <label for="navbar-login-password">密码</label>
+                                <input autocomplete type="password" name="password" id="navbar-login-password"
+                                       class="form-control" placeholder="密码"></div>
+                            <button style="width: 100%" type="submit" id="login-submit" name ="submitLogin" class="btn-rounded box-shadow-wrap-lg btn-gd-primary padder-lg">
+                                <span>登录</span>
+                                <span class="text-active">登录中...</span>
+                                <span class="banLogin_text">刷新页面后登录</span>
+                                <i class="animate-spin  fontello fontello-spinner hide" id="spin-login"></i>
+                                <i class="animate-spin fontello fontello-refresh hide" id="ban-login"></i>
+                            </button>
+
+
+<!--                            -->
+                            <input type="hidden" name="referer" value="https://www.hewenjie.cn/"></form>
+                    </div>
+                            </li>
+            <!--/登录管理-->
+            </ul>
+    </div>
+    <!-- / navbar collapse -->
+</header>
+  <!-- / headnav -->
+
+  <!--选择侧边栏的颜色-->
+  <aside id="aside" class="app-aside hidden-xs bg-white">  <!--<aside>-->
+        <div class="aside-wrap" layout="column">
+        <div class="navi-wrap scroll-y scroll-hide" flex>
+          <!-- user -->
+          <div class="clearfix hidden-xs text-center hide  show" id="aside-user">
+            <div class="dropdown wrapper ">
+                <div ui-nav>
+                          <a href="https://www.hewenjie.cn/cross.html">
+                            <span class="thumb-lg w-auto-folded avatar m-t-sm  ">
+                  <img src="https://i.loli.net/2020/07/25/ocu6N4WLStbJmeT.jpg" class="img-full img-circle normal-shadow">
+                </span>
+              </a>
+                </div>
+              <a href="#" data-toggle="dropdown" class="dropdown-toggle hidden-folded  ">
+                <span class="clear">
+                  <span class="block m-t-sm">
+                    <strong class="font-bold text-lt">Mr.He</strong>
+                    <b class="caret"></b>
+                  </span>
+                  <span class="text-muted text-xs block"></span>
+                </span>
+              </a>
+              <!-- dropdown -->
+              <ul class="dropdown-menu animated fadeInRight w hidden-folded no-padder">
+                <li class="wrapper b-b m-b-sm bg-info m-n">
+                  <span class="arrow top hidden-folded arrow-info"></span>
+                  <div>
+                                                <p>晚上好，注意早点休息</p>
+                                  </div>
+                  <div class="progress progress-xs m-b-none dker">
+                    <div class="progress-bar bg-white" data-toggle="tooltip" data-original-title="时间已经度过95.83%" style="width: 95.83%"></div>
+                  </div>
+                </li>
+              </ul>
+              <!-- / dropdown -->
+            </div>
+          </div>
+          <!-- / user -->
+
+          <!-- nav -->
+          <nav ui-nav class="navi clearfix">
+            <ul class="nav">
+             <!--index-->
+                <div class="line dk hidden-folded"></div>
+                <li class="hidden-folded padder m-t m-b-sm text-muted text-xs">
+                <span>导航</span>
+              </li>
+                                          <!--主页-->
+              <li>
+                <a href="https://www.hewenjie.cn/" class="auto">
+                    <span class="nav-icon"><i data-feather="home"></i></span>
+                    <span>首页</span>
+                </a>
+              </li>
+              <!-- /主页 -->
+                                                          <li class="line dk"></li>
+			<!--Components-->
+              <li class="hidden-folded padder m-t m-b-sm text-muted text-xs">
+                <span>组成</span>
+              </li>
+              <!--分类category-->
+                              <li >
+                <a class="auto">
+                  <span class="pull-right text-muted">
+                    <i class="fontello icon-fw fontello-angle-right text"></i>
+                    <i class="fontello icon-fw fontello-angle-down text-active"></i>
+                  </span>
+<!--                  <i class="glyphicon glyphicon-th"></i>-->
+                    <span class="nav-icon"><i data-feather="grid"></i></span>
+
+                    <span>分类</span>
+                </a>
+                <ul class="nav nav-sub dk">
+                  <li class="nav-sub-header">
+                    <a>
+                      <span>分类</span>
+                    </a>
+                  </li>
+                  <!--循环输出分类-->
+
+                    <li class="category-level-0 category-parent"><a  href="https://www.hewenjie.cn/daily/"><b class="badge pull-right">1</b>日常生活</a></li><li class="category-level-0 category-parent"><a  href="https://www.hewenjie.cn/source/"><b class="badge pull-right">6</b>程序源码</a></li><li class="category-level-0 category-parent"><a  href="https://www.hewenjie.cn/course/"><b class="badge pull-right">3</b>各类教程</a></li><li class="category-level-0 category-parent"><a  href="https://www.hewenjie.cn/software/"><b class="badge pull-right">4</b>实用软件</a></li><li class="category-level-0 category-parent"><a  href="https://www.hewenjie.cn/image/"><b class="badge pull-right">0</b>图集相册</a></li><li class="category-level-0 category-parent"><a  href="https://www.hewenjie.cn/experience/"><b class="badge pull-right">0</b>评测体验</a></li><li class="category-level-0 category-parent"><a  href="https://www.hewenjie.cn/promotions/"><b class="badge pull-right">7</b>活动线报</a></li><li class="category-level-0 category-parent"><a  href="https://www.hewenjie.cn/special/"><b class="badge pull-right">6</b>特殊教育</a></li><li class="category-level-0 category-parent"><a  href="https://www.hewenjie.cn/early/"><b class="badge pull-right">4</b>早期教育</a></li><li class="category-level-0 category-parent"><a  href="https://www.hewenjie.cn/briefing/"><b class="badge pull-right">59</b>每天60秒</a></li>                    
+                    <!--/循环输出分类-->
+
+                </ul>
+              </li>
+              <!--独立页面pages-->
+              <li>
+                <a class="auto">
+                  <span class="pull-right text-muted">
+                    <i class="fontello icon-fw fontello-angle-right text"></i>
+                    <i class="fontello icon-fw fontello-angle-down text-active"></i>
+                  </span>
+                    <span class="nav-icon"><i data-feather="file"></i></span>
+                  <span>页面</span>
+                </a>
+                <ul class="nav nav-sub dk">
+                  <li class="nav-sub-header">
+                    <a data-no-instant>
+                      <span>页面</span>
+                    </a>
+                  </li><!--这个字段不会被显示出来-->
+                  <!--循环输出独立页面-->
+                                                                                   <li><a href="https://www.hewenjie.cn/about.html"><span>关于小站</span></a></li>
+                                                                 <li><a href="https://www.hewenjie.cn/cross.html"><span>时光记忆</span></a></li>
+                                                                 <li><a href="https://www.hewenjie.cn/loves.html"><span>阅读观影</span></a></li>
+                                                                 <li><a href="https://www.hewenjie.cn/archives.html"><span>文章归档</span></a></li>
+                                                                 <li><a href="https://www.hewenjie.cn/project.html"><span>代码仓库</span></a></li>
+                                                                 <li><a href="https://www.hewenjie.cn/msg.html"><span>留言吐槽</span></a></li>
+                                                                 <li><a href="https://www.hewenjie.cn/links.html"><span>友情链接</span></a></li>
+                                   </ul>
+              </li>
+              <!--友情链接-->
+              <li>
+                <a class="auto">
+                  <span class="pull-right text-muted">
+                    <i class="fontello icon-fw fontello-angle-right text"></i>
+                    <i class="fontello icon-fw fontello-angle-down text-active"></i>
+                  </span>
+                    <span class="nav-icon"><i data-feather="user"></i></span>
+                  <span>友链</span>
+                </a>
+                <ul class="nav nav-sub dk">
+                  <li class="nav-sub-header">
+                    <a data-no-instant>
+                      <span>友链</span>
+                    </a>
+                  </li>
+                  <!--使用links插件，输出全站友链-->
+                                 </ul>
+              </li>
+                            </ul>
+          </nav>
+          <!-- nav -->
+        </div>
+          <!--end of .navi-wrap-->
+          <!--left_footer-->
+                    <div id="left_footer" class="footer wrapper-xs text-center nav-xs lt">
                   
-<h1><a id="C14">我的第十四篇日记</a></h1>
-<p>今天稍微学习了一下数字电路，然后做了一下英语试卷，感觉自己有点吃力，单词积累量比较少，唉。</p>
-<h2>html学习</h2>
-<p>今天继续学习的是html表格，已经显示在上图所示的表格中了。</p>
+                                        <div class="col-xs-4 no-padder">
+                          <a target="_blank" class="tinav" href="https://www.hewenjie.cn/admin/" title="" data-toggle="tooltip" data-placement="top" data-original-title="后台管理">
+                              <span class="left-bottom-icons block"><i data-feather="settings"></i></span>
+                              <small class="text-muted">管理</small>
+                          </a>
+                      </div>
+                                    <div class="col-xs-4 no-padder">
+                      <a target="_blank" class="tinav" href="https://www.hewenjie.cn/feed/" title="" data-toggle="tooltip" data-placement="top" data-original-title="文章RSS地址">
+                          <span class="left-bottom-icons block"><i data-feather="rss"></i></span>
+                          <small class="text-muted">文章</small>
+                      </a>
+                  </div>
+                  <div class="col-xs-4 no-padder">
+                      <a target="_blank" href="https://www.hewenjie.cn/feed/comments/" title="" data-toggle="tooltip" data-placement="top" data-original-title="评论RSS地址">
+                          <span class="left-bottom-icons block"><i data-feather="message-square"></i></span>
+                          <small class="text-muted">评论</small>
+                      </a>
+                  </div>
+          </div>
+          
+      </div><!--.aside-wrap-->
+  </aside>
+<!-- content -->
+<div id="content" class="app-content">
+    <!--loading animate-->
+    
 
-<h1><a id="C15">我的第十五篇日记</a></h1>
-<p>感觉今天什么也没有做，基本上玩了一天。</p>
 
-<h1><a id="C16">我的第十六篇日记</a></h1>
-<p>今天状态和昨天差不多，不过比昨天稍微好一点吧，也只是一点点罢了。</p>
 
-<h1><a id="C17">我的第十七篇日记</a></h1>
-<p>今天上午上了一节数据库课，老师讲了第三章的开头，讲到中间了，我大致能了解，但还是不太深入，我有点为我的数据库担心，感觉平常时候还是要多看一下书，多记一些概念。不然感觉考试没法过。</p>
-<h2>html学习</h2>
-<p>今天学习的是html列表，自己只是学了一个大概。</p>
 
-               
-<h1><a id="C18">我的第十八篇日记</a></h1>
-<p>今天上午第一节课是线性代数，因为有很多人去当志愿者了，所以没有来上课，老师就并没有往后讲，而是在与我们复习前面所学知识，第二节课是体育课，与同学打了半个小时左右的兵乓球，感觉很好，
-    哈哈，下午上的是c语言课，老师与我讲了很多以前没有讲过的细节，感觉很好，但就是下午上课对我来说有点吃力，因为晚上没有早点睡，很容易犯困，真的是没办法解决。晚上举行了迎新晚会，我待在寝室里，
-    并没有去看，应该有很多人会去看吧。 </p>
-<h2>html学习</h2>
-<p>今天学习的是html区块，即div和span，还学习了html网页布局，学习了许多，但就是不熟练，也不精通，不经常复习的话，很容易忘记。</p>
-               
-<h1><a id="C19">我的第十九篇日记</a></h1>
-<p>今天休息，一早准备去图书馆学习的，结果忘记带学生卡了，因此不能进去，所以我去五教学习了一下，发现有点吵，最后绕着回来了，不过我想我还是会去图书馆的，所以我下午又去了图书馆，学习的是
-   数字电路和verilog，想学必然导致一个结果，你一定可以学会。</p>
-<h2>html学习</h2>
-<p>今天学习的是html表单输入，如图示：<form action="">
-First name: <input type="text" name="firstname"><br>
-Last name: <input type="text" name="lastname">
-</form>
-</p>      
-<h1><a id="C20">我的第二十篇日记</a></h1>
-<p>今天是星期一，我第一节课是离散数学，第二节是线性代数，晚自习是毛概，总的来说，今天的课还好，但是需要掌握的内容还很多。</p>
-<h2>html学习</h2>
-<p>今天继续学习html表单，如图：密码字段：<form>
-Password: <input type="password" name="pwd">
-</form>
-单选按钮：                                           <form>
-<input type="radio" name="sex" value="male">Man<br>
-<input type="radio" name="sex" value="female">Woman
-</form>
-    提交按钮：                                         <form name="input" action="html_form_action.php" method="get">
-Username: <input type="text" name="user">
-<input type="submit" value="Submit">
-</form>
-</p>
-<h1><a id="C21">我的第二十一篇日记</a></h1>
-<p>我想先分享我以前所学的java程序，虽然我到现在几乎一个多月没学java了，但是我不会放弃的，我一定要把它学会，
-  <a href="https://github.com/Li-hui327/Lihui.GitHub.io/blob/master/java程序设计1" style="text-decoration:none;" target="_blank">java程序设计</a> <br>
-  今天上的是数据库，verilog，数字电路，网络与通信，感觉今天上课有点吃力，主要是对老师所讲的内容没有跟上进度，思考还停留在前面所学，因此现在学习起来对我来说有点困难，唉，压力
-  还挺大的。</p>
-<h2>html学习</h2>
-<p>今天有点困，便没有学习html，早早便睡了。</p>
- 
-<h1>我的第二十二篇日记</h1>
-<p>今天只有上午有课，第一节是离散数学，老师与我讲完第五章了，下周将会来个考试，第二节是数字电路，说实话，上数字电路对我来说有点困难，因为前面所学不太稳，后面就有点困难。<br>
-下午最后一节是数字电路实验课，开始进展还算顺利，之后连接电路就不行了，因为我没有看图，而是按照自己想当然的来做，所以花了很多时间没有做出来，最后是朋友帮我完成的。  </p>    
-<h2>html学习</h2>
-<p>今天应该算是把html学习完了吧，我是这么觉得的，但是我应该还存在许多漏洞，不得不说，语言学习是牵一发而动全身，只学一个是不行的，要把与其相关的都要学习一下，你才懂什么是什么，不然<br>
-就像现在的我一样，什么都不懂。</p>                                                                                                                            
-                                                                                                                            
-<p> <a href="#A1">回到顶部</a>    </p>
-                 <div id="footer" style="background-color:#FFA500;clear:both;text-align:center;">
-版权 © github.com</div>
-                 </div>
 
+<!-- / aside -->
+
+<!-- <div id="content" class="app-content"> -->
+<a class="off-screen-toggle hide"></a>
+<main class="app-content-body ">
+    <div class="hbox hbox-auto-xs hbox-auto-sm">
+        <div class="col center-part">
+                        <header class="bg-light lter wrapper-md">
+                <h1 class="m-n font-thin text-black l-h">听风博客</h1>
+                <small class="text-muted letterspacing indexWords">加载中……<script>
+                         $.ajax({
+                            type: 'Get',
+                            url: 'https://v1.hitokoto.cn/',
+                            success: function(data) {
+//data = JSON.parse(data);
+                               var hitokoto = data.hitokoto;
+                              $('.indexWords').text(hitokoto);
+                            }
+                         });
+</script></small>
+            </header>
+            <div class="wrapper-md skt-loading" id="post-panel">
+
+                                <!--首页输出文章-->
+
+                <div class="blog-post"><div class="single-post panel">
+    <div class="index-post-img">
+        <a href="https://www.hewenjie.cn/1.html">
+            <div class="item-thumb lazy"  style="background-image: url(https://cdn.jsdelivr.net/gh/He-WenJie/Handsome@master/assets/img/sj/1.jpg)">
+</div>
+           
+        </a>
+    </div><div class="post-meta wrapper-lg">    <h2 class="m-t-none text-ellipsis index-post-title text-title"><a 
+    href="https://www.hewenjie.cn/1.html"><span class="label text-sm bg-danger pull-left m-t-xs m-r" style="margin-top:  2px;">置顶</span>欢迎光临听风博客</a></h2><p class="summary l-h-2x text-muted">当你看到这文章时，说明我的博客已经开始 有时间的话就更新哟～</p><div class="line line-lg b-b b-light"></div>
+<div class="text-muted post-item-foot-icon text-ellipsis list-inline">
+<li>
+<span class="m-r-sm right-small-icons"><i data-feather="user"></i></span><a href="https://www.hewenjie.cn/author/1/">Mr.He</a></li>
+
+<li><span class="right-small-icons m-r-sm"><i data-feather="clock"></i></span>2020 年 08 月 17 日</li><li><span class="right-small-icons m-r-sm"><i 
+data-feather="message-square"></i></span><a href="https://www.hewenjie.cn/1.html#comments">2 条评论</a></li></div><!--text-muted-->
+</div><!--post-meta wrapper-lg-->
+</div><!--panel/panel-small-->
+<div class="panel-small single-post box-shadow-wrap-normal">
+    <div class="index-post-img-small post-feature index-img-small">
+        <a href="https://www.hewenjie.cn/93.html">
+            <div class="item-thumb-small lazy"  style="background-image: url(https://i.loli.net/2020/10/14/5CHwWuxsIJYtAO3.png)"></div>
+        </a>
+    </div><div class="post-meta wrapper-lg">    <h2 class="m-t-none text-ellipsis index-post-title text-title"><a 
+    href="https://www.hewenjie.cn/93.html">10月14日，星期三，在这里每天60秒读懂世界！</a></h2><p class="summary l-h-2x text-muted">1、刑事责任年龄拟调整：12至14岁犯故意杀人、故意伤害罪，致人死亡，情节恶劣的应当负刑责，奸淫不满10周岁幼女将适用更重刑罚；2、中央：不得下达升学指标...</p><div class="line line-lg b-b b-light"></div>
+<div class="text-muted post-item-foot-icon text-ellipsis list-inline">
+<li>
+<span class="m-r-sm right-small-icons"><i data-feather="user"></i></span><a href="https://www.hewenjie.cn/author/1/">Mr.He</a></li>
+
+<li><span class="right-small-icons m-r-sm"><i data-feather="clock"></i></span>2020 年 10 月 14 日</li><li><span class="right-small-icons m-r-sm"><i 
+data-feather="message-square"></i></span><a href="https://www.hewenjie.cn/93.html#comments">暂无评论</a></li></div><!--text-muted-->
+</div><!--post-meta wrapper-lg-->
+</div><!--panel/panel-small-->
+<div class="single-post panel">
+    <div class="index-post-img">
+        <a href="https://www.hewenjie.cn/92.html">
+            <div class="item-thumb lazy"  style="background-image: url(https://i.loli.net/2020/10/13/LIAnV4GluqKmphr.png)">
+</div>
+           
+        </a>
+    </div><div class="post-meta wrapper-lg">    <h2 class="m-t-none text-ellipsis index-post-title text-title"><a 
+    href="https://www.hewenjie.cn/92.html">10月13日，星期二，在这里每天60秒读懂世界！</a></h2><p class="summary l-h-2x text-muted">10月13日，农历八月八月廿七，星期二！在这里，每天60秒读懂世界！1、山西省长治市宣布从2022年开始把裸眼视力和体重考核结果纳入中考总成绩，网友质疑其涉嫌基因与经济双重歧视；2、青岛：将市胸科医院所在的楼山后社区定为中风险区域，其它区域风险等级不变，5天内将对全市检测全覆盖，截至12日已采样超百万份，目前未发现新增；3、教育部明确：将心肺复苏和急救知识纳入学校基础教育相关课程；4、农业农...</p><div class="line line-lg b-b b-light"></div>
+<div class="text-muted post-item-foot-icon text-ellipsis list-inline">
+<li>
+<span class="m-r-sm right-small-icons"><i data-feather="user"></i></span><a href="https://www.hewenjie.cn/author/1/">Mr.He</a></li>
+
+<li><span class="right-small-icons m-r-sm"><i data-feather="clock"></i></span>2020 年 10 月 13 日</li><li><span class="right-small-icons m-r-sm"><i 
+data-feather="message-square"></i></span><a href="https://www.hewenjie.cn/92.html#comments">暂无评论</a></li></div><!--text-muted-->
+</div><!--post-meta wrapper-lg-->
+</div><!--panel/panel-small-->
+<div class="panel-small single-post box-shadow-wrap-normal">
+    <div class="index-post-img-small post-feature index-img-small">
+        <a href="https://www.hewenjie.cn/91.html">
+            <div class="item-thumb-small lazy"  style="background-image: url(https://i.loli.net/2020/10/12/t8KdOcnXMJC7iLz.png)"></div>
+        </a>
+    </div><div class="post-meta wrapper-lg">    <h2 class="m-t-none text-ellipsis index-post-title text-title"><a 
+    href="https://www.hewenjie.cn/91.html">10月12日，星期一，在这里每天60秒读懂世界！ </a></h2><p class="summary l-h-2x text-muted">10月12日，农历八月八月廿六，星期一！在这里，每天60秒读懂世界！1、湖北仙桃一企业疑因钡泄漏致37名村民用自来水后出现中毒症状，知情者：吃完饭就上吐下...</p><div class="line line-lg b-b b-light"></div>
+<div class="text-muted post-item-foot-icon text-ellipsis list-inline">
+<li>
+<span class="m-r-sm right-small-icons"><i data-feather="user"></i></span><a href="https://www.hewenjie.cn/author/1/">Mr.He</a></li>
+
+<li><span class="right-small-icons m-r-sm"><i data-feather="clock"></i></span>2020 年 10 月 12 日</li><li><span class="right-small-icons m-r-sm"><i 
+data-feather="message-square"></i></span><a href="https://www.hewenjie.cn/91.html#comments">暂无评论</a></li></div><!--text-muted-->
+</div><!--post-meta wrapper-lg-->
+</div><!--panel/panel-small-->
+<div class="single-post panel">
+    <div class="index-post-img">
+        <a href="https://www.hewenjie.cn/90.html">
+            <div class="item-thumb lazy"  style="background-image: url(https://i.loli.net/2020/10/11/EdZs9Dw6MSqGAb5.png)">
+</div>
+           
+        </a>
+    </div><div class="post-meta wrapper-lg">    <h2 class="m-t-none text-ellipsis index-post-title text-title"><a 
+    href="https://www.hewenjie.cn/90.html">10月11日，星期日，在这里每天60秒读懂世界！ </a></h2><p class="summary l-h-2x text-muted">10月11日，农历八月八月廿五，星期日！在这里，每天60秒读懂世界！1、中国电信江西省欠费信息将接入个人征信系统，从2020年11月开始执行，手机欠费超3个月可能上征信；2、黑龙江：鸡西市鸡东县一居民家庭9人聚餐，食用了已在冰箱冷冻一年的自制酸汤子，疑似食物中毒，7人死亡2人仍在抢救；3、国家体育总局：近段时间以来进行的体能测试仅是督促运动员加强基础体能的措施，不会影响高水平运动员参与奥运会...</p><div class="line line-lg b-b b-light"></div>
+<div class="text-muted post-item-foot-icon text-ellipsis list-inline">
+<li>
+<span class="m-r-sm right-small-icons"><i data-feather="user"></i></span><a href="https://www.hewenjie.cn/author/1/">Mr.He</a></li>
+
+<li><span class="right-small-icons m-r-sm"><i data-feather="clock"></i></span>2020 年 10 月 11 日</li><li><span class="right-small-icons m-r-sm"><i 
+data-feather="message-square"></i></span><a href="https://www.hewenjie.cn/90.html#comments">暂无评论</a></li></div><!--text-muted-->
+</div><!--post-meta wrapper-lg-->
+</div><!--panel/panel-small-->
+<div class="panel-small single-post box-shadow-wrap-normal">
+    <div class="index-post-img-small post-feature index-img-small">
+        <a href="https://www.hewenjie.cn/89.html">
+            <div class="item-thumb-small lazy"  style="background-image: url(https://i.loli.net/2020/10/11/6Bm3OnFbycQklwH.png)"></div>
+        </a>
+    </div><div class="post-meta wrapper-lg">    <h2 class="m-t-none text-ellipsis index-post-title text-title"><a 
+    href="https://www.hewenjie.cn/89.html">10月10日，星期六，在这里每天60秒读懂世界！ </a></h2><p class="summary l-h-2x text-muted">10月10日，农历八月八月廿四，星期六！在这里，每天60秒读懂世界！1、国家林草局：竹鼠、果子狸、豪猪等45种野生动物今年年底前停止养殖；2、国务院督查组...</p><div class="line line-lg b-b b-light"></div>
+<div class="text-muted post-item-foot-icon text-ellipsis list-inline">
+<li>
+<span class="m-r-sm right-small-icons"><i data-feather="user"></i></span><a href="https://www.hewenjie.cn/author/1/">Mr.He</a></li>
+
+<li><span class="right-small-icons m-r-sm"><i data-feather="clock"></i></span>2020 年 10 月 10 日</li><li><span class="right-small-icons m-r-sm"><i 
+data-feather="message-square"></i></span><a href="https://www.hewenjie.cn/89.html#comments">暂无评论</a></li></div><!--text-muted-->
+</div><!--post-meta wrapper-lg-->
+</div><!--panel/panel-small-->
+</div>                <!--分页首页按钮-->
+                <nav class="text-center m-t-lg m-b-lg" role="navigation">
+                    <ol class="page-navigator"><li class="current"><a href="https://www.hewenjie.cn/page/1/">1</a></li><li><a href="https://www.hewenjie.cn/page/2/">2</a></li><li><a href="https://www.hewenjie.cn/page/3/">3</a></li><li><a href="https://www.hewenjie.cn/page/4/">4</a></li><li><span>...</span></li><li><a href="https://www.hewenjie.cn/page/17/">17</a></li><li class="next"><a href="https://www.hewenjie.cn/page/2/"><i class="fontello fontello-chevron-right"></i></a></li></ol>                </nav>
+                <style>
+                    .page-navigator>li>a, .page-navigator>li>span{
+                        line-height: 1.42857143;
+                        padding: 6px 12px;
+                    }
+                </style>
+            </div>
+        </div>
+        <!--首页右侧栏-->
+          
+         <aside class="asideBar col w-md bg-white-only bg-auto no-border-xs" role="complementary">
+     <div id="sidebar">
+      <section id="tabs-4" class="widget widget_tabs clear">
+       <div class="nav-tabs-alt no-js-hide">
+        <ul class="nav nav-tabs nav-justified box-shadow-bottom-normal tablist" role="tablist">
+         <li data-index="0" class="active" role="presentation"> <a href="#widget-tabs-4-hots" role="tab" aria-controls="widget-tabs-4-hots" aria-expanded="true" data-toggle="tab"><div class="sidebar-icon wrapper-sm"><i data-feather="thumbs-up"></i></div><span class="sr-only">热门文章</span> </a></li>
+                            <li role="presentation" data-index="1"> <a href="#widget-tabs-4-comments" role="tab" aria-controls="widget-tabs-4-comments" aria-expanded="false" data-toggle="tab"><div class="sidebar-icon wrapper-sm"><i  data-feather="message-square"></i></div> <span class="sr-only">最新评论</span> </a></li>
+                        <li data-index="2" role="presentation"> <a href="#widget-tabs-4-random" role="tab" aria-controls="widget-tabs-4-random" aria-expanded="false" data-toggle="tab"> <div class="sidebar-icon wrapper-sm"><i data-feather="gift"></i></div>  <span class="sr-only">随机文章</span>
+             </a></li>
+            <span class="navs-slider-bar"></span>
+        </ul>
+       </div>
+       <div class="tab-content">
+       <!--热门文章-->
+        <div id="widget-tabs-4-hots" class="tab-pane  fade in wrapper-md active" role="tabpanel">
+         <h5 class="widget-title m-t-none text-md">热门文章</h5>
+         <ul class="list-group no-bg no-borders pull-in m-b-none">
+          <li class="list-group-item">
+                <a href="https://www.hewenjie.cn/1.html" class="pull-left thumb-sm m-r"><img src="https://cdn.jsdelivr.net/gh/He-WenJie/Handsome@master/assets/img/sj2/7.jpg" class="img-40px normal-shadow img-square"></a>
+                <div class="clear">
+                    <h4 class="h5 l-h text-second"> <a href="https://www.hewenjie.cn/1.html" title="欢迎光临听风博客"> 欢迎光临听风博客 </a></h4>
+                    <small class="text-muted post-head-icon"><span class="meta-views"> <span class="right-small-icons"><i data-feather="message-circle"></i></span>  <span class="sr-only">评论数：</span> <span class="meta-value">2</span>
+                    </span></small></div></li><li class="list-group-item">
+                <a href="https://www.hewenjie.cn/43.html" class="pull-left thumb-sm m-r"><img src="https://cdn.jsdelivr.net/gh/He-WenJie/Handsome@master/assets/img/sj2/1.jpg" class="img-40px normal-shadow img-square"></a>
+                <div class="clear">
+                    <h4 class="h5 l-h text-second"> <a href="https://www.hewenjie.cn/43.html" title="MDClub轻量级开源论坛程序PHP网站源码"> MDClub轻量级开源论坛程序PHP网站源码 </a></h4>
+                    <small class="text-muted post-head-icon"><span class="meta-views"> <span class="right-small-icons"><i data-feather="message-circle"></i></span>  <span class="sr-only">评论数：</span> <span class="meta-value">1</span>
+                    </span></small></div></li><li class="list-group-item">
+                <a href="https://www.hewenjie.cn/9.html" class="pull-left thumb-sm m-r"><img src="https://cdn.jsdelivr.net/gh/He-WenJie/Handsome@master/assets/img/sj2/9.jpg" class="img-40px normal-shadow img-square"></a>
+                <div class="clear">
+                    <h4 class="h5 l-h text-second"> <a href="https://www.hewenjie.cn/9.html" title="8月17日，星期一，在这里每天60秒读懂世界！"> 8月17日，星期一，在这里每天60秒读懂世界！ </a></h4>
+                    <small class="text-muted post-head-icon"><span class="meta-views"> <span class="right-small-icons"><i data-feather="message-circle"></i></span>  <span class="sr-only">评论数：</span> <span class="meta-value">0</span>
+                    </span></small></div></li><li class="list-group-item">
+                <a href="https://www.hewenjie.cn/10.html" class="pull-left thumb-sm m-r"><img src="https://cdn.jsdelivr.net/gh/He-WenJie/Handsome@master/assets/img/sj2/6.jpg" class="img-40px normal-shadow img-square"></a>
+                <div class="clear">
+                    <h4 class="h5 l-h text-second"> <a href="https://www.hewenjie.cn/10.html" title="CloudFlare CDN如何自定义节点（CF自选IP）"> CloudFlare CDN如何自定义节点（CF自选IP） </a></h4>
+                    <small class="text-muted post-head-icon"><span class="meta-views"> <span class="right-small-icons"><i data-feather="message-circle"></i></span>  <span class="sr-only">评论数：</span> <span class="meta-value">0</span>
+                    </span></small></div></li><li class="list-group-item">
+                <a href="https://www.hewenjie.cn/11.html" class="pull-left thumb-sm m-r"><img src="https://cdn.jsdelivr.net/gh/He-WenJie/Handsome@master/assets/img/sj2/3.jpg" class="img-40px normal-shadow img-square"></a>
+                <div class="clear">
+                    <h4 class="h5 l-h text-second"> <a href="https://www.hewenjie.cn/11.html" title="8月18日，星期二，在这里每天60秒读懂世界！"> 8月18日，星期二，在这里每天60秒读懂世界！ </a></h4>
+                    <small class="text-muted post-head-icon"><span class="meta-views"> <span class="right-small-icons"><i data-feather="message-circle"></i></span>  <span class="sr-only">评论数：</span> <span class="meta-value">0</span>
+                    </span></small></div></li>         </ul>
+        </div>
+                   <!--最新评论-->
+        <div id="widget-tabs-4-comments" class="tab-pane fade wrapper-md no-js-show" role="tabpanel">
+         <h5 class="widget-title m-t-none text-md">最新评论</h5>
+         <ul class="list-group no-borders pull-in auto m-b-none no-bg">
+                              <li class="list-group-item">
+
+              <a href="https://www.hewenjie.cn/43.html#comment-3" class="pull-left thumb-sm avatar m-r">
+                  <img nogallery src="https://q.qlogo.cn/g?b=qq&nk=2966743702&s=100" class="img-40px photo img-square normal-shadow">              </a>
+              <a href="https://www.hewenjie.cn/43.html#comment-3" class="text-muted">
+                  <!--<i class="iconfont icon-comments-o text-muted pull-right m-t-sm text-sm" title="" aria-hidden="true" data-toggle="tooltip" data-placement="auto left"></i>
+                  <span class="sr-only"></span>-->
+              </a>
+              <div class="clear">
+                  <div class="text-ellipsis">
+                      <a href="https://www.hewenjie.cn/43.html#comment-3" title="Q青之家"> Q青之家 </a>
+                  </div>
+                  <small class="text-muted">
+                      <span>
+                          蹭一蹭                      </span>
+                  </small>
+              </div>
+          </li>
+                    <li class="list-group-item">
+
+              <a href="https://www.hewenjie.cn/1.html#comment-2" class="pull-left thumb-sm avatar m-r">
+                  <img nogallery src="https://q.qlogo.cn/g?b=qq&nk=431804095&s=100" class="img-40px photo img-square normal-shadow">              </a>
+              <a href="https://www.hewenjie.cn/1.html#comment-2" class="text-muted">
+                  <!--<i class="iconfont icon-comments-o text-muted pull-right m-t-sm text-sm" title="" aria-hidden="true" data-toggle="tooltip" data-placement="auto left"></i>
+                  <span class="sr-only"></span>-->
+              </a>
+              <div class="clear">
+                  <div class="text-ellipsis">
+                      <a href="https://www.hewenjie.cn/1.html#comment-2" title="等等博客"> 等等博客 </a>
+                  </div>
+                  <small class="text-muted">
+                      <span>
+                          已阅，感谢站长分享！                      </span>
+                  </small>
+              </div>
+          </li>
+                    <li class="list-group-item">
+
+              <a href="https://www.hewenjie.cn/1.html#comment-1" class="pull-left thumb-sm avatar m-r">
+                  <img nogallery src="https://q.qlogo.cn/g?b=qq&nk=3536168060&s=100" class="img-40px photo img-square normal-shadow">              </a>
+              <a href="https://www.hewenjie.cn/1.html#comment-1" class="text-muted">
+                  <!--<i class="iconfont icon-comments-o text-muted pull-right m-t-sm text-sm" title="" aria-hidden="true" data-toggle="tooltip" data-placement="auto left"></i>
+                  <span class="sr-only"></span>-->
+              </a>
+              <div class="clear">
+                  <div class="text-ellipsis">
+                      <a href="https://www.hewenjie.cn/1.html#comment-1" title="Mr.He"> Mr.He </a>
+                  </div>
+                  <small class="text-muted">
+                      <span>
+                          欢迎加入光临本小站！                      </span>
+                  </small>
+              </div>
+          </li>
+                   </ul>
+        </div>
+                   <!--随机文章-->
+        <div id="widget-tabs-4-random" class="tab-pane fade wrapper-md no-js-show" role="tabpanel">
+            <h5 class="widget-title m-t-none text-md">随机文章</h5>
+            <ul class="list-group no-bg no-borders pull-in">
+            <li class="list-group-item">
+                <a href="https://www.hewenjie.cn/41.html" class="pull-left thumb-sm m-r"><img src="https://cdn.jsdelivr.net/gh/He-WenJie/Handsome@master/assets/img/sj2/7.jpg" class="img-40px normal-shadow img-square"></a>
+                <div class="clear">
+                    <h4 class="h5 l-h text-second"> <a href="https://www.hewenjie.cn/41.html" title="请查收，12个儿童认知能力训练方案送给你！"> 请查收，12个儿童认知能力训练方案送给你！ </a></h4>
+                    <small class="text-muted post-head-icon"><span class="meta-views "> <span class="right-small-icons"><i data-feather="message-circle"></i></span> <span class="sr-only">评论数：</span> <span class="meta-value">0</span>
+                    </span></small></div></li><li class="list-group-item">
+                <a href="https://www.hewenjie.cn/17.html" class="pull-left thumb-sm m-r"><img src="https://cdn.jsdelivr.net/gh/He-WenJie/Handsome@master/assets/img/sj2/1.jpg" class="img-40px normal-shadow img-square"></a>
+                <div class="clear">
+                    <h4 class="h5 l-h text-second"> <a href="https://www.hewenjie.cn/17.html" title="8月24日，星期一，在这里每天60秒读懂世界！"> 8月24日，星期一，在这里每天60秒读懂世界！ </a></h4>
+                    <small class="text-muted post-head-icon"><span class="meta-views "> <span class="right-small-icons"><i data-feather="message-circle"></i></span> <span class="sr-only">评论数：</span> <span class="meta-value">0</span>
+                    </span></small></div></li><li class="list-group-item">
+                <a href="https://www.hewenjie.cn/60.html" class="pull-left thumb-sm m-r"><img src="https://cdn.jsdelivr.net/gh/He-WenJie/Handsome@master/assets/img/sj2/9.jpg" class="img-40px normal-shadow img-square"></a>
+                <div class="clear">
+                    <h4 class="h5 l-h text-second"> <a href="https://www.hewenjie.cn/60.html" title="9月20日，星期日，在这里每天60秒读懂世界！"> 9月20日，星期日，在这里每天60秒读懂世界！ </a></h4>
+                    <small class="text-muted post-head-icon"><span class="meta-views "> <span class="right-small-icons"><i data-feather="message-circle"></i></span> <span class="sr-only">评论数：</span> <span class="meta-value">0</span>
+                    </span></small></div></li><li class="list-group-item">
+                <a href="https://www.hewenjie.cn/26.html" class="pull-left thumb-sm m-r"><img src="https://cdn.jsdelivr.net/gh/He-WenJie/Handsome@master/assets/img/sj2/6.jpg" class="img-40px normal-shadow img-square"></a>
+                <div class="clear">
+                    <h4 class="h5 l-h text-second"> <a href="https://www.hewenjie.cn/26.html" title="9月2日，星期三，在这里每天60秒读懂世界！"> 9月2日，星期三，在这里每天60秒读懂世界！ </a></h4>
+                    <small class="text-muted post-head-icon"><span class="meta-views "> <span class="right-small-icons"><i data-feather="message-circle"></i></span> <span class="sr-only">评论数：</span> <span class="meta-value">0</span>
+                    </span></small></div></li><li class="list-group-item">
+                <a href="https://www.hewenjie.cn/52.html" class="pull-left thumb-sm m-r"><img src="https://cdn.jsdelivr.net/gh/He-WenJie/Handsome@master/assets/img/sj2/3.jpg" class="img-40px normal-shadow img-square"></a>
+                <div class="clear">
+                    <h4 class="h5 l-h text-second"> <a href="https://www.hewenjie.cn/52.html" title="感觉统合训练教学三阶段"> 感觉统合训练教学三阶段 </a></h4>
+                    <small class="text-muted post-head-icon"><span class="meta-views "> <span class="right-small-icons"><i data-feather="message-circle"></i></span> <span class="sr-only">评论数：</span> <span class="meta-value">0</span>
+                    </span></small></div></li>            </ul>
+        </div>
+       </div>
+      </section>
+      <!--博客信息-->
+               <section id="blog_info" class="widget widget_categories wrapper-md clear">
+       <h5 class="widget-title m-t-none text-md">博客信息</h5>
+       <ul class="list-group box-shadow-wrap-normal">
+                      <li class="list-group-item text-second"><span class="blog-info-icons"> <i data-feather="award"></i></span> <span
+                       class="badge
+           pull-right">86</span>文章数目</li>
+           <li class="list-group-item text-second"> <span class="blog-info-icons"> <i data-feather="message-circle"></i></span>
+               <span class="badge
+           pull-right">3</span>评论数目</li>
+           <li class="list-group-item text-second"><span class="blog-info-icons"><i data-feather="edit-2"></i></span>
+               <span class="badge 
+           pull-right">8.32 万</span>全站字数</li>
+           <li class="list-group-item text-second"><span class="blog-info-icons"> <i data-feather="calendar"></i></span>
+               <span class="badge
+           pull-right">1年90天</span>运行天数</li>
+           <li class="list-group-item text-second"><span class="blog-info-icons"> <i data-feather="user"></i></span> <span 
+                       class="badge
+            pull-right">2,640</span>访客总数</li>
   
+            <li class="list-group-item text-second"><span class="blog-info-icons"> <i data-feather="clock"></i></span> <span 
+                       class="badge
+            pull-right">104 ms</span>响应耗时</li>
+           <li class="list-group-item text-second"><span class="blog-info-icons"> <i data-feather="activity"></i></span> <span
+                       class="badge
+           pull-right">6 天前</span>最后活动</li>
+       </ul>
+      </section>
+                        <!--非文章页面-->
+            <section id="tag_cloud-2" class="widget widget_tag_cloud wrapper-md clear">
+       <h5 class="widget-title m-t-none text-md">标签云</h5>
+          <div class="tags l-h-2x">
+                                                                    <a href="https://www.hewenjie.cn/tag/%E7%AE%80%E6%8A%A5/" class="label badge" title="简报" data-toggle="tooltip">简报</a>
+                                        <a href="https://www.hewenjie.cn/tag/60%E7%A7%92%E8%AF%BB%E6%87%82%E4%B8%96%E7%95%8C/" class="label badge" title="60秒读懂世界" data-toggle="tooltip">60秒读懂世界</a>
+                                        <a href="https://www.hewenjie.cn/tag/%E7%99%BD%E5%AB%96/" class="label badge" title="白嫖" data-toggle="tooltip">白嫖</a>
+                                        <a href="https://www.hewenjie.cn/tag/%E7%89%B9%E6%AE%8A%E6%95%99%E8%82%B2/" class="label badge" title="特殊教育" data-toggle="tooltip">特殊教育</a>
+                                        <a href="https://www.hewenjie.cn/tag/%E6%97%A9%E6%9C%9F%E6%95%99%E8%82%B2/" class="label badge" title="早期教育" data-toggle="tooltip">早期教育</a>
+                                        <a href="https://www.hewenjie.cn/tag/%E7%89%B9%E6%95%99/" class="label badge" title="特教" data-toggle="tooltip">特教</a>
+                                        <a href="https://www.hewenjie.cn/tag/%E6%BA%90%E7%A0%81/" class="label badge" title="源码" data-toggle="tooltip">源码</a>
+                                        <a href="https://www.hewenjie.cn/tag/VIP/" class="label badge" title="VIP" data-toggle="tooltip">VIP</a>
+                                        <a href="https://www.hewenjie.cn/tag/%E4%B8%93%E6%B3%A8%E5%8A%9B/" class="label badge" title="专注力" data-toggle="tooltip">专注力</a>
+                                        <a href="https://www.hewenjie.cn/tag/Github/" class="label badge" title="Github" data-toggle="tooltip">Github</a>
+                                        <a href="https://www.hewenjie.cn/tag/%E4%B8%8B%E8%BD%BD/" class="label badge" title="下载" data-toggle="tooltip">下载</a>
+                                        <a href="https://www.hewenjie.cn/tag/404%E9%A1%B5%E9%9D%A2/" class="label badge" title="404页面" data-toggle="tooltip">404页面</a>
+                                        <a href="https://www.hewenjie.cn/tag/%E5%BC%95%E5%AF%BC%E6%BA%90%E7%A0%81/" class="label badge" title="引导源码" data-toggle="tooltip">引导源码</a>
+                                        <a href="https://www.hewenjie.cn/tag/%E5%85%8D%E8%B4%B9%E9%A2%86%E6%B5%81%E9%87%8F/" class="label badge" title="免费领流量" data-toggle="tooltip">免费领流量</a>
+                                        <a href="https://www.hewenjie.cn/tag/%E4%B8%AD%E5%9B%BD%E7%A7%BB%E5%8A%A8/" class="label badge" title="中国移动" data-toggle="tooltip">中国移动</a>
+                                        <a href="https://www.hewenjie.cn/tag/%E9%9F%B3%E4%B9%90/" class="label badge" title="音乐" data-toggle="tooltip">音乐</a>
+                                        <a href="https://www.hewenjie.cn/tag/%E8%AE%A4%E7%9F%A5%E8%83%BD%E5%8A%9B/" class="label badge" title="认知能力" data-toggle="tooltip">认知能力</a>
+                                        <a href="https://www.hewenjie.cn/tag/%E8%AE%A4%E7%9F%A5%E8%AE%AD%E7%BB%83/" class="label badge" title="认知训练" data-toggle="tooltip">认知训练</a>
+                                        <a href="https://www.hewenjie.cn/tag/%E6%97%A9%E6%95%99/" class="label badge" title="早教" data-toggle="tooltip">早教</a>
+                                        <a href="https://www.hewenjie.cn/tag/%E7%BD%91%E7%AB%99/" class="label badge" title="网站" data-toggle="tooltip">网站</a>
+                                        <a href="https://www.hewenjie.cn/tag/%E6%84%9F%E7%BB%9F%E7%BB%9F%E5%90%88%E8%AE%AD%E7%BB%83/" class="label badge" title="感统统合训练" data-toggle="tooltip">感统统合训练</a>
+                                        <a href="https://www.hewenjie.cn/tag/%E6%84%9F%E7%BB%9F%E8%AE%AD%E7%BB%83/" class="label badge" title="感统训练" data-toggle="tooltip">感统训练</a>
+                                        <a href="https://www.hewenjie.cn/tag/%E6%84%9F%E8%A7%89%E7%BB%9F%E5%90%88/" class="label badge" title="感觉统合" data-toggle="tooltip">感觉统合</a>
+                                        <a href="https://www.hewenjie.cn/tag/%E6%84%9F%E7%BB%9F/" class="label badge" title="感统" data-toggle="tooltip">感统</a>
+                                        <a href="https://www.hewenjie.cn/tag/CDN/" class="label badge" title="CDN" data-toggle="tooltip">CDN</a>
+                                        <a href="https://www.hewenjie.cn/tag/CloudFlare/" class="label badge" title="CloudFlare" data-toggle="tooltip">CloudFlare</a>
+                                        <a href="https://www.hewenjie.cn/tag/CF%E8%87%AA%E9%80%89IP/" class="label badge" title="CF自选IP" data-toggle="tooltip">CF自选IP</a>
+                                        <a href="https://www.hewenjie.cn/tag/%E6%B3%A8%E6%84%8F%E5%8A%9B/" class="label badge" title="注意力" data-toggle="tooltip">注意力</a>
+                                        <a href="https://www.hewenjie.cn/tag/%E6%9E%81%E8%87%B4CMS/" class="label badge" title="极致CMS" data-toggle="tooltip">极致CMS</a>
+                                        <a href="https://www.hewenjie.cn/tag/CMS/" class="label badge" title="CMS" data-toggle="tooltip">CMS</a>
+                                          </div>
+      </section>
+        </div>
+     </aside>
+      </div>
+</main>
+<!-- footer -->
+</div><!-- /content -->
+  <footer id="footer" class="app-footer" role="footer">
+    <div class="wrapper b-t bg-light">
+      <span class="pull-right hidden-xs text-ellipsis">
+      <div class="github-badge">
+<a href="http://www.typecho.org" target="_blank" title="由 Typecho 强力驱动">
+<span class="badge-subject">Powered</span><span class="badge-value bg-blue">Typecho</span>
+</a>
+</div>
+&nbsp;|&nbsp;
+<div class="github-badge">
+<a href="https://www.ihewro.com/archives/489/" target="_blank" title="站点使用 handsome 主题，作者：黎辉">
+<span class="badge-subject">Theme</span><span class="badge-value bg-orange">Handsome</span>
+</a>
+</div>     
+      </span>
+        <span class="text-ellipsis"><div class="github-badge">
+<a href="./" title="© 2020&nbsp;听风小站">
+<span class="badge-subject">Copyright</span><span class="badge-value bg-blue">© 2020&nbsp;听风博客</span>
+</a>
+</div>
+&nbsp;|&nbsp;
 
-  </body>
-</html>
+&nbsp;|&nbsp;
+<div class="github-badge">
+        <a href="https://www.hewenjie.cn/sitemap.xml" target="_blank">
+            <span class="badge-subject">网站地图</span><span class="badge-value bg-yellowgreen">Sitemap</span>
+         </a>
+    </div>
+&nbsp;|&nbsp;
+<div class="github-badge">
+        <a href="https://www.hewenjie.cn/ampindex" target="_blank">
+            <span class="badge-subject">AMP版</span><span class="badge-value bg-orange">手机首页</span>
+         </a>
+    </div></span>
+    </div>
+      <!--可以去除主题版权信息，最好保留版权信息或者添加主题信息到友链，谢谢你的理解-->
+            <script type="text/template" id="tmpl-customizer">
+          <div class="settings panel panel-default setting_body_panel" aria-hidden="true">
+              <button class="fix-padding btn btn-default no-shadow pos-abt border-radius-half-left"
+                      data-toggle="tooltip" data-placement="left" data-original-title="外观设置"
+                      data-toggle-class=".settings=active, .settings-icon=animate-spin">
+                  <i class="fontello fontello-gear settings-icon"></i>
+              </button>
+              <div class="panel-heading">
+                  <button class="pull-right btn btn-xs btn-rounded btn-danger " name="reset" data-toggle="tooltip"
+                          data-placement="left" data-original-title="恢复默认值" >重置</button>
+                  设置
+              </div>
+              <div class="setting_body">
+              <div class="panel-body">
+                  <# for ( var keys = _.keys( data.sections.settings ), i = 0, name; keys.length > i; ++i ) { #>
+                      <div<# if ( i !== ( keys.length - 1 ) ) print( ' class="m-b-sm"' ); else print(' id="mode_set"')
+                  #>>
+                          <label class="i-switch bg-info pull-right">
+                              <input type="checkbox" name="{{ keys[i] }}" <#
+                              print( ' value="'+handsome_UI.mode+data
+                              .defaults[keys[i]]+'"' )
+                              if ((data.defaults[keys[i]]=="auto" && handsome_UI.mode =="dark") || data
+                              .defaults[keys[i]] == true) print( ' checked="checked"' );
+                              #> /> 
+                                  <i></i>
+                          </label>
+
+                  <span> <# if(data.defaults[keys[i]]=="auto") print(LocalConst.DARK_MODE_AUTO); else if(data
+                      .sections.settings[keys[i]] == LocalConst.DARK_MODE) {print(LocalConst.DARK_MODE_FIXED)
+                      }else print(data.sections.settings[keys[i]]);#></span>
+       <# if ( i == ( keys.length - 1 ) ) {print( ' <small id="auto_info"'); if(data.defaults[keys[i]]!=="auto") print(' style="display:none"') ;print('><i class="glyphicon glyphicon-info-sign" data-toggle="tooltip" data-placement="bottom" data-original-title="网站深色模式自动依据您的设备关于深色模式的设置进行切换"></i></small>')}; #>
+              </div>
+              <# } #>
+          </div>
+          <div class="wrapper b-t b-light bg-light lter r-b">
+              <div class="row row-sm">
+                  <div class="col-xs-4">
+                      <#
+                              _.each( data.sections.colors, function( color, i ) {
+                              var newColumnBefore = ( i % 5 ) === 4;
+                              #>
+                          <label class="i-checks block<# if ( !newColumnBefore ) print( ' m-b-sm' ); #>">
+                              <input type="radio" name="color" value="{{ i }}"<# if ( data.defaults['color'] === i ) print( ' checked="checked"' ); #> />
+                                  <span class="block bg-light clearfix pos-rlt">
+								<span class="active pos-abt w-full h-full bg-black-opacity text-center">
+									<i class="fontello fontello-check text-md text-white m-t-xs"></i>
+								</span>
+								<b class="{{ color.navbarHeader }} header"></b>
+								<b class="{{ color.navbarCollapse }} header"></b>
+								<b class="{{ color.aside.replace( ' b-r', '' ) }}"></b>
+							</span>
+                          </label>
+                          <#
+                                  if ( newColumnBefore && ( i + 1 ) < data.sections.colors.length )
+                          print( '</div><div class="col-xs-4">' );
+                              } );
+                              #>
+                          </div>
+                  </div>
+              </div>
+          </div>
+          </div>
+      </script>
+
+
+      
+      <div class="topButton panel panel-default">
+          <button id="goToTop" class="fix-padding btn btn-default no-shadow pos-abt hide  border-radius-half-left"
+                  data-toggle="tooltip" data-placement="left" data-original-title="返回顶部">
+              <i class="fontello fontello-chevron-circle-up" aria-hidden="true"></i>
+          </button>
+      </div>
+  </footer>
+  </div><!--end of .app app-header-fixed-->
+
+
+
+
+        
+
+<!--定义全局变量-->
+
+
+
+<!--主题核心js-->
+<script>
+    SearchConfig = {
+        url: "https://www.hewenjie.cn/usr/plugins/Preference/cache/search.json"
+    }
+</script>
+
+
+
+    <script src="https://cdn.jsdelivr.net/gh/He-WenJie/Handsome@master/assets/js/function.min.js?v=7.3.12020081501"></script>
+
+    <script src="https://cdn.jsdelivr.net/gh/He-WenJie/Handsome@master/assets/js/core.min.js?v=7.3.12020081501"></script>
+
+
+
+    <!--全局播放器组件-->
+    <script>
+                var player = new skPlayer({"autoplay":false,"listshow":false,"mode":"listloop","music":{"type":"cloud","source":"888233349","media":"tencent"}});
+    </script>
+
+
+<script>
+    if ('serviceWorker' in navigator) {
+        if (LocalConst.USE_CACHE) {
+            navigator.serviceWorker.addEventListener('controllerchange', function (ev) {
+                try {
+                    $.message({
+                        title:"检测到本地缓存需要更新",
+                        message:"<a href='#' onclick='window.location.reload();'>点击刷新页面</a>更新本地缓存",
+                        type:'warning',
+                        time: '300000'
+                    });
+                }catch (e) {
+                }
+            });
+        }
+    }
+
+</script>
+
+<!--主题组件js加载-->
+    <script src="https://cdn.jsdelivr.net/gh/He-WenJie/Handsome@master/assets/js/features/jquery.pjax.min.js" type="text/javascript"></script>
+
+    <!--平滑滚动组件-->
+    <script src="https://cdn.jsdelivr.net/gh/He-WenJie/Handsome@master/assets/js/features/SmoothScroll.min.js"></script>
+
+
+<!--pjax动画组件-->
+    <script>
+        window.paceOptions = {
+            ajax: {
+                ignoreURLs: ['/.*Get.php.*/']
+            },//忽视音乐加载的ajax请求
+            restartOnPushState: false,
+            startOnPageLoad: false,
+            restartOnRequestAfter: false
+        };
+    </script>
+    <script src="https://cdn.jsdelivr.net/gh/He-WenJie/Handsome@master/assets/js/features/pace.min.js"></script>
+
+    <link href="https://cdn.jsdelivr.net/gh/He-WenJie/Handsome@master/assets/css/features/pjax/pace-theme-loading-bar.min.css"
+          rel="stylesheet">
+
+            <style>
+                        .pace .pace-progress{
+      background: #000000;
+      color: #000000;
+}
+
+.pace .pace-activity{
+    box-shadow: inset 0 0 0 2px #000000, inset 0 0 0 7px #FFF;
+}        </style>
+    
+
+
+
+
+
+<!--主题组件js加载结束-->
+
+<!--用户自定义js-->
+<script type="text/javascript">
+    <!--左侧彩色-->
+let leftHeader=document.querySelectorAll("span.nav-icon>svg,span.nav-icon>i");let leftHeaderColorArr=["#FF69B4","#58c7ea","#E066FF","#FF69B4","#FFA54F","#90EE90","#0043ff","#cc00ff","#878787","#A0522D","#FF7256","#FFA500","#8B0000","#7CFC00","#4EEE94","#00FFFF","#EE0000"];leftHeader.forEach(tag=>{tagsColor=leftHeaderColorArr[Math.floor(Math.random()*leftHeaderColorArr.length)];tag.style.color=tagsColor});  
+<!--复制提醒-->
+document.body.oncopy=function(){layer.msg('复制成功,若要转载请务必保留原文链接！');};
+<!--彩色标签云-->
+let tags = document.querySelectorAll("#tag_cloud-2 a");
+let infos = document.querySelectorAll(".badge");
+let colorArr = ["#428BCA", "#AEDCAE", "#ECA9A7", "#DA99FF", "#FFB380", "#D9B999"];
+tags.forEach(tag => {
+    tagsColor = colorArr[Math.floor(Math.random() * colorArr.length)];
+    tag.style.backgroundColor = tagsColor;
+});
+infos.forEach(info => {
+    infosColor = colorArr[Math.floor(Math.random() * colorArr.length)];
+    info.style.backgroundColor = infosColor;
+});</script>
+
+<!--全局文件-->
+<script src="https://lib.baomitu.com/layer/3.1.1/layer.js"></script>
+
+</body>
+</html><!--html end-->
+<!-- / footer -->
+
+
+
