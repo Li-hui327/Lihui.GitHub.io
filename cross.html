@@ -1,0 +1,1500 @@
+<!DOCTYPE HTML>
+<html class="small-scroll-bar no-js bg" lang="zh-cmn-Hans">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+    <meta charset="UTF-8">
+    <!--IE 8浏览器的页面渲染方式-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+    <!--默认使用极速内核：针对国内浏览器产商-->
+    <meta name="renderer" content="webkit">
+    <!--chrome Android 地址栏颜色-->
+            <meta name="theme-color" content="#3a3f51"/>
+    
+    <meta http-equiv="x-dns-prefetch-control" content="on">
+
+    <title>时光记忆 - 听风博客</title>
+            <link rel="icon" type="image/ico" href="/favicon.ico">
+        <meta name="description" content="时光记忆" />
+<meta name="generator" content="Typecho 1.2/18.10.23" />
+<meta name="template" content="handsome" />
+<link rel="pingback" href="https://www.hewenjie.cn/action/xmlrpc" />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://www.hewenjie.cn/action/xmlrpc?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://www.hewenjie.cn/action/xmlrpc?wlw" />
+<link rel="alternate" type="application/rss+xml" title="时光记忆 &raquo; 听风博客 &raquo; RSS 2.0" href="https://www.hewenjie.cn/feed/cross.html" />
+<link rel="alternate" type="application/rdf+xml" title="时光记忆 &raquo; 听风博客 &raquo; RSS 1.0" href="https://www.hewenjie.cn/feed/rss/cross.html" />
+<link rel="alternate" type="application/atom+xml" title="时光记忆 &raquo; 听风博客 &raquo; ATOM 1.0" href="https://www.hewenjie.cn/feed/atom/cross.html" />
+
+
+    
+    
+    <script type="text/javascript">
+
+        window['LocalConst'] = {
+            //base
+            BASE_SCRIPT_URL: 'https://www.hewenjie.cn/usr/themes/handsome/',
+            BLOG_URL: 'https://li-hui327.github.io/Lihui.GitHub.io/',
+            BLOG_URL_N: 'https://li-hui327.github.io/Lihui.GitHub.io',
+            STATIC_PATH: 'https://cdn.jsdelivr.net/gh/He-WenJie/Handsome@master/assets/',
+            BLOG_URL_PHP: 'https://www.hewenjie.cn/',
+            VDITOR_CDN: 'https://cdn.jsdelivr.net/npm/vditor@3.4.5',
+            MATHJAX_SVG_CDN: 'https://cdn.jsdelivr.net/npm/mathjax@3.0.5/es5/tex-svg.js',
+            THEME_VERSION: '7.3.12020081501',
+            THEME_VERSION_PRO: '7.3.1',
+
+            //comment
+            COMMENT_NAME_INFO: '必须填写昵称或姓名',
+            COMMENT_EMAIL_INFO: '必须填写电子邮箱地址',
+            COMMENT_EMAIL_LEGAL_INFO: '邮箱地址不合法',
+            COMMENT_CONTENT_INFO: '必须填写评论内容',
+            COMMENT_SUBMIT_ERROR: '提交失败，请重试！',
+            COMMENT_CONTENT_LEGAL_INFO: '提交失败,评论被拦截或者进入审核区域',
+            COMMENT_CONTENT_CHECK_INFO: '评论进入审核区域，请勿重复评论',
+            COMMENT_TITLE: '评论通知',
+
+            //login
+            LOGIN_TITLE: '登录通知',
+            LOGIN_USERNAME_INFO: '必须填写用户名',
+            LOGIN_PASSWORD_INFO: '请填写密码',
+            LOGIN_SUBMIT_ERROR: '登录失败，请重新登录',
+            LOGIN_SUBMIT_INFO: '用户名或者密码错误，请重试',
+            LOGIN_SUBMIT_SUCCESS: '登录成功',
+            CLICK_TO_REFRESH: '点击以刷新页面',
+            LOGOUT_SUCCESS_REFRESH: '退出成功，正在刷新当前页面',
+
+            LOGOUT_ERROR: '退出失败，请重试',
+            LOGOUT_SUCCESS: '退出成功',
+            SUBMIT_PASSWORD_INFO: '密码错误，请重试',
+
+            //comment
+            ChANGYAN_APP_KEY: '',
+            CHANGYAN_CONF: '',
+
+            COMMENT_SYSTEM: '0',
+            COMMENT_SYSTEM_ROOT: '0',
+            COMMENT_SYSTEM_CHANGYAN: '1',
+            COMMENT_SYSTEM_OTHERS: '2',
+            EMOJI: '表情',
+            COMMENT_NEED_EMAIL: '1',
+            COMMENT_REJECT_PLACEHOLDER: '居然什么也不说，哼',
+            COMMENT_PLACEHOLDER: '说点什么吧……',
+
+            //pjax
+            IS_PJAX: '1',
+            IS_PAJX_COMMENT: '1',
+            PJAX_ANIMATE: 'loading-bar',
+            PJAX_TO_TOP: '0',
+            TO_TOP_SPEED: '100',
+
+
+            USER_COMPLETED: {"data":"<!--\u5f69\u8272\u5de6\u4fa7\u680f-->\r\nlet leftHeader=document.querySelectorAll(\"span.nav-icon>svg,span.nav-icon>i\");let leftHeaderColorArr=[\"#FF69B4\",\"#58c7ea\",\"#E066FF\",\"#FF69B4\",\"#FFA54F\",\"#90EE90\",\"#0043ff\",\"#cc00ff\",\"#878787\",\"#A0522D\",\"#FF7256\",\"#FFA500\",\"#8B0000\",\"#7CFC00\",\"#4EEE94\",\"#00FFFF\",\"#EE0000\"];leftHeader.forEach(tag=>{tagsColor=leftHeaderColorArr[Math.floor(Math.random()*leftHeaderColorArr.length)];tag.style.color=tagsColor});  \r\n<!--\u5f69\u8272\u6807\u7b7e\u4e91-->\r\nlet tags = document.querySelectorAll(\"#tag_cloud-2 a\");\r\nlet infos = document.querySelectorAll(\".badge\");\r\nlet colorArr = [\"#428BCA\", \"#AEDCAE\", \"#ECA9A7\", \"#DA99FF\", \"#FFB380\", \"#D9B999\"];\r\ntags.forEach(tag => {\r\n    tagsColor = colorArr[Math.floor(Math.random() * colorArr.length)];\r\n    tag.style.backgroundColor = tagsColor;\r\n});\r\ninfos.forEach(info => {\r\n    infosColor = colorArr[Math.floor(Math.random() * colorArr.length)];\r\n    info.style.backgroundColor = infosColor;\r\n});"},
+
+            //ui
+            OPERATION_NOTICE: '操作通知',
+            SCREENSHOT_BEGIN: '正在生成当前页面截图……',
+            SCREENSHOT_NOTICE: '点击顶部下载按钮保存当前卡片',
+            SCREENSHORT_ERROR: '由于图片跨域原因导致截图失败',
+            SCREENSHORT_SUCCESS: '截图成功',
+
+            //music
+            MUSIC_NOTICE: '播放通知',
+            MUSIC_FAILE: '当前音乐地址无效，自动为您播放下一首',
+            MUSIC_FAILE_END: '当前音乐地址无效',
+            MUSIC_LIST_SUCCESS: '歌单歌曲加载成功',
+
+            //option
+            TOC_TITLE: '文章目录',
+            HEADER_FIX: '固定头部',
+            ASIDE_FIX: '固定导航',
+            ASIDE_FOLDED: '折叠导航',
+            ASIDE_DOCK: '置顶导航',
+            CONTAINER_BOX: '盒子模型',
+            DARK_MODE: '深色模式',
+            DARK_MODE_AUTO: '深色模式（自动）',
+            DARK_MODE_FIXED: '深色模式（固定）',
+            EDITOR_CHOICE: 'origin',
+
+
+            CDN_NAME: '',
+            LAZY_LOAD: '',
+            PAGE_ANIMATE: '',
+            THEME_COLOR: '14',
+            THEME_COLOR_EDIT: 'white-white-white',
+            THEME_HEADER_FIX: '1',
+            THEME_ASIDE_FIX: '1',
+            THEME_ASIDE_FOLDED: '',
+            THEME_ASIDE_DOCK: '',
+            THEME_CONTAINER_BOX: '1',
+            THEME_HIGHLIGHT_CODE: '1',
+            THEME_MATHJAX: '',
+            THEME_TOC: '1',
+            THEME_DARK_MODE: 'auto',
+            THEME_DARK_MODE_VALUE: 'auto',
+            SHOW_SETTING_BUTTON: '1',
+
+            THEME_DARK_HOUR: '18',
+            THEME_LIGHT_HOUR: '6',
+            THUMB_STYLE: 'normal',
+            AUTO_READ_MODE: '',
+
+            //代码高亮
+            CODE_STYLE_LIGHT: 'solarized-light',
+            CODE_STYLE_DARK: 'solarized-dark',
+
+            //other
+            OFF_SCROLL_HEIGHT: '50',
+            SHOW_IMAGE_ALT: '1',
+            USER_LOGIN: '',
+            USE_CACHE: '1',
+            POST_SPEECH: '1',
+        };
+
+        if ('serviceWorker' in navigator) {
+            if (LocalConst.USE_CACHE) {
+                navigator.serviceWorker.register(LocalConst.BLOG_URL + 'sw.min.js?v=7.3.12020081501')
+                    .then(function (reg) {
+
+                    }).catch(function (error) {
+                    console.log('cache failed with ' + error); // registration failed
+                });
+            } else {
+                navigator.serviceWorker.getRegistrations()
+                    .then(function (registrations) {
+                        for (let registration of registrations) {
+                            registration.unregister();
+                            // 清除缓存
+                            window.caches && caches.keys && caches.keys().then(function (keys) {
+                                keys.forEach(function (key) {
+                                    caches.delete(key);
+                                });
+                            });
+                            console.log("unregister success")
+                        }
+                    });
+            }
+        }
+    </script>
+
+
+    
+
+    <!-- 第三方CDN加载CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+
+
+    <!-- 本地css静态资源 -->
+
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/He-WenJie/Handsome@master/assets/css/origin/function.min.css?v=7.3.12020081501" type="text/css"/>
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/gh/He-WenJie/Handsome@master/assets/css/handsome.min.css?v=7.3.12020081501"
+          type="text/css"/>
+
+        
+    
+    <!--主题组件css文件加载-->
+    
+    <!--引入英文字体文件-->
+            <link rel="stylesheet preload" href="https://cdn.jsdelivr.net/gh/He-WenJie/Handsome@master/assets/css/features/font.min.css?v=7.3.12020081501" as="style"/>
+    
+    <style type="text/css">
+        
+        html.bg {
+        background: #EFEFEF
+        }
+        .cool-transparent .off-screen+* .app-content-body {
+        background: #EFEFEF
+        }
+@media (max-width:767px){
+    html.bg {
+        background: #EFEFEF
+        }
+        .cool-transparent .off-screen+* .app-content-body {
+        background: #EFEFEF
+        }
+}
+/*底部页脚*/
+.github-badge {
+  display: inline-block;
+  border-radius: 4px;
+  text-shadow: none;
+  font-size: 12px;
+  color: #fff;
+  line-height: 15px;
+  background-color: #abbac3;
+  margin-bottom: 5px
+}
+.github-badge .badge-subject {
+  display: inline-block;
+  background-color: #4d4d4d;
+  padding: 4px 4px 4px 6px;
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px
+}
+.github-badge .badge-value {
+  display: inline-block;
+  padding: 4px 6px 4px 4px;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px
+}
+.github-badge .bg-blue {
+  background-color: #007ec6
+}
+.github-badge .bg-orange {
+  background-color: #ffa500
+}
+.github-badge .bg-red {
+  background-color: #f00
+}
+.github-badge .bg-green {
+  background-color: #3bca6e
+}
+.github-badge .bg-purple {
+  background-color: #ab34e9
+}
+/*优化底部栏*/
+.wrapper {
+  padding: 11px;
+}
+/*文章标题居中*/
+.panel h2{
+    text-align: center; 
+}
+.panel-small h2{
+    text-align: center; 
+}
+.panel-picture h3{
+    text-align: center; 
+}
+.post-item-foot-icon{
+    text-align: center;
+}
+/*文章内打赏图标跳动*/
+.btn-pay {
+    animation: star 0.5s ease-in-out infinite alternate;
+}
+
+@keyframes star {
+    from {
+        transform: scale(1);
+    }
+
+    to {
+        transform: scale(1.1);
+    }
+}
+/* 右侧列表导航栏图标颜色 */
+.sidebar-icon svg.feather.feather-thumbs-up{color: #ff0000;}
+.sidebar-icon svg.feather.feather-message-square{color:#495dc3;}
+.sidebar-icon svg.feather.feather-gift{color:#52DE97;}#aside .wrapper:hover {
+	background: url(https://cdn.jsdelivr.net/gh/He-WenJie/Handsome@master/assets/img/snow.gif);
+	background-size: cover;
+	color: #999;
+}    </style>
+
+    <!--全站jquery-->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@2.2.4/dist/jquery.min.js"></script>
+
+    <!--网站统计代码-->
+    <script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?cfa689adf568d7830785be181f9835a7";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+
+</head>
+
+<body id="body" class="fix-padding">
+
+
+
+	<!-- aside -->
+	  
+  <div id="alllayout" class="app app-aside-fix container app-header-fixed ">  <!-- headnav -->
+  <header id="header" class="app-header navbar box-shadow-bottom-lg" role="menu">
+    <!-- navbar header（交集处） -->
+    <div class="text-ellipsis navbar-header bg-white">
+    <button class="pull-right visible-xs" ui-toggle-class="show animated animated-lento fadeIn" target=".navbar-collapse">
+        <span class="menu-icons"><i data-feather="search"></i></span>
+    </button>
+    <button class="pull-left visible-xs" ui-toggle-class="off-screen animated" target=".app-aside" ui-scroll="app">
+        <span class="menu-icons"><i data-feather="menu"></i></span>
+    </button>
+    <!-- brand -->
+    <a href="https:///" class="navbar-brand text-lt">
+        <span id="navbar-brand-day">
+                                                <i class="fontello fontello-home"></i>
+                            <span class="hidden-folded m-l-xs">听风博客</span>
+                    </span>
+            </a>
+    <!-- / brand -->
+    </div>
+    <!-- / navbar header -->
+
+    <!-- navbar collapse（顶部导航栏） -->
+    <div class="collapse pos-rlt navbar-collapse bg-white">
+    <!-- statitic info-->
+        <ul class="nav navbar-nav hidden-sm">
+        <li class="dropdown pos-stc">
+            <a id="statistic_pane" data-status="false" href="#" data-toggle="dropdown" class="dropdown-toggle feathericons dropdown-toggle"
+               aria-expanded="false">
+                <i data-feather="pie-chart"></i>
+                <span class="caret"></span>
+            </a>
+            <div class="dropdown-menu wrapper w-full bg-white">
+                <div class="row">
+                    <div class="col-sm-8 b-l b-light">
+                        <div class="m-l-xs m-t-xs m-b-sm font-bold">动态日历<span class="info-icons"><i
+                                        data-feather="info"
+                                                                                  data-toggle="tooltip" title="统计近10个月的文章和作者评论数目"></i>
+                            </span></div>
+                        <div class="text-center">
+                            <nav class="loading-echart text-center m-t-lg m-b-lg">
+                                <p class="infinite-scroll-request"><i class="animate-spin fontello fontello-refresh"></i>Loading...</p>
+                            </nav>
+                            <div id="post-calendar" class="top-echart hide"></div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4 b-l b-light">
+                        <div class="m-l-xs m-t-xs m-b-sm font-bold">分类雷达图</div>
+                        <div class="text-center">
+                            <nav class="loading-echart text-center m-t-lg m-b-lg">
+                                <p class="infinite-scroll-request"><i class="animate-spin fontello fontello-refresh"></i>Loading...</p>
+                            </nav>
+                            <div id="category-radar" class="top-echart hide"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-4 b-l b-light">
+                        <div class="m-l-xs m-t-xs m-b-sm font-bold">发布统计图</div>
+                        <div class="text-center">
+                            <nav class="loading-echart text-center m-t-lg m-b-lg">
+                                <p class="infinite-scroll-request"><i class="animate-spin fontello fontello-refresh"></i>Loading...</p>
+                            </nav>
+                            <div id="posts-chart" class="top-echart hide"></div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4 b-l b-light">
+                        <div class="m-l-xs m-t-xs m-b-sm font-bold">分类统计图</div>
+                        <div class="text-center">
+                            <nav class="loading-echart text-center m-t-lg m-b-lg">
+                                <p class="infinite-scroll-request"><i class="animate-spin fontello fontello-refresh"></i>Loading...</p>
+                            </nav>
+                            <div id="categories-chart" class="top-echart hide"></div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4 b-l b-light">
+                        <div class="m-l-xs m-t-xs m-b-sm font-bold">标签统计图</div>
+                        <div class="text-center">
+                            <nav class="loading-echart text-center m-t-lg m-b-lg">
+                                <p class="infinite-scroll-request"><i class="animate-spin fontello fontello-refresh"></i>Loading...</p>
+                            </nav>
+                            <div id="tags-chart" class="top-echart hide"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </li>
+    </ul>
+    
+    <!-- search form -->
+
+    <form id="searchform1" class="searchform navbar-form navbar-form-sm navbar-left shift" method="post"
+          role="search">
+        <div class="form-group">
+            <div class="input-group rounded bg-white-pure box-shadow-wrap-normal">
+                <input  autocomplete="off" id="search_input" type="search" name="s" class="transparent rounded form-control input-sm no-borders padder" required placeholder="输入关键词搜索…">
+                <!--搜索提示-->
+                <ul id="search_tips_drop" class="small-scroll-bar dropdown-menu hide" style="display: block;top: 
+                30px; left: 0px;">
+                </ul>
+                <span id="search_submit" class="transparent input-group-btn">
+                  <button  type="submit" class="transparent btn btn-sm">
+                      <span class="feathericons" id="icon-search"><i data-feather="search"></i></span>
+                      <span class="feathericons animate-spin  hide" id="spin-search"><i
+                                  data-feather="loader"></i></span>
+                      <!--                      <i class="fontello fontello-search" id="icon-search"></i>-->
+                      <!--                      <i class="animate-spin  fontello fontello-spinner hide" id="spin-search"></i>-->
+                  </button>
+              </span>
+            </div>
+        </div>
+    </form>
+    <a href="" style="display: none" id="searchUrl"></a>
+    <!-- / search form -->
+        <ul class="nav navbar-nav navbar-right">
+                    <li class="music-box hidden-xs hidden-sm">
+                <div id="skPlayer"></div>
+            </li>
+            <li class="dropdown "><a class="skPlayer-list-switch dropdown-toggle
+            feathericons"><i
+                            data-feather="disc"></i><span class="visible-xs-inline"></span></a></li>
+                                    <!--闲言碎语-->
+            <li class="dropdown">
+                <a href="#" data-toggle="dropdown" class="feathericons dropdown-toggle">
+                    <i data-feather="twitch"></i>
+                    <span class="visible-xs-inline">
+              闲言碎语              </span>
+                    <span class="badge badge-sm up bg-danger pull-right-xs"></span>
+                </a>
+                <!-- dropdown -->
+                <div class="dropdown-menu w-xl animated fadeInUp">
+                    <div class="panel bg-white">
+                        <div class="panel-heading b-light bg-light">
+                            <strong>
+                                闲言碎语                            </strong>
+                        </div>
+                        <div class="list-group" id="smallRecording">
+                                                    </div>
+                    </div>
+                </div>
+            </li>
+            <!--/闲言碎语-->
+                            <!--登录管理-->
+            <li class="dropdown" id="easyLogin">
+                <a onclick="return false" data-toggle="dropdown" class="dropdown-toggle clear" data-toggle="dropdown">
+                                            <span class="feathericons"><i data-feather="key"></i></span>
+                                        <b class="caret"></b><!--下三角符号-->
+                </a>
+                <!-- dropdown(已经登录) -->
+                                    <div class="dropdown-menu w-lg wrapper bg-white animated fadeIn" aria-labelledby="navbar-login-dropdown">
+                        <form id="Login_form" action="https://www.hewenjie.cn/index.php/action/login?_=fde0cff539ca61c9e36856976c8d515b" method="post">
+                            <div class="form-group">
+                                <label for="navbar-login-user">用户名</label>
+                                <input type="text" name="name" id="navbar-login-user" class="form-control" placeholder="用户名或电子邮箱"></div>
+                            <div class="form-group">
+                                <label for="navbar-login-password">密码</label>
+                                <input autocomplete type="password" name="password" id="navbar-login-password"
+                                       class="form-control" placeholder="密码"></div>
+                            <button style="width: 100%" type="submit" id="login-submit" name ="submitLogin" class="btn-rounded box-shadow-wrap-lg btn-gd-primary padder-lg">
+                                <span>登录</span>
+                                <span class="text-active">登录中...</span>
+                                <span class="banLogin_text">刷新页面后登录</span>
+                                <i class="animate-spin  fontello fontello-spinner hide" id="spin-login"></i>
+                                <i class="animate-spin fontello fontello-refresh hide" id="ban-login"></i>
+                            </button>
+
+
+<!--                            -->
+                            <input type="hidden" name="referer" value="https://www.hewenjie.cn/"></form>
+                    </div>
+                            </li>
+            <!--/登录管理-->
+            </ul>
+    </div>
+    <!-- / navbar collapse -->
+</header>
+  <!-- / headnav -->
+
+  <!--选择侧边栏的颜色-->
+  <aside id="aside" class="app-aside hidden-xs bg-white">  <!--<aside>-->
+        <div class="aside-wrap" layout="column">
+        <div class="navi-wrap scroll-y scroll-hide" flex>
+          <!-- user -->
+          <div class="clearfix hidden-xs text-center hide  show" id="aside-user">
+            <div class="dropdown wrapper ">
+                <div ui-nav>
+                          <a href="https://li-hui327.github.io/Lihui.GitHub.io/cross.html">
+                            <span class="thumb-lg w-auto-folded avatar m-t-sm  ">
+                  <img src="https://e.im5i.com/2020/10/21/5f518c783ef67ee96522be387fb14a77.png" class="img-full img-circle normal-shadow">
+                </span>
+              </a>
+                </div>
+              <a href="#" data-toggle="dropdown" class="dropdown-toggle hidden-folded  ">
+                <span class="clear">
+                  <span class="block m-t-sm">
+                    <strong class="font-bold text-lt">Mr.He</strong>
+                    <b class="caret"></b>
+                  </span>
+                  <span class="text-muted text-xs block"></span>
+                </span>
+              </a>
+              <!-- dropdown -->
+              <ul class="dropdown-menu animated fadeInRight w hidden-folded no-padder">
+                <li class="wrapper b-b m-b-sm bg-info m-n">
+                  <span class="arrow top hidden-folded arrow-info"></span>
+                  <div>
+                                                <p>注意劳逸结合，不要过度玩耍</p>
+                                  </div>
+                  <div class="progress progress-xs m-b-none dker">
+                    <div class="progress-bar bg-white" data-toggle="tooltip" data-original-title="时间已经度过95.83%" style="width: 95.83%"></div>
+                  </div>
+                </li>
+              </ul>
+              <!-- / dropdown -->
+            </div>
+          </div>
+          <!-- / user -->
+
+          <!-- nav -->
+          <nav ui-nav class="navi clearfix">
+            <ul class="nav">
+             <!--index-->
+                <div class="line dk hidden-folded"></div>
+                <li class="hidden-folded padder m-t m-b-sm text-muted text-xs">
+                <span>导航</span>
+              </li>
+                                          <!--主页-->
+              <li>
+                <a href="https://www.hewenjie.cn/" class="auto">
+                    <span class="nav-icon"><i data-feather="home"></i></span>
+                    <span>首页</span>
+                </a>
+              </li>
+              <!-- /主页 -->
+                                                          <li class="line dk"></li>
+			<!--Components-->
+              <li class="hidden-folded padder m-t m-b-sm text-muted text-xs">
+                <span>组成</span>
+              </li>
+              <!--分类category-->
+                              <li >
+                <a class="auto">
+                  <span class="pull-right text-muted">
+                    <i class="fontello icon-fw fontello-angle-right text"></i>
+                    <i class="fontello icon-fw fontello-angle-down text-active"></i>
+                  </span>
+<!--                  <i class="glyphicon glyphicon-th"></i>-->
+                    <span class="nav-icon"><i data-feather="grid"></i></span>
+
+                    <span>分类</span>
+                </a>
+                <ul class="nav nav-sub dk">
+                  <li class="nav-sub-header">
+                    <a>
+                      <span>分类</span>
+                    </a>
+                  </li>
+                  <!--循环输出分类-->
+
+                    <li class="category-level-0 category-parent"><a  href="https://www.hewenjie.cn/daily/"><b class="badge pull-right">1</b>日常生活</a></li><li class="category-level-0 category-parent"><a  href="https://www.hewenjie.cn/source/"><b class="badge pull-right">7</b>程序源码</a></li><li class="category-level-0 category-parent"><a  href="https://www.hewenjie.cn/course/"><b class="badge pull-right">3</b>各类教程</a></li><li class="category-level-0 category-parent"><a  href="https://www.hewenjie.cn/software/"><b class="badge pull-right">4</b>实用软件</a></li><li class="category-level-0 category-parent"><a  href="https://www.hewenjie.cn/image/"><b class="badge pull-right">0</b>图集相册</a></li><li class="category-level-0 category-parent"><a  href="https://www.hewenjie.cn/experience/"><b class="badge pull-right">0</b>评测体验</a></li><li class="category-level-0 category-parent"><a  href="https://www.hewenjie.cn/promotions/"><b class="badge pull-right">7</b>活动线报</a></li><li class="category-level-0 category-parent"><a  href="https://www.hewenjie.cn/special/"><b class="badge pull-right">6</b>特殊教育</a></li><li class="category-level-0 category-parent"><a  href="https://www.hewenjie.cn/early/"><b class="badge pull-right">4</b>早期教育</a></li><li class="category-level-0 category-parent"><a  href="https://www.hewenjie.cn/briefing/"><b class="badge pull-right">69</b>每天60秒</a></li><li class="category-level-0 category-parent"><a  href="https://www.hewenjie.cn/music/"><b class="badge pull-right">2</b>值得一听</a></li>                    
+                    <!--/循环输出分类-->
+
+                </ul>
+              </li>
+              <!--独立页面pages-->
+              <li>
+                <a class="auto">
+                  <span class="pull-right text-muted">
+                    <i class="fontello icon-fw fontello-angle-right text"></i>
+                    <i class="fontello icon-fw fontello-angle-down text-active"></i>
+                  </span>
+                    <span class="nav-icon"><i data-feather="file"></i></span>
+                  <span>页面</span>
+                </a>
+                <ul class="nav nav-sub dk">
+                  <li class="nav-sub-header">
+                    <a data-no-instant>
+                      <span>页面</span>
+                    </a>
+                  </li><!--这个字段不会被显示出来-->
+                  <!--循环输出独立页面-->
+                                                                                   <li><a href="https://www.hewenjie.cn/about.html"><span>关于小站</span></a></li>
+                                                                 <li><a href="https://www.hewenjie.cn/cross.html"><span>时光记忆</span></a></li>
+                                                                 <li><a href="https://www.hewenjie.cn/loves.html"><span>阅读观影</span></a></li>
+                                                                 <li><a href="https://www.hewenjie.cn/archives.html"><span>文章归档</span></a></li>
+                                                                 <li><a href="https://www.hewenjie.cn/project.html"><span>代码仓库</span></a></li>
+                                                                 <li><a href="https://www.hewenjie.cn/msg.html"><span>留言吐槽</span></a></li>
+                                                                 <li><a href="https://www.hewenjie.cn/links.html"><span>友情链接</span></a></li>
+                                   </ul>
+              </li>
+              <!--友情链接-->
+              <li>
+                <a class="auto">
+                  <span class="pull-right text-muted">
+                    <i class="fontello icon-fw fontello-angle-right text"></i>
+                    <i class="fontello icon-fw fontello-angle-down text-active"></i>
+                  </span>
+                    <span class="nav-icon"><i data-feather="user"></i></span>
+                  <span>友链</span>
+                </a>
+                <ul class="nav nav-sub dk">
+                  <li class="nav-sub-header">
+                    <a data-no-instant>
+                      <span>友链</span>
+                    </a>
+                  </li>
+                  <!--使用links插件，输出全站友链-->
+                                 </ul>
+              </li>
+                            </ul>
+          </nav>
+          <!-- nav -->
+        </div>
+          <!--end of .navi-wrap-->
+          <!--left_footer-->
+                    <div id="left_footer" class="footer wrapper-xs text-center nav-xs lt">
+                  
+                                        <div class="col-xs-4 no-padder">
+                          <a target="_blank" class="tinav" href="https://www.hewenjie.cn/admin/" title="" data-toggle="tooltip" data-placement="top" data-original-title="后台管理">
+                              <span class="left-bottom-icons block"><i data-feather="settings"></i></span>
+                              <small class="text-muted">管理</small>
+                          </a>
+                      </div>
+                                    <div class="col-xs-4 no-padder">
+                      <a target="_blank" class="tinav" href="https://www.hewenjie.cn/feed/" title="" data-toggle="tooltip" data-placement="top" data-original-title="文章RSS地址">
+                          <span class="left-bottom-icons block"><i data-feather="rss"></i></span>
+                          <small class="text-muted">文章</small>
+                      </a>
+                  </div>
+                  <div class="col-xs-4 no-padder">
+                      <a target="_blank" href="https://www.hewenjie.cn/feed/comments/" title="" data-toggle="tooltip" data-placement="top" data-original-title="评论RSS地址">
+                          <span class="left-bottom-icons block"><i data-feather="message-square"></i></span>
+                          <small class="text-muted">评论</small>
+                      </a>
+                  </div>
+          </div>
+          
+      </div><!--.aside-wrap-->
+  </aside>
+<!-- content -->
+<div id="content" class="app-content">
+    <!--loading animate-->
+    
+
+
+
+
+
+	<!-- / aside -->
+
+  <!-- content -->
+<!-- <div id="content" class="app-content"> -->
+    <a class="off-screen-toggle hide"></a>
+  	<main class="app-content-body ">
+        <div class="hbox hbox-auto-xs hbox-auto-sm">
+            <div class="col center-part">
+                <div style="background:url(https://api.zpblogs.cn/pic/360.ashx?type=d) center center; background-size:cover">
+                    <div class="wrapper-lg bg-white-opacity">
+                        <div class="row m-t">
+                            <div class="col-sm-6">
+                                <div class="clear m-b">
+                                    <div class="m-b m-t-sm">
+                                        <span class="h3 text-black">Mr.He</span>
+                                        <small class="m-l"></small>
+                                    </div>
+                                    <p class="m-b">
+                                                                                <a target="_blank" title="twitter" href="#" class="btn btn-sm btn-bg btn-rounded btn-default btn-icon"><i class="fontello fontello-twitter"></i></a><a target="_blank" title="facebook" href="#" class="btn btn-sm btn-bg btn-rounded btn-default btn-icon"><i class="fontello fontello-facebook"></i></a><a target="_blank" title="googlepluse" href="#" class="btn btn-sm btn-bg btn-rounded btn-default btn-icon"><i class="fontello fontello-google-plus"></i></a>                                    </p>
+                                    <a target="_blank" href="#" class="btn btn-sm btn-success btn-rounded">github</a>                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                                                <div class="pull-right pull-none-xs text-center">
+                                    <a class="m-b-md inline m">
+                                        <span class="h3 block font-bold">3</span>
+                                        <small>评论</small>
+                                    </a>
+                                    <a class="m-b-md inline m">
+                                        <span class="h3 block font-bold">99</span>
+                                        <small>文章</small>
+                                    </a>
+                                    <a class="m-b-md inline m">
+                                        <span class="h3 block font-bold">0</span>
+                                        <small>动态</small>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="wrapper bg-white">
+                    <ul class="nav nav-pills nav-sm" id="time-tabs">
+                        <li class="active"><a href="#talk" role="tab" data-toggle="tab" aria-expanded="true">我的动态</a></li>
+                                            </ul>
+                </div>
+
+                <div class="tab-content">
+                    <div id="talk" class="padder tab-pane  fade in active">
+                        
+<div id="comments" class="timeMachine">
+    <!--如果允许评论，会出现评论框和个人信息的填写-->
+            <!--判断是否登录，只有登陆者才有权利发表说说-->
+        <div id="respond-page-3" class="hide respond
+    comment-respond
+    no-borders border-radius-6">
+
+            <div class="panel panel-default m-t-md pos-rlt m-b-lg no-borders border-radius-6">
+                <form id="comment_form" action="https://www.hewenjie.cn/cross.html/comment" method="post" class="comment-form"
+                      role="form">
+                    <input type="hidden" name="receiveMail" id="receiveMail" value="yes" />
+
+                    <textarea id="comment" class="border-radius-6-top textarea form-control no-border" name="text" rows="3"
+                          maxlength="65525" aria-required="true"></textarea>
+
+
+                                        <div class="secret_comment" id="secret_comment">
+                        <label class="secret_comment_label control-label">私密</label>
+                        <div class="secret_comment_check">
+                            <label class="i-switch i-switch-sm bg-dark m-b-ss m-r">
+                                <input type="checkbox" id="secret_comment_checkbox">
+                                <i></i>
+                            </label>
+                        </div>
+                    </div>
+                                        <!--提交按钮-->
+                    <div style="padding-left: 5px" class="panel-footer
+                     bg-light lter border-radius-6-bottom">
+                                                    <div id="author_info" class="col-sm-8 col-md-8">
+                                <div class="comment-form-author col-sm-6 col-md-6 col-xs-6">
+                                    <div>
+                                                                                <input id="author" class="form-control" name="author" type="text"
+                                               value="" maxlength="245"
+                                               placeholder="姓名或昵称">
+                                    </div>
+                                </div>
+                                <div class="comment-form-email col-sm-6 col-md-6 col-xs-6">
+                                    <input type="text" name="mail" id="mail" class="form-control"
+                                           placeholder="邮箱 (必填,将保密)"
+                                           value=""/>
+                                    <input type="hidden" name="receiveMail" id="receiveMail" value="yes"/>
+                                </div>
+                            </div>
+                                                <div class="">
+                            <small class="time-cancel cancel-comment-reply">
+                                                                <a id="cancel-comment-reply-link" href="https://www.hewenjie.cn/cross.html#respond-page-3" rel="nofollow" style="display:none" onclick="return TypechoComment.cancelReply();">取消回复</a>                            </small>
+                            <button type="submit" name="submit" id="submit" class="submit btn btn-info pull-right btn-sm">
+                                <span>发表新鲜事</span>
+                                <span class="text-active">提交中...
+            <i class="animate-spin fontello fontello-spinner hide" id="spin"></i>
+          </span>
+                            </button>
+                            <ul class="nav nav-pills nav-sm" id="time_toolbar">
+                                <li><a id="image-insert" data-toggle="modal" data-target="#imageInsertModal"><i
+                                                class="fontello fontello-picture text-muted"></i></a></li>
+                                <li><a id="video-insert" data-toggle="modal" data-target="#videoInsertModal"><i
+                                                class="fontello fontello-youtube-play text-muted"></i></a></li>
+                                <li><a id="music-insert" data-toggle="modal" data-target="#musicInsertModal"><i
+                                                class="fontello fontello-headphones text-muted"></i></a></li>
+                            </ul>
+                        </div>
+
+                        <!--模态框-->
+                        
+ <div class="modal fade" id="imageInsertModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                                <div class="modal-dialog modal-sm" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                            <h4 class="modal-title" id="myModalLabel">插入图片</h4>
+                                        </div>
+                                        <div class="modal-body">
+                                            <div class="row">
+                                                <div class="col-lg-12 b-r">
+                                                    <div class="form-group">
+                                                        <label class="insert_tips">请在下方的输入框内输入要插入的远程图片地址</label>
+                                                        <input name="imageInsertModal" type="text" class="form-control" >
+                                                        <label class="insert_tips m-t-sm">本地上传</label>
+     <input type="file" id="time_file" multiple name="file" class="hide">
+<div class="bootstrap-filestyle input-group"><input type="text" id="file-info" class="form-control" value="未选择任何文件" 
+disabled=""> <span 
+class="group-span-filestyle input-group-btn" tabindex="0"><label for="filestyle-0" class="btn btn-primary" id="time-upload">选择文件</label></span></div>
+                                                        
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-default"
+                                                    data-dismiss="modal"> 取消 </button>
+                                            <button type="button" id="imageInsertOk" class="btn btn-primary">确定</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+ 
+ <div class="modal fade" id="videoInsertModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                                <div class="modal-dialog modal-sm" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                            <h4 class="modal-title" id="myModalLabel">插入视频</h4>
+                                        </div>
+                                        <div class="modal-body">
+                                            <div class="row">
+                                                <div class="col-lg-12 b-r">
+                                                    <div class="form-group">
+                                                        <label class="insert_tips">请在下方的输入框内输入要插入的远程视频地址</label>
+                                                        <input name="videoInsertModal" type="text" class="form-control" >
+                                                        
+                                                        
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-default"
+                                                    data-dismiss="modal"> 取消 </button>
+                                            <button type="button" id="videoInsertOk" class="btn btn-primary">确定</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+ 
+ <div class="modal fade" id="musicInsertModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                                <div class="modal-dialog modal-sm" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                            <h4 class="modal-title" id="myModalLabel">插入音乐</h4>
+                                        </div>
+                                        <div class="modal-body">
+                                            <div class="row">
+                                                <div class="col-lg-12 b-r">
+                                                    <div class="form-group">
+                                                        <label class="insert_tips">请在下方的输入框内输入要插入的单曲地址或者远程音乐地址</label>
+                                                        <input name="musicInsertModal" type="text" class="form-control" >
+                                                        
+                                                        
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-default"
+                                                    data-dismiss="modal"> 取消 </button>
+                                            <button type="button" id="musicInsertOk" class="btn btn-primary">确定</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+ 
+
+                    </div>
+                </form>
+            </div>
+        </div>
+                    <!--一条说说都没有，则显示默认信息-->
+        <div class="streamline b-l m-l-lg m-b padder-v">
+            <ol class="comment-list list-unstyled m-b-none">
+                <div class="comment-body comment-parent comment-odd comment-by-author">
+
+                    <a class="pull-left thumb-sm avatar m-l-n-md">
+                        <img nogallery src="https://i.loli.net/2020/07/25/ocu6N4WLStbJmeT.jpg">
+                    </a>
+
+                    <div class="m-l-lg m-b-lg">
+                        <div class="m-b-xs">
+                            <a href="" class="h4"></a><a
+                                    href="https://www.hewenjie.cn"></a>
+                            <span class="format_time text-muted m-l-sm pull-right">2020 年 10 月 24 日 11 时 19 分 PM</span>
+                        </div>
+                        <div class="m-b">
+                            <div class="m-b">
+                                <p>欢迎你来到「时光机」栏目。在这里你可以记录你的日常和心情。而且，首页的“闲言碎语”栏目会显示最新的三条动态!</br></br>这是默认的第一条说说，当你发布第一条说说，刷新页面后，该条动态会自动消失。</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </ol>
+        </div>
+
+    
+</div>
+<style>
+#talk .streamline>.comment-list > .comment-body >.time-machine > .panel-body p:first-letter {
+    font-size: 140%;
+    /* float: left; */
+    vertical-align: middle;
+}
+</style>
+<script>
+    //更新未读提醒
+
+    //点赞操作
+    $('.star_talk').click(function () {
+        var ele = $(this);
+        $.get(LocalConst.BLOG_URL, {action: "star_talk", coid: $(this).data('coid')})
+            .error(function () {
+                $.message({
+                    title: LocalConst.OPERATION_NOTICE,
+                    message: "点赞失败，检查网络问题",
+                    type: 'warning'
+                })
+            }).success(function (data) {
+            if (data === "1") {//成功点赞
+                ele.children('i').attr("class", "glyphicon glyphicon-heart");
+                ele.children('.star_count').text(parseInt(ele.children('.star_count').text()) + 1);
+                $.message({
+                    title: LocalConst.OPERATION_NOTICE,
+                    message: "点赞成功",
+                    type: 'success'
+                });
+            } else if (data === "2") {//重复点赞
+                ele.children('i').css("color", "red");
+                $.message({
+                    title: LocalConst.OPERATION_NOTICE,
+                    message: "请勿重复点赞哦",
+                    type: 'info'
+                });
+            } else if (data === "-1") {//代码出错
+                $.message({
+                    title: LocalConst.OPERATION_NOTICE,
+                    message: "点赞请求失败，请稍后重试",
+                    type: 'error'
+                });
+            }
+        });
+    });
+</script>
+                    </div><!--end of #pedder-->
+
+                                    </div>
+            </div><!--end of .center-part -->
+            <div class="col w-lg bg-light lter bg-auto">
+                <div class="wrapper">
+                    <div class="padder-md">
+                        <div class="m-b-xs text-md">联系方式</div>
+                        <ul class="list-group no-bg no-borders pull-in">
+                                                        <li class="list-group-item"><a target="_blank" href="#" class="pull-left thumb-sm avatar m-r"><img 
+src="https://s2.ax1x.com/2019/07/20/ZzU1sO.png" class="img-40px photo img-square normal-shadow"><i class="on b-white bottom"></i></a><div class="clear"><div><a target="_blank" href="#">email</a></div><small class="text-muted">3536168060@qq.com</small></div></li><li class="list-group-item"><a target="_blank" href="#" class="pull-left thumb-sm avatar m-r"><img 
+src="https://s2.ax1x.com/2019/07/20/ZzUlQK.png" class="img-40px photo img-square normal-shadow"><i class="on b-white bottom"></i></a><div class="clear"><div><a target="_blank" href="#">QQ</a></div><small class="text-muted">3536168060</small></div></li><li class="list-group-item"><a target="_blank" href="#" class="pull-left thumb-sm avatar m-r"><img 
+src="https://s2.ax1x.com/2019/07/20/ZzUMz6.png" class="img-40px photo img-square normal-shadow"><i class="on b-white bottom"></i></a><div class="clear"><div><a target="_blank" href="#">微博</a></div><small class="text-muted">你微博账号</small></div></li><li class="list-group-item"><a target="_blank" href="#" class="pull-left thumb-sm avatar m-r"><img 
+src="https://s2.ax1x.com/2019/07/20/ZzU3LD.png" class="img-40px photo img-square normal-shadow"><i class="on b-white bottom"></i></a><div class="clear"><div><a target="_blank" href="#">网易云音乐</a></div><small class="text-muted">你的网易云账号</small></div></li>                        </ul>
+                    </div>
+
+                    <div class="panel box-shadow-wrap-normal">
+                        <h4 class="font-thin padder">关于我</h4>
+                        <ul class="list-group">
+                            <li class="list-group-item">
+                                <p>来自南部的一个小城市，个性不张扬，讨厌随波逐流。</p>
+
+                            </li>
+                        </ul>
+                    </div>
+
+                    
+                </div>
+            </div>
+        </div>
+	</main>
+
+<script>
+
+    var timeTemple = '<div class="m-l-n-md">\n' +
+        '          <a class="pull-left thumb-sm avatar">\n' +
+        '            <img class="img-square" src="{IMG_AVATAR}">\n' +
+        '          </a>          \n' +
+        '          <div class="time-machine m-l-xxl panel">\n' +
+        '            <div class="panel-heading pos-rlt">\n' +
+        '              <span class="arrow left pull-up"></span>\n' +
+        '              <span class="text-muted m-l-sm pull-right">\n' +
+        '                {TIME}\n' +
+        '              </span>\n' +
+        '              {CONTENT}</div><div class="text-muted say_footer panel-footer">\n' +
+        '                <a target="_blank" href="{LINK}" class="text-muted m-xs"><i class="iconfont icon-redo"></i>&nbsp;&nbsp;查看全文</a>\n' +
+        '              </div>' +
+        '          </div>' +
+        '        </div>';
+
+    $('#time-tabs').find('a').click(function (e) {
+        var object = $(this);
+        var rss = $(this).data("rss");
+        var id = $(this).data("id");
+        var flag = $(this).attr("data-status");
+        var type = $(this).data("type");
+        var img = $(this).data("img");
+        // console.log(flag);
+        // console.log(rss);
+        if ('undefined' !== rss && 'undefined' !== id && flag === "false"){
+            //动态加载内容
+            handsome_util.addScript(LocalConst.BASE_SCRIPT_URL + "assets/js/features/jFeed.min.js","feed_js",function () {
+                $.getFeed({
+                    url: rss,
+                    success: function(feed){
+                        $.each(feed.items,function(i,item){
+
+                            var date = new Date(Date.parse(item.updated));
+                            Y = date.getFullYear() + '-';
+                            M = (date.getMonth()+1 < 10 ? '0'+(date.getMonth()+1) : date.getMonth()+1) + '-';
+                            D = date.getDate() + ' ';
+                            h = date.getHours() + ':';
+                            m = date.getMinutes();
+                            date=Y+M+D+h+m;
+                            var itemContent="";
+                            if (type!==""){
+                                if (type === "title"){
+                                    itemContent = item.title;
+                                }else if (type === "description"){
+                                    itemContent = item.description;
+                                }else {
+                                    itemContent = item.description;
+                                }
+                            }else {
+                                itemContent = item.description;
+                            }
+                            if (img ===""){
+                                img = "https://i.loli.net/2020/07/25/ocu6N4WLStbJmeT.jpg";
+                            }
+                            if (date === "NaN-NaN-NaN NaN:NaN"){
+                                date = "";
+                            }
+                            var content=timeTemple.
+                            replace("{TIME}",date).
+                            replace("{CONTENT}",itemContent).
+                            replace("{LINK}",item.link).
+                            replace("{IMG_AVATAR}",img);
+
+
+                            $("#"+id).find(".comment-list").append(content);
+                            $("#"+id).find(".streamline").removeClass("hide");
+                            $("#"+id).find(".loading-nav").addClass("hide");
+                            object.attr("data-status","true");
+
+                            /*lightGallery  */
+                            handsome_content.seFancyBox();
+
+                        });
+                    },
+                    error: function (feed) {
+                        $("#"+id).find(".loading-nav").addClass("hide");
+                        $("#"+id).find(".error-nav").removeClass("hide");
+                    }
+                });
+            });
+        }
+    });
+    $("#time-upload").bind("click",function () {
+        $("#time_file").trigger("click");
+
+    });
+
+    /*监听文件上传框*/
+    $("#time_file").bind("change",function () {
+        if (!$(this).val()) {
+            $("#file-info").html("没有选择文件");
+            return;
+        }
+
+
+        var input = $('#time_file');
+        // 相当于： $input[0].files, $input.get(0).files
+        var files = input.prop('files');
+        // console.log(files);
+        //判断文件类型
+        if (files[0].type!=="image/jpeg" && files[0].type!=="image/png" && files[0].type!=="image/gif"){
+            $("#file-info").val("错误的文件类型！" + files[0].type);
+            return;
+        }
+        var suffix = "." + files[0].type.slice(6);
+        // console.log(suffix);
+        //开始上传文件
+        var file = files[0];
+        var reader = new FileReader();
+        reader.onload = function(e) {
+            var data = e.target.result;//base64 加密后的图片数据
+            var content = new FormData();
+            content.append("action","upload_img");
+            content.append("file",data);
+            content.append("time_code",'6096cf966cc414aab5d959c322736e80');
+
+            content.append("suffix",suffix);
+
+            
+            $.ajax({
+                url: "?action=upload_img",
+                type: 'post',
+                data: content,
+                cache: false,
+                processData: false,
+                contentType: false,
+                success: function (data) {
+                    data = JSON.parse(data);
+                    $("#time-upload").text("选择文件");
+                    $("#time-upload").attr("disabled",false);
+                    $("input[ name='imageInsertModal']").val(data.data);//插入返回的图片地址
+
+                }, error: function (jqXHR, textStatus, errorThrown) {
+                    $("#time-upload").attr("disabled",false);
+                    $("#time-upload").text("选择文件");
+                    $("#file-info").val($("#file-info").val() + "上传失败" + textStatus);
+                }
+            });
+        };
+
+        // data.append('data', "2333");
+        $("#file-info").val(files[0].name);
+        $("#time-upload").text("正在上传");
+        $("#time-upload").attr("disabled",true);
+        reader.readAsDataURL(file);
+    })
+
+</script>
+
+    <!-- footer -->
+	<script type="text/javascript">
+(function () {
+    window.TypechoComment = {
+        dom : function (id) {
+            return document.getElementById(id);
+        },
+    
+        create : function (tag, attr) {
+            var el = document.createElement(tag);
+        
+            for (var key in attr) {
+                el.setAttribute(key, attr[key]);
+            }
+        
+            return el;
+        },
+
+        reply : function (cid, coid) {
+            var comment = this.dom(cid), parent = comment.parentNode,
+                response = this.dom('respond-page-3'), input = this.dom('comment-parent'),
+                form = 'form' == response.tagName ? response : response.getElementsByTagName('form')[0],
+                textarea = response.getElementsByTagName('textarea')[0];
+
+            if (null == input) {
+                input = this.create('input', {
+                    'type' : 'hidden',
+                    'name' : 'parent',
+                    'id'   : 'comment-parent'
+                });
+
+                form.appendChild(input);
+            }
+
+            input.setAttribute('value', coid);
+
+            if (null == this.dom('comment-form-place-holder')) {
+                var holder = this.create('div', {
+                    'id' : 'comment-form-place-holder'
+                });
+
+                response.parentNode.insertBefore(holder, response);
+            }
+
+            comment.appendChild(response);
+            this.dom('cancel-comment-reply-link').style.display = '';
+
+            if (null != textarea && 'text' == textarea.name) {
+                textarea.focus();
+            }
+
+            return false;
+        },
+
+        cancelReply : function () {
+            var response = this.dom('respond-page-3'),
+            holder = this.dom('comment-form-place-holder'), input = this.dom('comment-parent');
+
+            if (null != input) {
+                input.parentNode.removeChild(input);
+            }
+
+            if (null == holder) {
+                return true;
+            }
+
+            this.dom('cancel-comment-reply-link').style.display = 'none';
+            holder.parentNode.insertBefore(response, holder);
+            return false;
+        }
+    };
+})();
+</script>
+<script type="text/javascript">
+var registCommentEvent = function() {
+    var event = document.addEventListener ? {
+        add: 'addEventListener',
+        focus: 'focus',
+        load: 'DOMContentLoaded'
+    } : {
+        add: 'attachEvent',
+        focus: 'onfocus',
+        load: 'onload'
+    };
+    var r = document.getElementById('respond-page-3');
+        
+    if (null != r) {
+        var forms = r.getElementsByTagName('form');
+        if (forms.length > 0) {
+            var f = forms[0], textarea = f.getElementsByTagName('textarea')[0], added = false;
+
+            if (null != textarea && 'text' == textarea.name) {
+                textarea[event.add](event.focus, function () {
+                    if (!added) {
+                        var input = document.createElement('input');
+                        input.type = 'hidden';
+                        input.name = '_';
+                            input.value = (function () {
+    var _7nCbXVy = 'fd'//'c'
++//'qWd'
+'e0c'+//'pV'
+'ff'+//'hs'
+'hs'+//'E2'
+'53'+/* 'Qow'//'Qow' */''+//'pcO'
+'9c'+//'v3D'
+'a6'+//'zGG'
+'zGG'+'1c'//'bGm'
++'9'//'QXx'
++//'O'
+'e36'+'U1I'//'U1I'
++//'pt2'
+'pt2'+'8'//'z'
++'9s'//'9s'
++'569'//'8'
++'7'//'pCb'
++//'u'
+'6'+''///*'tc8'*/'tc8'
++//'R'
+'c8d'+//'A'
+'515'+/* 'ZV'//'ZV' */''+'Tq'//'Tq'
++//'IJk'
+'IJk'+'b'//'pQ'
+, _uE9 = [[7,9],[13,16],[19,22],[19,22],[20,22],[31,33],[31,34]];
+    
+    for (var i = 0; i < _uE9.length; i ++) {
+        _7nCbXVy = _7nCbXVy.substring(0, _uE9[i][0]) + _7nCbXVy.substring(_uE9[i][1]);
+    }
+
+    return _7nCbXVy;
+})();
+                    
+                        f.appendChild(input);
+                        
+                        input = document.createElement('input');
+                        input.type = 'hidden';
+                        input.name = 'checkReferer';
+                        input.value = 'false';
+                        
+                        f.appendChild(input);
+                        
+
+                        added = true;
+                    }
+                });
+            }
+        }
+    }
+};
+</script></div><!-- /content -->
+  <footer id="footer" class="app-footer" role="footer">
+    <div class="wrapper b-t bg-light">
+      <span class="pull-right hidden-xs text-ellipsis">
+      <div class="github-badge">
+<a href="http://www.typecho.org" target="_blank" title="由 Typecho 强力驱动">
+<span class="badge-subject">Powered</span><span class="badge-value bg-blue">Typecho</span>
+</a>
+</div>
+&nbsp;|&nbsp;
+<div class="github-badge">
+<a href="https://www.ihewro.com/archives/489/" target="_blank" title="站点使用 handsome 主题，作者：友人C">
+<span class="badge-subject">Theme</span><span class="badge-value bg-orange">Handsome</span>
+</a>
+</div>     
+      </span>
+        <span class="text-ellipsis"><div class="github-badge">
+<a href="./" title="© 2020&nbsp;听风博客">
+<span class="badge-subject">Copyright</span><span class="badge-value bg-blue">© 2020&nbsp;指尖小站</span>
+</a>
+
+&nbsp;|&nbsp;
+<div class="github-badge">
+        <a href="https://www.hewenjie.cn/sitemap.xml" target="_blank">
+            <span class="badge-subject">网站地图</span><span class="badge-value bg-yellowgreen">Sitemap</span>
+         </a>
+    </div>
+&nbsp;|&nbsp;
+<div class="github-badge">
+        <a href="https://www.hewenjie.cn/ampindex" target="_blank">
+            <span class="badge-subject">AMP版</span><span class="badge-value bg-orange">手机首页</span>
+         </a>
+    </div></span>
+    </div>
+      <!--可以去除主题版权信息，最好保留版权信息或者添加主题信息到友链，谢谢你的理解-->
+            <script type="text/template" id="tmpl-customizer">
+          <div class="settings panel panel-default setting_body_panel" aria-hidden="true">
+              <button class="fix-padding btn btn-default no-shadow pos-abt border-radius-half-left"
+                      data-toggle="tooltip" data-placement="left" data-original-title="外观设置"
+                      data-toggle-class=".settings=active, .settings-icon=animate-spin">
+                  <i class="fontello fontello-gear settings-icon"></i>
+              </button>
+              <div class="panel-heading">
+                  <button class="pull-right btn btn-xs btn-rounded btn-danger " name="reset" data-toggle="tooltip"
+                          data-placement="left" data-original-title="恢复默认值" >重置</button>
+                  设置
+              </div>
+              <div class="setting_body">
+              <div class="panel-body">
+                  <# for ( var keys = _.keys( data.sections.settings ), i = 0, name; keys.length > i; ++i ) { #>
+                      <div<# if ( i !== ( keys.length - 1 ) ) print( ' class="m-b-sm"' ); else print(' id="mode_set"')
+                  #>>
+                          <label class="i-switch bg-info pull-right">
+                              <input type="checkbox" name="{{ keys[i] }}" <#
+                              print( ' value="'+handsome_UI.mode+data
+                              .defaults[keys[i]]+'"' )
+                              if ((data.defaults[keys[i]]=="auto" && handsome_UI.mode =="dark") || data
+                              .defaults[keys[i]] == true) print( ' checked="checked"' );
+                              #> /> 
+                                  <i></i>
+                          </label>
+
+                  <span> <# if(data.defaults[keys[i]]=="auto") print(LocalConst.DARK_MODE_AUTO); else if(data
+                      .sections.settings[keys[i]] == LocalConst.DARK_MODE) {print(LocalConst.DARK_MODE_FIXED)
+                      }else print(data.sections.settings[keys[i]]);#></span>
+       <# if ( i == ( keys.length - 1 ) ) {print( ' <small id="auto_info"'); if(data.defaults[keys[i]]!=="auto") print(' style="display:none"') ;print('><i class="glyphicon glyphicon-info-sign" data-toggle="tooltip" data-placement="bottom" data-original-title="网站深色模式自动依据您的设备关于深色模式的设置进行切换"></i></small>')}; #>
+              </div>
+              <# } #>
+          </div>
+          <div class="wrapper b-t b-light bg-light lter r-b">
+              <div class="row row-sm">
+                  <div class="col-xs-4">
+                      <#
+                              _.each( data.sections.colors, function( color, i ) {
+                              var newColumnBefore = ( i % 5 ) === 4;
+                              #>
+                          <label class="i-checks block<# if ( !newColumnBefore ) print( ' m-b-sm' ); #>">
+                              <input type="radio" name="color" value="{{ i }}"<# if ( data.defaults['color'] === i ) print( ' checked="checked"' ); #> />
+                                  <span class="block bg-light clearfix pos-rlt">
+								<span class="active pos-abt w-full h-full bg-black-opacity text-center">
+									<i class="fontello fontello-check text-md text-white m-t-xs"></i>
+								</span>
+								<b class="{{ color.navbarHeader }} header"></b>
+								<b class="{{ color.navbarCollapse }} header"></b>
+								<b class="{{ color.aside.replace( ' b-r', '' ) }}"></b>
+							</span>
+                          </label>
+                          <#
+                                  if ( newColumnBefore && ( i + 1 ) < data.sections.colors.length )
+                          print( '</div><div class="col-xs-4">' );
+                              } );
+                              #>
+                          </div>
+                  </div>
+              </div>
+          </div>
+          </div>
+      </script>
+
+
+      
+      <div class="topButton panel panel-default">
+          <button id="goToTop" class="fix-padding btn btn-default no-shadow pos-abt hide  border-radius-half-left"
+                  data-toggle="tooltip" data-placement="left" data-original-title="返回顶部">
+              <i class="fontello fontello-chevron-circle-up" aria-hidden="true"></i>
+          </button>
+      </div>
+  </footer>
+  </div><!--end of .app app-header-fixed-->
+
+
+
+
+        
+
+<!--定义全局变量-->
+
+
+
+<!--主题核心js-->
+<script>
+    SearchConfig = {
+        url: "https://www.hewenjie.cn/usr/plugins/Preference/cache/search.json"
+    }
+</script>
+
+
+
+    <script src="https://cdn.jsdelivr.net/gh/He-WenJie/Handsome@master/assets/js/function.min.js?v=7.3.12020081501"></script>
+
+    <script src="https://cdn.jsdelivr.net/gh/He-WenJie/Handsome@master/assets/js/core.min.js?v=7.3.12020081501"></script>
+
+
+
+    <!--全局播放器组件-->
+    <script>
+                var player = new skPlayer({"autoplay":false,"listshow":false,"mode":"listloop","music":{"type":"cloud","source":"888233349","media":"tencent"}});
+    </script>
+
+
+<script>
+    if ('serviceWorker' in navigator) {
+        if (LocalConst.USE_CACHE) {
+            navigator.serviceWorker.addEventListener('controllerchange', function (ev) {
+                try {
+                    $.message({
+                        title:"检测到本地缓存需要更新",
+                        message:"<a href='#' onclick='window.location.reload();'>点击刷新页面</a>更新本地缓存",
+                        type:'warning',
+                        time: '300000'
+                    });
+                }catch (e) {
+                }
+            });
+        }
+    }
+
+</script>
+
+<!--主题组件js加载-->
+    <script src="https://cdn.jsdelivr.net/gh/He-WenJie/Handsome@master/assets/js/features/jquery.pjax.min.js" type="text/javascript"></script>
+
+    <!--平滑滚动组件-->
+    <script src="https://cdn.jsdelivr.net/gh/He-WenJie/Handsome@master/assets/js/features/SmoothScroll.min.js"></script>
+
+
+<!--pjax动画组件-->
+    <script>
+        window.paceOptions = {
+            ajax: {
+                ignoreURLs: ['/.*Get.php.*/']
+            },//忽视音乐加载的ajax请求
+            restartOnPushState: false,
+            startOnPageLoad: false,
+            restartOnRequestAfter: false
+        };
+    </script>
+    <script src="https://cdn.jsdelivr.net/gh/He-WenJie/Handsome@master/assets/js/features/pace.min.js"></script>
+
+    <link href="https://cdn.jsdelivr.net/gh/He-WenJie/Handsome@master/assets/css/features/pjax/pace-theme-loading-bar.min.css"
+          rel="stylesheet">
+
+            <style>
+                        .pace .pace-progress{
+      background: #000000;
+      color: #000000;
+}
+
+.pace .pace-activity{
+    box-shadow: inset 0 0 0 2px #000000, inset 0 0 0 7px #FFF;
+}        </style>
+    
+
+
+
+
+
+<!--主题组件js加载结束-->
+
+<!--用户自定义js-->
+<script type="text/javascript">
+    <!--左侧彩色-->
+let leftHeader=document.querySelectorAll("span.nav-icon>svg,span.nav-icon>i");let leftHeaderColorArr=["#FF69B4","#58c7ea","#E066FF","#FF69B4","#FFA54F","#90EE90","#0043ff","#cc00ff","#878787","#A0522D","#FF7256","#FFA500","#8B0000","#7CFC00","#4EEE94","#00FFFF","#EE0000"];leftHeader.forEach(tag=>{tagsColor=leftHeaderColorArr[Math.floor(Math.random()*leftHeaderColorArr.length)];tag.style.color=tagsColor});  
+<!--复制提醒-->
+document.body.oncopy=function(){layer.msg('复制成功,若要转载请务必保留原文链接！');};
+<!--彩色标签云-->
+let tags = document.querySelectorAll("#tag_cloud-2 a");
+let infos = document.querySelectorAll(".badge");
+let colorArr = ["#428BCA", "#AEDCAE", "#ECA9A7", "#DA99FF", "#FFB380", "#D9B999"];
+tags.forEach(tag => {
+    tagsColor = colorArr[Math.floor(Math.random() * colorArr.length)];
+    tag.style.backgroundColor = tagsColor;
+});
+infos.forEach(info => {
+    infosColor = colorArr[Math.floor(Math.random() * colorArr.length)];
+    info.style.backgroundColor = infosColor;
+});</script>
+
+<!--全局文件-->
+<script src="https://lib.baomitu.com/layer/3.1.1/layer.js"></script>
+
+</body>
+</html><!--html end-->
+  	<!-- / footer -->
