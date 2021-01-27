@@ -1,1233 +1,507 @@
-<!DOCTYPE HTML>
-<html class="small-scroll-bar no-js bg" lang="zh-cmn-Hans">
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
-    <meta charset="UTF-8">
-    <!--IE 8浏览器的页面渲染方式-->
-    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
-    <!--默认使用极速内核：针对国内浏览器产商-->
-    <meta name="renderer" content="webkit">
-    <!--chrome Android 地址栏颜色-->
-            <meta name="theme-color" content="#3a3f51"/>
-    
-    <meta http-equiv="x-dns-prefetch-control" content="on">
-
-    <title>听风博客 - 相逢的人会再相逢</title>
-            <link rel="icon" type="image/ico" href="/favicon.ico">
-        <meta name="description" content="我们这一生很短，我们终将会失去它，所以不妨大胆一点！听风博客个人网站，是记录日常、工作、技术、资源分享的一个网站。" />
-<meta name="keywords" content="typecho,php,blog,听风博客,记录点滴,学习,成长,个人网站,技术,分享,回忆,个人记录,网络技术" />
-<meta name="generator" content="Typecho 1.2/18.10.23" />
-<meta name="template" content="handsome" />
-<link rel="pingback" href="https://www.hewenjie.cn/action/xmlrpc" />
-<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://www.hewenjie.cn/action/xmlrpc?rsd" />
-<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://www.hewenjie.cn/action/xmlrpc?wlw" />
-<link rel="alternate" type="application/rss+xml" title="听风博客 &raquo; RSS 2.0" href="https://www.hewenjie.cn/feed/" />
-<link rel="alternate" type="application/rdf+xml" title="听风博客 &raquo; RSS 1.0" href="https://www.hewenjie.cn/feed/rss/" />
-<link rel="alternate" type="application/atom+xml" title="听风博客 &raquo; ATOM 1.0" href="https://www.hewenjie.cn/feed/atom/" />
-
-<link rel="amphtml" href="https://www.hewenjie.cn/ampindex">
-
-
-    
-    
-    <script type="text/javascript">
-
-        window['LocalConst'] = {
-            //base
-            BASE_SCRIPT_URL: 'https://www.hewenjie.cn/usr/themes/handsome/',
-            BLOG_URL: 'https://li-hui327.github.io/Lihui.GitHub.io/',
-            BLOG_URL_N: 'https://li-hui327.github.io/Lihui.GitHub.io',
-            STATIC_PATH: 'https://cdn.jsdelivr.net/gh/He-WenJie/Handsome@master/assets/',
-            BLOG_URL_PHP: 'https://www.hewenjie.cn/',
-            VDITOR_CDN: 'https://cdn.jsdelivr.net/npm/vditor@3.4.5',
-            MATHJAX_SVG_CDN: 'https://cdn.jsdelivr.net/npm/mathjax@3.0.5/es5/tex-svg.js',
-            THEME_VERSION: '7.3.12020081501',
-            THEME_VERSION_PRO: '7.3.1',
-
-            //comment
-            COMMENT_NAME_INFO: '必须填写昵称或姓名',
-            COMMENT_EMAIL_INFO: '必须填写电子邮箱地址',
-            COMMENT_EMAIL_LEGAL_INFO: '邮箱地址不合法',
-            COMMENT_CONTENT_INFO: '必须填写评论内容',
-            COMMENT_SUBMIT_ERROR: '提交失败，请重试！',
-            COMMENT_CONTENT_LEGAL_INFO: '提交失败,评论被拦截或者进入审核区域',
-            COMMENT_CONTENT_CHECK_INFO: '评论进入审核区域，请勿重复评论',
-            COMMENT_TITLE: '评论通知',
-
-            //login
-            LOGIN_TITLE: '登录通知',
-            LOGIN_USERNAME_INFO: '必须填写用户名',
-            LOGIN_PASSWORD_INFO: '请填写密码',
-            LOGIN_SUBMIT_ERROR: '登录失败，请重新登录',
-            LOGIN_SUBMIT_INFO: '用户名或者密码错误，请重试',
-            LOGIN_SUBMIT_SUCCESS: '登录成功',
-            CLICK_TO_REFRESH: '点击以刷新页面',
-            LOGOUT_SUCCESS_REFRESH: '退出成功，正在刷新当前页面',
-
-            LOGOUT_ERROR: '退出失败，请重试',
-            LOGOUT_SUCCESS: '退出成功',
-            SUBMIT_PASSWORD_INFO: '密码错误，请重试',
-
-            //comment
-            ChANGYAN_APP_KEY: '',
-            CHANGYAN_CONF: '',
-
-            COMMENT_SYSTEM: '0',
-            COMMENT_SYSTEM_ROOT: '0',
-            COMMENT_SYSTEM_CHANGYAN: '1',
-            COMMENT_SYSTEM_OTHERS: '2',
-            EMOJI: '表情',
-            COMMENT_NEED_EMAIL: '1',
-            COMMENT_REJECT_PLACEHOLDER: '居然什么也不说，哼',
-            COMMENT_PLACEHOLDER: '说点什么吧……',
-
-            //pjax
-            IS_PJAX: '1',
-            IS_PAJX_COMMENT: '1',
-            PJAX_ANIMATE: 'loading-bar',
-            PJAX_TO_TOP: '0',
-            TO_TOP_SPEED: '100',
-
-
-            USER_COMPLETED: {"data":"<!--\u5f69\u8272\u5de6\u4fa7\u680f-->\r\nlet leftHeader=document.querySelectorAll(\"span.nav-icon>svg,span.nav-icon>i\");let leftHeaderColorArr=[\"#FF69B4\",\"#58c7ea\",\"#E066FF\",\"#FF69B4\",\"#FFA54F\",\"#90EE90\",\"#0043ff\",\"#cc00ff\",\"#878787\",\"#A0522D\",\"#FF7256\",\"#FFA500\",\"#8B0000\",\"#7CFC00\",\"#4EEE94\",\"#00FFFF\",\"#EE0000\"];leftHeader.forEach(tag=>{tagsColor=leftHeaderColorArr[Math.floor(Math.random()*leftHeaderColorArr.length)];tag.style.color=tagsColor});  \r\n<!--\u5f69\u8272\u6807\u7b7e\u4e91-->\r\nlet tags = document.querySelectorAll(\"#tag_cloud-2 a\");\r\nlet infos = document.querySelectorAll(\".badge\");\r\nlet colorArr = [\"#428BCA\", \"#AEDCAE\", \"#ECA9A7\", \"#DA99FF\", \"#FFB380\", \"#D9B999\"];\r\ntags.forEach(tag => {\r\n    tagsColor = colorArr[Math.floor(Math.random() * colorArr.length)];\r\n    tag.style.backgroundColor = tagsColor;\r\n});\r\ninfos.forEach(info => {\r\n    infosColor = colorArr[Math.floor(Math.random() * colorArr.length)];\r\n    info.style.backgroundColor = infosColor;\r\n});"},
-
-            //ui
-            OPERATION_NOTICE: '操作通知',
-            SCREENSHOT_BEGIN: '正在生成当前页面截图……',
-            SCREENSHOT_NOTICE: '点击顶部下载按钮保存当前卡片',
-            SCREENSHORT_ERROR: '由于图片跨域原因导致截图失败',
-            SCREENSHORT_SUCCESS: '截图成功',
-
-            //music
-            MUSIC_NOTICE: '播放通知',
-            MUSIC_FAILE: '当前音乐地址无效，自动为您播放下一首',
-            MUSIC_FAILE_END: '当前音乐地址无效',
-            MUSIC_LIST_SUCCESS: '歌单歌曲加载成功',
-
-            //option
-            TOC_TITLE: '文章目录',
-            HEADER_FIX: '固定头部',
-            ASIDE_FIX: '固定导航',
-            ASIDE_FOLDED: '折叠导航',
-            ASIDE_DOCK: '置顶导航',
-            CONTAINER_BOX: '盒子模型',
-            DARK_MODE: '深色模式',
-            DARK_MODE_AUTO: '深色模式（自动）',
-            DARK_MODE_FIXED: '深色模式（固定）',
-            EDITOR_CHOICE: 'origin',
-
-
-            CDN_NAME: '',
-            LAZY_LOAD: '',
-            PAGE_ANIMATE: '',
-            THEME_COLOR: '14',
-            THEME_COLOR_EDIT: 'white-white-white',
-            THEME_HEADER_FIX: '1',
-            THEME_ASIDE_FIX: '1',
-            THEME_ASIDE_FOLDED: '',
-            THEME_ASIDE_DOCK: '',
-            THEME_CONTAINER_BOX: '1',
-            THEME_HIGHLIGHT_CODE: '1',
-            THEME_MATHJAX: '',
-            THEME_TOC: '1',
-            THEME_DARK_MODE: 'auto',
-            THEME_DARK_MODE_VALUE: 'auto',
-            SHOW_SETTING_BUTTON: '1',
-
-            THEME_DARK_HOUR: '18',
-            THEME_LIGHT_HOUR: '6',
-            THUMB_STYLE: 'normal',
-            AUTO_READ_MODE: '',
-
-            //代码高亮
-            CODE_STYLE_LIGHT: 'solarized-light',
-            CODE_STYLE_DARK: 'solarized-dark',
-
-            //other
-            OFF_SCROLL_HEIGHT: '50',
-            SHOW_IMAGE_ALT: '1',
-            USER_LOGIN: '',
-            USE_CACHE: '1',
-            POST_SPEECH: '1',
-        };
-
-        if ('serviceWorker' in navigator) {
-            if (LocalConst.USE_CACHE) {
-                navigator.serviceWorker.register(LocalConst.BLOG_URL + 'sw.min.js?v=7.3.12020081501')
-                    .then(function (reg) {
-
-                    }).catch(function (error) {
-                    console.log('cache failed with ' + error); // registration failed
-                });
-            } else {
-                navigator.serviceWorker.getRegistrations()
-                    .then(function (registrations) {
-                        for (let registration of registrations) {
-                            registration.unregister();
-                            // 清除缓存
-                            window.caches && caches.keys && caches.keys().then(function (keys) {
-                                keys.forEach(function (key) {
-                                    caches.delete(key);
-                                });
-                            });
-                            console.log("unregister success")
-                        }
-                    });
-            }
-        }
-    </script>
-
-
-    
-
-    <!-- 第三方CDN加载CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
-
-
-    <!-- 本地css静态资源 -->
-
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/He-WenJie/Handsome@master/assets/css/origin/function.min.css?v=7.3.12020081501" type="text/css"/>
-    <link rel="stylesheet"
-          href="https://cdn.jsdelivr.net/gh/He-WenJie/Handsome@master/assets/css/handsome.min.css?v=7.3.12020081501"
-          type="text/css"/>
-
-        
-    
-    <!--主题组件css文件加载-->
-    
-    <!--引入英文字体文件-->
-            <link rel="stylesheet preload" href="https://cdn.jsdelivr.net/gh/He-WenJie/Handsome@master/assets/css/features/font.min.css?v=7.3.12020081501" as="style"/>
-    
-    <style type="text/css">
-        
-        html.bg {
-        background: #EFEFEF
-        }
-        .cool-transparent .off-screen+* .app-content-body {
-        background: #EFEFEF
-        }
-@media (max-width:767px){
-    html.bg {
-        background: #EFEFEF
-        }
-        .cool-transparent .off-screen+* .app-content-body {
-        background: #EFEFEF
-        }
-}
-/*底部页脚*/
-.github-badge {
-  display: inline-block;
-  border-radius: 4px;
-  text-shadow: none;
-  font-size: 12px;
-  color: #fff;
-  line-height: 15px;
-  background-color: #abbac3;
-  margin-bottom: 5px
-}
-.github-badge .badge-subject {
-  display: inline-block;
-  background-color: #4d4d4d;
-  padding: 4px 4px 4px 6px;
-  border-top-left-radius: 4px;
-  border-bottom-left-radius: 4px
-}
-.github-badge .badge-value {
-  display: inline-block;
-  padding: 4px 6px 4px 4px;
-  border-top-right-radius: 4px;
-  border-bottom-right-radius: 4px
-}
-.github-badge .bg-blue {
-  background-color: #007ec6
-}
-.github-badge .bg-orange {
-  background-color: #ffa500
-}
-.github-badge .bg-red {
-  background-color: #f00
-}
-.github-badge .bg-green {
-  background-color: #3bca6e
-}
-.github-badge .bg-purple {
-  background-color: #ab34e9
-}
-/*优化底部栏*/
-.wrapper {
-  padding: 11px;
-}
-/*文章标题居中*/
-.panel h2{
-    text-align: center; 
-}
-.panel-small h2{
-    text-align: center; 
-}
-.panel-picture h3{
-    text-align: center; 
-}
-.post-item-foot-icon{
-    text-align: center;
-}
-/*文章内打赏图标跳动*/
-.btn-pay {
-    animation: star 0.5s ease-in-out infinite alternate;
-}
-
-@keyframes star {
-    from {
-        transform: scale(1);
-    }
-
-    to {
-        transform: scale(1.1);
-    }
-}
-/* 右侧列表导航栏图标颜色 */
-.sidebar-icon svg.feather.feather-thumbs-up{color: #ff0000;}
-.sidebar-icon svg.feather.feather-message-square{color:#495dc3;}
-.sidebar-icon svg.feather.feather-gift{color:#52DE97;}#aside .wrapper:hover {
-	background: url(https://cdn.jsdelivr.net/gh/He-WenJie/Handsome@master/assets/img/snow.gif);
-	background-size: cover;
-	color: #999;
-}    </style>
-
-    <!--全站jquery-->
-    <script src="https://cdn.jsdelivr.net/npm/jquery@2.2.4/dist/jquery.min.js"></script>
-
-    <!--网站统计代码-->
-    <script>
-var _hmt = _hmt || [];
-(function() {
-  var hm = document.createElement("script");
-  hm.src = "https://hm.baidu.com/hm.js?cfa689adf568d7830785be181f9835a7";
-  var s = document.getElementsByTagName("script")[0]; 
-  s.parentNode.insertBefore(hm, s);
-})();
-</script>
-
-
+<meta content="en-us" http-equiv="Content-Language" />
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>主页</title>
 </head>
+<style>
+/*下方这句不动它，翻译开始*/
 
-<body id="body" class="fix-padding">
-
-
-<!-- aside -->
-  
-  <div id="alllayout" class="app app-aside-fix container app-header-fixed ">  <!-- headnav -->
-  <header id="header" class="app-header navbar box-shadow-bottom-lg" role="menu">
-    <!-- navbar header（交集处） -->
-    <div class="text-ellipsis navbar-header bg-white">
-    <button class="pull-right visible-xs" ui-toggle-class="show animated animated-lento fadeIn" target=".navbar-collapse">
-        <span class="menu-icons"><i data-feather="search"></i></span>
-    </button>
-    <button class="pull-left visible-xs" ui-toggle-class="off-screen animated" target=".app-aside" ui-scroll="app">
-        <span class="menu-icons"><i data-feather="menu"></i></span>
-    </button>
-    <!-- brand -->
-    <a href="https://li-hui327.github.io/Lihui.GitHub.io/" class="navbar-brand text-lt">
-        <span id="navbar-brand-day">
-                                                <i class="fontello fontello-home"></i>
-                            <span class="hidden-folded m-l-xs">听风博客</span>
-                    </span>
-            </a>
-    <!-- / brand -->
-    </div>
-    <!-- / navbar header -->
-
-    <!-- navbar collapse（顶部导航栏） -->
-    <div class="collapse pos-rlt navbar-collapse bg-white">
-    <!-- statitic info-->
-        <ul class="nav navbar-nav hidden-sm">
-        <li class="dropdown pos-stc">
-            <a id="statistic_pane" data-status="false" href="#" data-toggle="dropdown" class="dropdown-toggle feathericons dropdown-toggle"
-               aria-expanded="false">
-                <i data-feather="pie-chart"></i>
-                <span class="caret"></span>
-            </a>
-            <div class="dropdown-menu wrapper w-full bg-white">
-                <div class="row">
-                    <div class="col-sm-8 b-l b-light">
-                        <div class="m-l-xs m-t-xs m-b-sm font-bold">动态日历<span class="info-icons"><i
-                                        data-feather="info"
-                                                                                  data-toggle="tooltip" title="统计近10个月的文章"></i>
-                            </span></div>
-                        <div class="text-center">
-                            <nav class="loading-echart text-center m-t-lg m-b-lg">
-                                <p class="infinite-scroll-request"><i class="animate-spin fontello fontello-refresh"></i>Loading...</p>
-                            </nav>
-                            <div id="post-calendar" class="top-echart hide"></div>
-                        </div>
-                    </div>
-                    <div class="col-sm-4 b-l b-light">
-                        <div class="m-l-xs m-t-xs m-b-sm font-bold">分类雷达图</div>
-                        <div class="text-center">
-                            <nav class="loading-echart text-center m-t-lg m-b-lg">
-                                <p class="infinite-scroll-request"><i class="animate-spin fontello fontello-refresh"></i>Loading...</p>
-                            </nav>
-                            <div id="category-radar" class="top-echart hide"></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-sm-4 b-l b-light">
-                        <div class="m-l-xs m-t-xs m-b-sm font-bold">发布统计图</div>
-                        <div class="text-center">
-                            <nav class="loading-echart text-center m-t-lg m-b-lg">
-                                <p class="infinite-scroll-request"><i class="animate-spin fontello fontello-refresh"></i>Loading...</p>
-                            </nav>
-                            <div id="posts-chart" class="top-echart hide"></div>
-                        </div>
-                    </div>
-                    <div class="col-sm-4 b-l b-light">
-                        <div class="m-l-xs m-t-xs m-b-sm font-bold">分类统计图</div>
-                        <div class="text-center">
-                            <nav class="loading-echart text-center m-t-lg m-b-lg">
-                                <p class="infinite-scroll-request"><i class="animate-spin fontello fontello-refresh"></i>Loading...</p>
-                            </nav>
-                            <div id="categories-chart" class="top-echart hide"></div>
-                        </div>
-                    </div>
-                    <div class="col-sm-4 b-l b-light">
-                        <div class="m-l-xs m-t-xs m-b-sm font-bold">标签统计图</div>
-                        <div class="text-center">
-                            <nav class="loading-echart text-center m-t-lg m-b-lg">
-                                <p class="infinite-scroll-request"><i class="animate-spin fontello fontello-refresh"></i>Loading...</p>
-                            </nav>
-                            <div id="tags-chart" class="top-echart hide"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </li>
-    </ul>
-    
-    <!-- search form -->
-
-    <form id="searchform1" class="searchform navbar-form navbar-form-sm navbar-left shift" method="post"
-          role="search">
-        <div class="form-group">
-            <div class="input-group rounded bg-white-pure box-shadow-wrap-normal">
-                <input  autocomplete="off" id="search_input" type="search" name="s" class="transparent rounded form-control input-sm no-borders padder" required placeholder="输入关键词搜索…">
-                <!--搜索提示-->
-                <ul id="search_tips_drop" class="small-scroll-bar dropdown-menu hide" style="display: block;top: 
-                30px; left: 0px;">
-                </ul>
-                <span id="search_submit" class="transparent input-group-btn">
-                  <button  type="submit" class="transparent btn btn-sm">
-                      <span class="feathericons" id="icon-search"><i data-feather="search"></i></span>
-                      <span class="feathericons animate-spin  hide" id="spin-search"><i
-                                  data-feather="loader"></i></span>
-                      <!--                      <i class="fontello fontello-search" id="icon-search"></i>-->
-                      <!--                      <i class="animate-spin  fontello fontello-spinner hide" id="spin-search"></i>-->
-                  </button>
-              </span>
-            </div>
-        </div>
-    </form>
-    <a href="" style="display: none" id="searchUrl"></a>
-    <!-- / search form -->
-        <ul class="nav navbar-nav navbar-right">
-                    <li class="music-box hidden-xs hidden-sm">
-                <div id="skPlayer"></div>
-            </li>
-            <li class="dropdown "><a class="skPlayer-list-switch dropdown-toggle
-            feathericons"><i
-                            data-feather="disc"></i><span class="visible-xs-inline"></span></a></li>
-                                    <!--闲言碎语-->
-            <li class="dropdown">
-                <a href="#" data-toggle="dropdown" class="feathericons dropdown-toggle">
-                    <i data-feather="twitch"></i>
-                    <span class="visible-xs-inline">
-              闲言碎语              </span>
-                    <span class="badge badge-sm up bg-danger pull-right-xs"></span>
-                </a>
-                <!-- dropdown -->
-                <div class="dropdown-menu w-xl animated fadeInUp">
-                    <div class="panel bg-white">
-                        <div class="panel-heading b-light bg-light">
-                            <strong>
-                                闲言碎语                            </strong>
-                        </div>
-                        <div class="list-group" id="smallRecording">
-                                                    </div>
-                    </div>
-                </div>
-            </li>
-            <!--/闲言碎语-->
-                            <!--登录管理-->
-            <li class="dropdown" id="easyLogin">
-                <a onclick="return false" data-toggle="dropdown" class="dropdown-toggle clear" data-toggle="dropdown">
-                                            <span class="feathericons"><i data-feather="key"></i></span>
-                                        <b class="caret"></b><!--下三角符号-->
-                </a>
-                <!-- dropdown(已经登录) -->
-                                    <div class="dropdown-menu w-lg wrapper bg-white animated fadeIn" aria-labelledby="navbar-login-dropdown">
-                        <form id="Login_form" action="https://www.hewenjie.cn/index.php/action/login?_=360aac1ae04cb3219244d077e034c645" method="post">
-                            <div class="form-group">
-                                <label for="navbar-login-user">用户名</label>
-                                <input type="text" name="name" id="navbar-login-user" class="form-control" placeholder="用户名或电子邮箱"></div>
-                            <div class="form-group">
-                                <label for="navbar-login-password">密码</label>
-                                <input autocomplete type="password" name="password" id="navbar-login-password"
-                                       class="form-control" placeholder="密码"></div>
-                            <button style="width: 100%" type="submit" id="login-submit" name ="submitLogin" class="btn-rounded box-shadow-wrap-lg btn-gd-primary padder-lg">
-                                <span>登录</span>
-                                <span class="text-active">登录中...</span>
-                                <span class="banLogin_text">刷新页面后登录</span>
-                                <i class="animate-spin  fontello fontello-spinner hide" id="spin-login"></i>
-                                <i class="animate-spin fontello fontello-refresh hide" id="ban-login"></i>
-                            </button>
-
-
-<!--                            -->
-                            <input type="hidden" name="referer" value="https://www.hewenjie.cn/"></form>
-                    </div>
-                            </li>
-            <!--/登录管理-->
-            </ul>
-    </div>
-    <!-- / navbar collapse -->
-</header>
-  <!-- / headnav -->
-
-  <!--选择侧边栏的颜色-->
-  <aside id="aside" class="app-aside hidden-xs bg-white">  <!--<aside>-->
-        <div class="aside-wrap" layout="column">
-        <div class="navi-wrap scroll-y scroll-hide" flex>
-          <!-- user -->
-          <div class="clearfix hidden-xs text-center hide  show" id="aside-user">
-            <div class="dropdown wrapper ">
-                <div ui-nav>
-                          <a href="https://li-hui327.github.io/Lihui.GitHub.io/cross.html">
-                            <span class="thumb-lg w-auto-folded avatar m-t-sm  ">
-                  <img src="https://e.im5i.com/2020/10/21/5f518c783ef67ee96522be387fb14a77.png" class="img-full img-circle normal-shadow">
-                </span>
-              </a>
-                </div>
-              <a href="#" data-toggle="dropdown" class="dropdown-toggle hidden-folded  ">
-                <span class="clear">
-                  <span class="block m-t-sm">
-                    <strong class="font-bold text-lt">Mr.He</strong>
-                    <b class="caret"></b>
-                  </span>
-                  <span class="text-muted text-xs block"></span>
-                </span>
-              </a>
-              <!-- dropdown -->
-              <ul class="dropdown-menu animated fadeInRight w hidden-folded no-padder">
-                <li class="wrapper b-b m-b-sm bg-info m-n">
-                  <span class="arrow top hidden-folded arrow-info"></span>
-                  <div>
-                                                <p>注意劳逸结合，不要过度玩耍</p>
-                                  </div>
-                  <div class="progress progress-xs m-b-none dker">
-                    <div class="progress-bar bg-white" data-toggle="tooltip" data-original-title="时间已经度过95.83%" style="width: 95.83%"></div>
-                  </div>
-                </li>
-              </ul>
-              <!-- / dropdown -->
-            </div>
-          </div>
-          <!-- / user -->
-
-          <!-- nav -->
-          <nav ui-nav class="navi clearfix">
-            <ul class="nav">
-             <!--index-->
-                <div class="line dk hidden-folded"></div>
-                <li class="hidden-folded padder m-t m-b-sm text-muted text-xs">
-                <span>导航</span>
-              </li>
-                                          <!--主页-->
-              <li>
-                <a href="https://li-hui327.github.io/Lihui.GitHub.io/" class="auto">
-                    <span class="nav-icon"><i data-feather="home"></i></span>
-                    <span>首页</span>
-                </a>
-              </li>
-              <!-- /主页 -->
-                                                          <li class="line dk"></li>
-			<!--Components-->
-              <li class="hidden-folded padder m-t m-b-sm text-muted text-xs">
-                <span>组成</span>
-              </li>
-              <!--分类category-->
-                              <li >
-                <a class="auto">
-                  <span class="pull-right text-muted">
-                    <i class="fontello icon-fw fontello-angle-right text"></i>
-                    <i class="fontello icon-fw fontello-angle-down text-active"></i>
-                  </span>
-<!--                  <i class="glyphicon glyphicon-th"></i>-->
-                    <span class="nav-icon"><i data-feather="grid"></i></span>
-
-                    <span>分类</span>
-                </a>
-                <ul class="nav nav-sub dk">
-                  <li class="nav-sub-header">
-                    <a>
-                      <span>分类</span>
-                    </a>
-                  </li>
-                  <!--循环输出分类-->
-
-                    <li class="category-level-0 category-parent"><a  href="https://www.hewenjie.cn/daily/"><b class="badge pull-right">1</b>日常生活</a></li><li class="category-level-0 category-parent"><a  href="https://www.hewenjie.cn/source/"><b class="badge pull-right">6</b>程序源码</a></li><li class="category-level-0 category-parent"><a  href="https://www.hewenjie.cn/course/"><b class="badge pull-right">3</b>各类教程</a></li><li class="category-level-0 category-parent"><a  href="https://www.hewenjie.cn/software/"><b class="badge pull-right">4</b>实用软件</a></li><li class="category-level-0 category-parent"><a  href="https://www.hewenjie.cn/image/"><b class="badge pull-right">0</b>图集相册</a></li><li class="category-level-0 category-parent"><a  href="https://www.hewenjie.cn/experience/"><b class="badge pull-right">0</b>评测体验</a></li><li class="category-level-0 category-parent"><a  href="https://www.hewenjie.cn/promotions/"><b class="badge pull-right">7</b>活动线报</a></li><li class="category-level-0 category-parent"><a  href="https://www.hewenjie.cn/special/"><b class="badge pull-right">6</b>特殊教育</a></li><li class="category-level-0 category-parent"><a  href="https://www.hewenjie.cn/early/"><b class="badge pull-right">4</b>早期教育</a></li><li class="category-level-0 category-parent"><a  href="https://www.hewenjie.cn/briefing/"><b class="badge pull-right">59</b>每天60秒</a></li>                    
-                    <!--/循环输出分类-->
-
-                </ul>
-              </li>
-              <!--独立页面pages-->
-              <li>
-                <a class="auto">
-                  <span class="pull-right text-muted">
-                    <i class="fontello icon-fw fontello-angle-right text"></i>
-                    <i class="fontello icon-fw fontello-angle-down text-active"></i>
-                  </span>
-                    <span class="nav-icon"><i data-feather="file"></i></span>
-                  <span>页面</span>
-                </a>
-                <ul class="nav nav-sub dk">
-                  <li class="nav-sub-header">
-                    <a data-no-instant>
-                      <span>页面</span>
-                    </a>
-                  </li><!--这个字段不会被显示出来-->
-                  <!--循环输出独立页面-->
-                                                                                   <li><a href="https://www.hewenjie.cn/about.html"><span>关于小站</span></a></li>
-                                                                 <li><a href="https://www.hewenjie.cn/cross.html"><span>时光记忆</span></a></li>
-                                                                 <li><a href="https://www.hewenjie.cn/loves.html"><span>阅读观影</span></a></li>
-                                                                 <li><a href="https://www.hewenjie.cn/archives.html"><span>文章归档</span></a></li>
-                                                                 <li><a href="https://www.hewenjie.cn/project.html"><span>代码仓库</span></a></li>
-                                                                 <li><a href="https://www.hewenjie.cn/msg.html"><span>留言吐槽</span></a></li>
-                                                                 <li><a href="https://www.hewenjie.cn/links.html"><span>友情链接</span></a></li>
-                                   </ul>
-              </li>
-              <!--友情链接-->
-              <li>
-                <a class="auto">
-                  <span class="pull-right text-muted">
-                    <i class="fontello icon-fw fontello-angle-right text"></i>
-                    <i class="fontello icon-fw fontello-angle-down text-active"></i>
-                  </span>
-                    <span class="nav-icon"><i data-feather="user"></i></span>
-                  <span>友链</span>
-                </a>
-                <ul class="nav nav-sub dk">
-                  <li class="nav-sub-header">
-                    <a data-no-instant>
-                      <span>友链</span>
-                    </a>
-                  </li>
-                  <!--使用links插件，输出全站友链-->
-                                 </ul>
-              </li>
-                            </ul>
-          </nav>
-          <!-- nav -->
-        </div>
-          <!--end of .navi-wrap-->
-          <!--left_footer-->
-                    <div id="left_footer" class="footer wrapper-xs text-center nav-xs lt">
-                  
-                                        <div class="col-xs-4 no-padder">
-                          <a target="_blank" class="tinav" href="https://www.hewenjie.cn/admin/" title="" data-toggle="tooltip" data-placement="top" data-original-title="后台管理">
-                              <span class="left-bottom-icons block"><i data-feather="settings"></i></span>
-                              <small class="text-muted">管理</small>
-                          </a>
-                      </div>
-                                    <div class="col-xs-4 no-padder">
-                      <a target="_blank" class="tinav" href="https://www.hewenjie.cn/feed/" title="" data-toggle="tooltip" data-placement="top" data-original-title="文章RSS地址">
-                          <span class="left-bottom-icons block"><i data-feather="rss"></i></span>
-                          <small class="text-muted">文章</small>
-                      </a>
-                  </div>
-                  <div class="col-xs-4 no-padder">
-                      <a target="_blank" href="https://www.hewenjie.cn/feed/comments/" title="" data-toggle="tooltip" data-placement="top" data-original-title="评论RSS地址">
-                          <span class="left-bottom-icons block"><i data-feather="message-square"></i></span>
-                          <small class="text-muted">评论</small>
-                      </a>
-                  </div>
-          </div>
-          
-      </div><!--.aside-wrap-->
-  </aside>
-<!-- content -->
-<div id="content" class="app-content">
-    <!--loading animate-->
-    
-
-
-
-
-
-<!-- / aside -->
-
-<!-- <div id="content" class="app-content"> -->
-<a class="off-screen-toggle hide"></a>
-<main class="app-content-body ">
-    <div class="hbox hbox-auto-xs hbox-auto-sm">
-        <div class="col center-part">
-                        <header class="bg-light lter wrapper-md">
-                <h1 class="m-n font-thin text-black l-h">听风博客</h1>
-                <small class="text-muted letterspacing indexWords">加载中……<script>
-                         $.ajax({
-                            type: 'Get',
-                            url: 'https://v1.hitokoto.cn/',
-                            success: function(data) {
-//data = JSON.parse(data);
-                               var hitokoto = data.hitokoto;
-                              $('.indexWords').text(hitokoto);
-                            }
-                         });
-</script></small>
-            </header>
-            <div class="wrapper-md skt-loading" id="post-panel">
-
-                                <!--首页输出文章-->
-
-                <div class="blog-post"><div class="single-post panel">
-    <div class="index-post-img">
-        <a href="https://www.hewenjie.cn/1.html">
-            <div class="item-thumb lazy"  style="background-image: url(https://cdn.jsdelivr.net/gh/He-WenJie/Handsome@master/assets/img/sj/1.jpg)">
-</div>
-           
-        </a>
-    </div><div class="post-meta wrapper-lg">    <h2 class="m-t-none text-ellipsis index-post-title text-title"><a 
-    href="https://www.hewenjie.cn/1.html"><span class="label text-sm bg-danger pull-left m-t-xs m-r" style="margin-top:  2px;">置顶</span>欢迎光临听风博客</a></h2><p class="summary l-h-2x text-muted">当你看到这文章时，说明我的博客已经开始 有时间的话就更新哟～</p><div class="line line-lg b-b b-light"></div>
-<div class="text-muted post-item-foot-icon text-ellipsis list-inline">
-<li>
-<span class="m-r-sm right-small-icons"><i data-feather="user"></i></span><a href="https://www.hewenjie.cn/author/1/">Mr.He</a></li>
-
-<li><span class="right-small-icons m-r-sm"><i data-feather="clock"></i></span>2020 年 08 月 17 日</li><li><span class="right-small-icons m-r-sm"><i 
-data-feather="message-square"></i></span><a href="https://www.hewenjie.cn/1.html#comments">2 条评论</a></li></div><!--text-muted-->
-</div><!--post-meta wrapper-lg-->
-</div><!--panel/panel-small-->
-<div class="panel-small single-post box-shadow-wrap-normal">
-    <div class="index-post-img-small post-feature index-img-small">
-        <a href="https://www.hewenjie.cn/93.html">
-            <div class="item-thumb-small lazy"  style="background-image: url(https://i.loli.net/2020/10/14/5CHwWuxsIJYtAO3.png)"></div>
-        </a>
-    </div><div class="post-meta wrapper-lg">    <h2 class="m-t-none text-ellipsis index-post-title text-title"><a 
-    href="https://www.hewenjie.cn/93.html">10月14日，星期三，在这里每天60秒读懂世界！</a></h2><p class="summary l-h-2x text-muted">1、刑事责任年龄拟调整：12至14岁犯故意杀人、故意伤害罪，致人死亡，情节恶劣的应当负刑责，奸淫不满10周岁幼女将适用更重刑罚；2、中央：不得下达升学指标...</p><div class="line line-lg b-b b-light"></div>
-<div class="text-muted post-item-foot-icon text-ellipsis list-inline">
-<li>
-<span class="m-r-sm right-small-icons"><i data-feather="user"></i></span><a href="https://www.hewenjie.cn/author/1/">Mr.He</a></li>
-
-<li><span class="right-small-icons m-r-sm"><i data-feather="clock"></i></span>2020 年 10 月 14 日</li><li><span class="right-small-icons m-r-sm"><i 
-data-feather="message-square"></i></span><a href="https://www.hewenjie.cn/93.html#comments">暂无评论</a></li></div><!--text-muted-->
-</div><!--post-meta wrapper-lg-->
-</div><!--panel/panel-small-->
-<div class="single-post panel">
-    <div class="index-post-img">
-        <a href="https://www.hewenjie.cn/92.html">
-            <div class="item-thumb lazy"  style="background-image: url(https://i.loli.net/2020/10/13/LIAnV4GluqKmphr.png)">
-</div>
-           
-        </a>
-    </div><div class="post-meta wrapper-lg">    <h2 class="m-t-none text-ellipsis index-post-title text-title"><a 
-    href="https://www.hewenjie.cn/92.html">10月13日，星期二，在这里每天60秒读懂世界！</a></h2><p class="summary l-h-2x text-muted">10月13日，农历八月八月廿七，星期二！在这里，每天60秒读懂世界！1、山西省长治市宣布从2022年开始把裸眼视力和体重考核结果纳入中考总成绩，网友质疑其涉嫌基因与经济双重歧视；2、青岛：将市胸科医院所在的楼山后社区定为中风险区域，其它区域风险等级不变，5天内将对全市检测全覆盖，截至12日已采样超百万份，目前未发现新增；3、教育部明确：将心肺复苏和急救知识纳入学校基础教育相关课程；4、农业农...</p><div class="line line-lg b-b b-light"></div>
-<div class="text-muted post-item-foot-icon text-ellipsis list-inline">
-<li>
-<span class="m-r-sm right-small-icons"><i data-feather="user"></i></span><a href="https://www.hewenjie.cn/author/1/">Mr.He</a></li>
-
-<li><span class="right-small-icons m-r-sm"><i data-feather="clock"></i></span>2020 年 10 月 13 日</li><li><span class="right-small-icons m-r-sm"><i 
-data-feather="message-square"></i></span><a href="https://www.hewenjie.cn/92.html#comments">暂无评论</a></li></div><!--text-muted-->
-</div><!--post-meta wrapper-lg-->
-</div><!--panel/panel-small-->
-<div class="panel-small single-post box-shadow-wrap-normal">
-    <div class="index-post-img-small post-feature index-img-small">
-        <a href="https://www.hewenjie.cn/91.html">
-            <div class="item-thumb-small lazy"  style="background-image: url(https://i.loli.net/2020/10/12/t8KdOcnXMJC7iLz.png)"></div>
-        </a>
-    </div><div class="post-meta wrapper-lg">    <h2 class="m-t-none text-ellipsis index-post-title text-title"><a 
-    href="https://www.hewenjie.cn/91.html">10月12日，星期一，在这里每天60秒读懂世界！ </a></h2><p class="summary l-h-2x text-muted">10月12日，农历八月八月廿六，星期一！在这里，每天60秒读懂世界！1、湖北仙桃一企业疑因钡泄漏致37名村民用自来水后出现中毒症状，知情者：吃完饭就上吐下...</p><div class="line line-lg b-b b-light"></div>
-<div class="text-muted post-item-foot-icon text-ellipsis list-inline">
-<li>
-<span class="m-r-sm right-small-icons"><i data-feather="user"></i></span><a href="https://www.hewenjie.cn/author/1/">Mr.He</a></li>
-
-<li><span class="right-small-icons m-r-sm"><i data-feather="clock"></i></span>2020 年 10 月 12 日</li><li><span class="right-small-icons m-r-sm"><i 
-data-feather="message-square"></i></span><a href="https://www.hewenjie.cn/91.html#comments">暂无评论</a></li></div><!--text-muted-->
-</div><!--post-meta wrapper-lg-->
-</div><!--panel/panel-small-->
-<div class="single-post panel">
-    <div class="index-post-img">
-        <a href="https://www.hewenjie.cn/90.html">
-            <div class="item-thumb lazy"  style="background-image: url(https://i.loli.net/2020/10/11/EdZs9Dw6MSqGAb5.png)">
-</div>
-           
-        </a>
-    </div><div class="post-meta wrapper-lg">    <h2 class="m-t-none text-ellipsis index-post-title text-title"><a 
-    href="https://www.hewenjie.cn/90.html">10月11日，星期日，在这里每天60秒读懂世界！ </a></h2><p class="summary l-h-2x text-muted">10月11日，农历八月八月廿五，星期日！在这里，每天60秒读懂世界！1、中国电信江西省欠费信息将接入个人征信系统，从2020年11月开始执行，手机欠费超3个月可能上征信；2、黑龙江：鸡西市鸡东县一居民家庭9人聚餐，食用了已在冰箱冷冻一年的自制酸汤子，疑似食物中毒，7人死亡2人仍在抢救；3、国家体育总局：近段时间以来进行的体能测试仅是督促运动员加强基础体能的措施，不会影响高水平运动员参与奥运会...</p><div class="line line-lg b-b b-light"></div>
-<div class="text-muted post-item-foot-icon text-ellipsis list-inline">
-<li>
-<span class="m-r-sm right-small-icons"><i data-feather="user"></i></span><a href="https://www.hewenjie.cn/author/1/">Mr.He</a></li>
-
-<li><span class="right-small-icons m-r-sm"><i data-feather="clock"></i></span>2020 年 10 月 11 日</li><li><span class="right-small-icons m-r-sm"><i 
-data-feather="message-square"></i></span><a href="https://www.hewenjie.cn/90.html#comments">暂无评论</a></li></div><!--text-muted-->
-</div><!--post-meta wrapper-lg-->
-</div><!--panel/panel-small-->
-<div class="panel-small single-post box-shadow-wrap-normal">
-    <div class="index-post-img-small post-feature index-img-small">
-        <a href="https://www.hewenjie.cn/89.html">
-            <div class="item-thumb-small lazy"  style="background-image: url(https://i.loli.net/2020/10/11/6Bm3OnFbycQklwH.png)"></div>
-        </a>
-    </div><div class="post-meta wrapper-lg">    <h2 class="m-t-none text-ellipsis index-post-title text-title"><a 
-    href="https://www.hewenjie.cn/89.html">10月10日，星期六，在这里每天60秒读懂世界！ </a></h2><p class="summary l-h-2x text-muted">10月10日，农历八月八月廿四，星期六！在这里，每天60秒读懂世界！1、国家林草局：竹鼠、果子狸、豪猪等45种野生动物今年年底前停止养殖；2、国务院督查组...</p><div class="line line-lg b-b b-light"></div>
-<div class="text-muted post-item-foot-icon text-ellipsis list-inline">
-<li>
-<span class="m-r-sm right-small-icons"><i data-feather="user"></i></span><a href="https://www.hewenjie.cn/author/1/">Mr.He</a></li>
-
-<li><span class="right-small-icons m-r-sm"><i data-feather="clock"></i></span>2020 年 10 月 10 日</li><li><span class="right-small-icons m-r-sm"><i 
-data-feather="message-square"></i></span><a href="https://www.hewenjie.cn/89.html#comments">暂无评论</a></li></div><!--text-muted-->
-</div><!--post-meta wrapper-lg-->
-</div><!--panel/panel-small-->
-</div>                <!--分页首页按钮-->
-                <nav class="text-center m-t-lg m-b-lg" role="navigation">
-                    <ol class="page-navigator"><li class="current"><a href="https://www.hewenjie.cn/page/1/">1</a></li><li><a href="https://www.hewenjie.cn/page/2/">2</a></li><li><a href="https://www.hewenjie.cn/page/3/">3</a></li><li><a href="https://www.hewenjie.cn/page/4/">4</a></li><li><span>...</span></li><li><a href="https://www.hewenjie.cn/page/17/">17</a></li><li class="next"><a href="https://www.hewenjie.cn/page/2/"><i class="fontello fontello-chevron-right"></i></a></li></ol>                </nav>
-                <style>
-                    .page-navigator>li>a, .page-navigator>li>span{
-                        line-height: 1.42857143;
-                        padding: 6px 12px;
-                    }
-                </style>
-            </div>
-        </div>
-        <!--首页右侧栏-->
-          
-         <aside class="asideBar col w-md bg-white-only bg-auto no-border-xs" role="complementary">
-     <div id="sidebar">
-      <section id="tabs-4" class="widget widget_tabs clear">
-       <div class="nav-tabs-alt no-js-hide">
-        <ul class="nav nav-tabs nav-justified box-shadow-bottom-normal tablist" role="tablist">
-         <li data-index="0" class="active" role="presentation"> <a href="#widget-tabs-4-hots" role="tab" aria-controls="widget-tabs-4-hots" aria-expanded="true" data-toggle="tab"><div class="sidebar-icon wrapper-sm"><i data-feather="thumbs-up"></i></div><span class="sr-only">热门文章</span> </a></li>
-                            <li role="presentation" data-index="1"> <a href="#widget-tabs-4-comments" role="tab" aria-controls="widget-tabs-4-comments" aria-expanded="false" data-toggle="tab"><div class="sidebar-icon wrapper-sm"><i  data-feather="message-square"></i></div> <span class="sr-only">最新评论</span> </a></li>
-                        <li data-index="2" role="presentation"> <a href="#widget-tabs-4-random" role="tab" aria-controls="widget-tabs-4-random" aria-expanded="false" data-toggle="tab"> <div class="sidebar-icon wrapper-sm"><i data-feather="gift"></i></div>  <span class="sr-only">随机文章</span>
-             </a></li>
-            <span class="navs-slider-bar"></span>
-        </ul>
-       </div>
-       <div class="tab-content">
-       <!--热门文章-->
-        <div id="widget-tabs-4-hots" class="tab-pane  fade in wrapper-md active" role="tabpanel">
-         <h5 class="widget-title m-t-none text-md">热门文章</h5>
-         <ul class="list-group no-bg no-borders pull-in m-b-none">
-          <li class="list-group-item">
-                <a href="https://www.hewenjie.cn/1.html" class="pull-left thumb-sm m-r"><img src="https://cdn.jsdelivr.net/gh/He-WenJie/Handsome@master/assets/img/sj2/7.jpg" class="img-40px normal-shadow img-square"></a>
-                <div class="clear">
-                    <h4 class="h5 l-h text-second"> <a href="https://www.hewenjie.cn/1.html" title="欢迎光临听风博客"> 欢迎光临听风博客 </a></h4>
-                    <small class="text-muted post-head-icon"><span class="meta-views"> <span class="right-small-icons"><i data-feather="message-circle"></i></span>  <span class="sr-only">评论数：</span> <span class="meta-value">2</span>
-                    </span></small></div></li><li class="list-group-item">
-                <a href="https://www.hewenjie.cn/43.html" class="pull-left thumb-sm m-r"><img src="https://cdn.jsdelivr.net/gh/He-WenJie/Handsome@master/assets/img/sj2/1.jpg" class="img-40px normal-shadow img-square"></a>
-                <div class="clear">
-                    <h4 class="h5 l-h text-second"> <a href="https://www.hewenjie.cn/43.html" title="MDClub轻量级开源论坛程序PHP网站源码"> MDClub轻量级开源论坛程序PHP网站源码 </a></h4>
-                    <small class="text-muted post-head-icon"><span class="meta-views"> <span class="right-small-icons"><i data-feather="message-circle"></i></span>  <span class="sr-only">评论数：</span> <span class="meta-value">1</span>
-                    </span></small></div></li><li class="list-group-item">
-                <a href="https://www.hewenjie.cn/9.html" class="pull-left thumb-sm m-r"><img src="https://cdn.jsdelivr.net/gh/He-WenJie/Handsome@master/assets/img/sj2/9.jpg" class="img-40px normal-shadow img-square"></a>
-                <div class="clear">
-                    <h4 class="h5 l-h text-second"> <a href="https://www.hewenjie.cn/9.html" title="8月17日，星期一，在这里每天60秒读懂世界！"> 8月17日，星期一，在这里每天60秒读懂世界！ </a></h4>
-                    <small class="text-muted post-head-icon"><span class="meta-views"> <span class="right-small-icons"><i data-feather="message-circle"></i></span>  <span class="sr-only">评论数：</span> <span class="meta-value">0</span>
-                    </span></small></div></li><li class="list-group-item">
-                <a href="https://www.hewenjie.cn/10.html" class="pull-left thumb-sm m-r"><img src="https://cdn.jsdelivr.net/gh/He-WenJie/Handsome@master/assets/img/sj2/6.jpg" class="img-40px normal-shadow img-square"></a>
-                <div class="clear">
-                    <h4 class="h5 l-h text-second"> <a href="https://www.hewenjie.cn/10.html" title="CloudFlare CDN如何自定义节点（CF自选IP）"> CloudFlare CDN如何自定义节点（CF自选IP） </a></h4>
-                    <small class="text-muted post-head-icon"><span class="meta-views"> <span class="right-small-icons"><i data-feather="message-circle"></i></span>  <span class="sr-only">评论数：</span> <span class="meta-value">0</span>
-                    </span></small></div></li><li class="list-group-item">
-                <a href="https://www.hewenjie.cn/11.html" class="pull-left thumb-sm m-r"><img src="https://cdn.jsdelivr.net/gh/He-WenJie/Handsome@master/assets/img/sj2/3.jpg" class="img-40px normal-shadow img-square"></a>
-                <div class="clear">
-                    <h4 class="h5 l-h text-second"> <a href="https://www.hewenjie.cn/11.html" title="8月18日，星期二，在这里每天60秒读懂世界！"> 8月18日，星期二，在这里每天60秒读懂世界！ </a></h4>
-                    <small class="text-muted post-head-icon"><span class="meta-views"> <span class="right-small-icons"><i data-feather="message-circle"></i></span>  <span class="sr-only">评论数：</span> <span class="meta-value">0</span>
-                    </span></small></div></li>         </ul>
-        </div>
-                   <!--最新评论-->
-        <div id="widget-tabs-4-comments" class="tab-pane fade wrapper-md no-js-show" role="tabpanel">
-         <h5 class="widget-title m-t-none text-md">最新评论</h5>
-         <ul class="list-group no-borders pull-in auto m-b-none no-bg">
-                              <li class="list-group-item">
-
-              <a href="https://www.hewenjie.cn/43.html#comment-3" class="pull-left thumb-sm avatar m-r">
-                  <img nogallery src="https://q.qlogo.cn/g?b=qq&nk=2966743702&s=100" class="img-40px photo img-square normal-shadow">              </a>
-              <a href="https://www.hewenjie.cn/43.html#comment-3" class="text-muted">
-                  <!--<i class="iconfont icon-comments-o text-muted pull-right m-t-sm text-sm" title="" aria-hidden="true" data-toggle="tooltip" data-placement="auto left"></i>
-                  <span class="sr-only"></span>-->
-              </a>
-              <div class="clear">
-                  <div class="text-ellipsis">
-                      <a href="https://www.hewenjie.cn/43.html#comment-3" title="Q青之家"> Q青之家 </a>
-                  </div>
-                  <small class="text-muted">
-                      <span>
-                          蹭一蹭                      </span>
-                  </small>
-              </div>
-          </li>
-                    <li class="list-group-item">
-
-              <a href="https://www.hewenjie.cn/1.html#comment-2" class="pull-left thumb-sm avatar m-r">
-                  <img nogallery src="https://q.qlogo.cn/g?b=qq&nk=431804095&s=100" class="img-40px photo img-square normal-shadow">              </a>
-              <a href="https://www.hewenjie.cn/1.html#comment-2" class="text-muted">
-                  <!--<i class="iconfont icon-comments-o text-muted pull-right m-t-sm text-sm" title="" aria-hidden="true" data-toggle="tooltip" data-placement="auto left"></i>
-                  <span class="sr-only"></span>-->
-              </a>
-              <div class="clear">
-                  <div class="text-ellipsis">
-                      <a href="https://www.hewenjie.cn/1.html#comment-2" title="等等博客"> 等等博客 </a>
-                  </div>
-                  <small class="text-muted">
-                      <span>
-                          已阅，感谢站长分享！                      </span>
-                  </small>
-              </div>
-          </li>
-                    <li class="list-group-item">
-
-              <a href="https://www.hewenjie.cn/1.html#comment-1" class="pull-left thumb-sm avatar m-r">
-                  <img nogallery src="https://q.qlogo.cn/g?b=qq&nk=3536168060&s=100" class="img-40px photo img-square normal-shadow">              </a>
-              <a href="https://www.hewenjie.cn/1.html#comment-1" class="text-muted">
-                  <!--<i class="iconfont icon-comments-o text-muted pull-right m-t-sm text-sm" title="" aria-hidden="true" data-toggle="tooltip" data-placement="auto left"></i>
-                  <span class="sr-only"></span>-->
-              </a>
-              <div class="clear">
-                  <div class="text-ellipsis">
-                      <a href="https://www.hewenjie.cn/1.html#comment-1" title="Mr.He"> Mr.He </a>
-                  </div>
-                  <small class="text-muted">
-                      <span>
-                          欢迎加入光临本小站！                      </span>
-                  </small>
-              </div>
-          </li>
-                   </ul>
-        </div>
-                   <!--随机文章-->
-        <div id="widget-tabs-4-random" class="tab-pane fade wrapper-md no-js-show" role="tabpanel">
-            <h5 class="widget-title m-t-none text-md">随机文章</h5>
-            <ul class="list-group no-bg no-borders pull-in">
-            <li class="list-group-item">
-                <a href="https://www.hewenjie.cn/41.html" class="pull-left thumb-sm m-r"><img src="https://cdn.jsdelivr.net/gh/He-WenJie/Handsome@master/assets/img/sj2/7.jpg" class="img-40px normal-shadow img-square"></a>
-                <div class="clear">
-                    <h4 class="h5 l-h text-second"> <a href="https://www.hewenjie.cn/41.html" title="请查收，12个儿童认知能力训练方案送给你！"> 请查收，12个儿童认知能力训练方案送给你！ </a></h4>
-                    <small class="text-muted post-head-icon"><span class="meta-views "> <span class="right-small-icons"><i data-feather="message-circle"></i></span> <span class="sr-only">评论数：</span> <span class="meta-value">0</span>
-                    </span></small></div></li><li class="list-group-item">
-                <a href="https://www.hewenjie.cn/17.html" class="pull-left thumb-sm m-r"><img src="https://cdn.jsdelivr.net/gh/He-WenJie/Handsome@master/assets/img/sj2/1.jpg" class="img-40px normal-shadow img-square"></a>
-                <div class="clear">
-                    <h4 class="h5 l-h text-second"> <a href="https://www.hewenjie.cn/17.html" title="8月24日，星期一，在这里每天60秒读懂世界！"> 8月24日，星期一，在这里每天60秒读懂世界！ </a></h4>
-                    <small class="text-muted post-head-icon"><span class="meta-views "> <span class="right-small-icons"><i data-feather="message-circle"></i></span> <span class="sr-only">评论数：</span> <span class="meta-value">0</span>
-                    </span></small></div></li><li class="list-group-item">
-                <a href="https://www.hewenjie.cn/60.html" class="pull-left thumb-sm m-r"><img src="https://cdn.jsdelivr.net/gh/He-WenJie/Handsome@master/assets/img/sj2/9.jpg" class="img-40px normal-shadow img-square"></a>
-                <div class="clear">
-                    <h4 class="h5 l-h text-second"> <a href="https://www.hewenjie.cn/60.html" title="9月20日，星期日，在这里每天60秒读懂世界！"> 9月20日，星期日，在这里每天60秒读懂世界！ </a></h4>
-                    <small class="text-muted post-head-icon"><span class="meta-views "> <span class="right-small-icons"><i data-feather="message-circle"></i></span> <span class="sr-only">评论数：</span> <span class="meta-value">0</span>
-                    </span></small></div></li><li class="list-group-item">
-                <a href="https://www.hewenjie.cn/26.html" class="pull-left thumb-sm m-r"><img src="https://cdn.jsdelivr.net/gh/He-WenJie/Handsome@master/assets/img/sj2/6.jpg" class="img-40px normal-shadow img-square"></a>
-                <div class="clear">
-                    <h4 class="h5 l-h text-second"> <a href="https://www.hewenjie.cn/26.html" title="9月2日，星期三，在这里每天60秒读懂世界！"> 9月2日，星期三，在这里每天60秒读懂世界！ </a></h4>
-                    <small class="text-muted post-head-icon"><span class="meta-views "> <span class="right-small-icons"><i data-feather="message-circle"></i></span> <span class="sr-only">评论数：</span> <span class="meta-value">0</span>
-                    </span></small></div></li><li class="list-group-item">
-                <a href="https://www.hewenjie.cn/52.html" class="pull-left thumb-sm m-r"><img src="https://cdn.jsdelivr.net/gh/He-WenJie/Handsome@master/assets/img/sj2/3.jpg" class="img-40px normal-shadow img-square"></a>
-                <div class="clear">
-                    <h4 class="h5 l-h text-second"> <a href="https://www.hewenjie.cn/52.html" title="感觉统合训练教学三阶段"> 感觉统合训练教学三阶段 </a></h4>
-                    <small class="text-muted post-head-icon"><span class="meta-views "> <span class="right-small-icons"><i data-feather="message-circle"></i></span> <span class="sr-only">评论数：</span> <span class="meta-value">0</span>
-                    </span></small></div></li>            </ul>
-        </div>
-       </div>
-      </section>
-      <!--博客信息-->
-               <section id="blog_info" class="widget widget_categories wrapper-md clear">
-       <h5 class="widget-title m-t-none text-md">博客信息</h5>
-       <ul class="list-group box-shadow-wrap-normal">
-                      <li class="list-group-item text-second"><span class="blog-info-icons"> <i data-feather="award"></i></span> <span
-                       class="badge
-           pull-right">86</span>文章数目</li>
-           <li class="list-group-item text-second"> <span class="blog-info-icons"> <i data-feather="message-circle"></i></span>
-               <span class="badge
-           pull-right">3</span>评论数目</li>
-           <li class="list-group-item text-second"><span class="blog-info-icons"><i data-feather="edit-2"></i></span>
-               <span class="badge 
-           pull-right">8.32 万</span>全站字数</li>
-           <li class="list-group-item text-second"><span class="blog-info-icons"> <i data-feather="calendar"></i></span>
-               <span class="badge
-           pull-right">1年90天</span>运行天数</li>
-           <li class="list-group-item text-second"><span class="blog-info-icons"> <i data-feather="user"></i></span> <span 
-                       class="badge
-            pull-right">2,640</span>访客总数</li>
-  
-            <li class="list-group-item text-second"><span class="blog-info-icons"> <i data-feather="clock"></i></span> <span 
-                       class="badge
-            pull-right">104 ms</span>响应耗时</li>
-           <li class="list-group-item text-second"><span class="blog-info-icons"> <i data-feather="activity"></i></span> <span
-                       class="badge
-           pull-right">6 天前</span>最后活动</li>
-       </ul>
-      </section>
-                        <!--非文章页面-->
-            <section id="tag_cloud-2" class="widget widget_tag_cloud wrapper-md clear">
-       <h5 class="widget-title m-t-none text-md">标签云</h5>
-          <div class="tags l-h-2x">
-                                                                    <a href="https://www.hewenjie.cn/tag/%E7%AE%80%E6%8A%A5/" class="label badge" title="简报" data-toggle="tooltip">简报</a>
-                                        <a href="https://www.hewenjie.cn/tag/60%E7%A7%92%E8%AF%BB%E6%87%82%E4%B8%96%E7%95%8C/" class="label badge" title="60秒读懂世界" data-toggle="tooltip">60秒读懂世界</a>
-                                        <a href="https://www.hewenjie.cn/tag/%E7%99%BD%E5%AB%96/" class="label badge" title="白嫖" data-toggle="tooltip">白嫖</a>
-                                        <a href="https://www.hewenjie.cn/tag/%E7%89%B9%E6%AE%8A%E6%95%99%E8%82%B2/" class="label badge" title="特殊教育" data-toggle="tooltip">特殊教育</a>
-                                        <a href="https://www.hewenjie.cn/tag/%E6%97%A9%E6%9C%9F%E6%95%99%E8%82%B2/" class="label badge" title="早期教育" data-toggle="tooltip">早期教育</a>
-                                        <a href="https://www.hewenjie.cn/tag/%E7%89%B9%E6%95%99/" class="label badge" title="特教" data-toggle="tooltip">特教</a>
-                                        <a href="https://www.hewenjie.cn/tag/%E6%BA%90%E7%A0%81/" class="label badge" title="源码" data-toggle="tooltip">源码</a>
-                                        <a href="https://www.hewenjie.cn/tag/VIP/" class="label badge" title="VIP" data-toggle="tooltip">VIP</a>
-                                        <a href="https://www.hewenjie.cn/tag/%E4%B8%93%E6%B3%A8%E5%8A%9B/" class="label badge" title="专注力" data-toggle="tooltip">专注力</a>
-                                        <a href="https://www.hewenjie.cn/tag/Github/" class="label badge" title="Github" data-toggle="tooltip">Github</a>
-                                        <a href="https://www.hewenjie.cn/tag/%E4%B8%8B%E8%BD%BD/" class="label badge" title="下载" data-toggle="tooltip">下载</a>
-                                        <a href="https://www.hewenjie.cn/tag/404%E9%A1%B5%E9%9D%A2/" class="label badge" title="404页面" data-toggle="tooltip">404页面</a>
-                                        <a href="https://www.hewenjie.cn/tag/%E5%BC%95%E5%AF%BC%E6%BA%90%E7%A0%81/" class="label badge" title="引导源码" data-toggle="tooltip">引导源码</a>
-                                        <a href="https://www.hewenjie.cn/tag/%E5%85%8D%E8%B4%B9%E9%A2%86%E6%B5%81%E9%87%8F/" class="label badge" title="免费领流量" data-toggle="tooltip">免费领流量</a>
-                                        <a href="https://www.hewenjie.cn/tag/%E4%B8%AD%E5%9B%BD%E7%A7%BB%E5%8A%A8/" class="label badge" title="中国移动" data-toggle="tooltip">中国移动</a>
-                                        <a href="https://www.hewenjie.cn/tag/%E9%9F%B3%E4%B9%90/" class="label badge" title="音乐" data-toggle="tooltip">音乐</a>
-                                        <a href="https://www.hewenjie.cn/tag/%E8%AE%A4%E7%9F%A5%E8%83%BD%E5%8A%9B/" class="label badge" title="认知能力" data-toggle="tooltip">认知能力</a>
-                                        <a href="https://www.hewenjie.cn/tag/%E8%AE%A4%E7%9F%A5%E8%AE%AD%E7%BB%83/" class="label badge" title="认知训练" data-toggle="tooltip">认知训练</a>
-                                        <a href="https://www.hewenjie.cn/tag/%E6%97%A9%E6%95%99/" class="label badge" title="早教" data-toggle="tooltip">早教</a>
-                                        <a href="https://www.hewenjie.cn/tag/%E7%BD%91%E7%AB%99/" class="label badge" title="网站" data-toggle="tooltip">网站</a>
-                                        <a href="https://www.hewenjie.cn/tag/%E6%84%9F%E7%BB%9F%E7%BB%9F%E5%90%88%E8%AE%AD%E7%BB%83/" class="label badge" title="感统统合训练" data-toggle="tooltip">感统统合训练</a>
-                                        <a href="https://www.hewenjie.cn/tag/%E6%84%9F%E7%BB%9F%E8%AE%AD%E7%BB%83/" class="label badge" title="感统训练" data-toggle="tooltip">感统训练</a>
-                                        <a href="https://www.hewenjie.cn/tag/%E6%84%9F%E8%A7%89%E7%BB%9F%E5%90%88/" class="label badge" title="感觉统合" data-toggle="tooltip">感觉统合</a>
-                                        <a href="https://www.hewenjie.cn/tag/%E6%84%9F%E7%BB%9F/" class="label badge" title="感统" data-toggle="tooltip">感统</a>
-                                        <a href="https://www.hewenjie.cn/tag/CDN/" class="label badge" title="CDN" data-toggle="tooltip">CDN</a>
-                                        <a href="https://www.hewenjie.cn/tag/CloudFlare/" class="label badge" title="CloudFlare" data-toggle="tooltip">CloudFlare</a>
-                                        <a href="https://www.hewenjie.cn/tag/CF%E8%87%AA%E9%80%89IP/" class="label badge" title="CF自选IP" data-toggle="tooltip">CF自选IP</a>
-                                        <a href="https://www.hewenjie.cn/tag/%E6%B3%A8%E6%84%8F%E5%8A%9B/" class="label badge" title="注意力" data-toggle="tooltip">注意力</a>
-                                        <a href="https://www.hewenjie.cn/tag/%E6%9E%81%E8%87%B4CMS/" class="label badge" title="极致CMS" data-toggle="tooltip">极致CMS</a>
-                                        <a href="https://www.hewenjie.cn/tag/CMS/" class="label badge" title="CMS" data-toggle="tooltip">CMS</a>
-                                          </div>
-      </section>
-        </div>
-     </aside>
-      </div>
-</main>
-<!-- footer -->
-</div><!-- /content -->
-  <footer id="footer" class="app-footer" role="footer">
-    <div class="wrapper b-t bg-light">
-      <span class="pull-right hidden-xs text-ellipsis">
-      <div class="github-badge">
-<a href="http://www.typecho.org" target="_blank" title="由 Typecho 强力驱动">
-<span class="badge-subject">Powered</span><span class="badge-value bg-blue">Typecho</span>
-</a>
-</div>
-&nbsp;|&nbsp;
-<div class="github-badge">
-<a href="https://www.ihewro.com/archives/489/" target="_blank" title="站点使用 handsome 主题，作者：黎辉">
-<span class="badge-subject">Theme</span><span class="badge-value bg-orange">Handsome</span>
-</a>
-</div>     
-      </span>
-        <span class="text-ellipsis"><div class="github-badge">
-<a href="./" title="© 2020&nbsp;听风小站">
-<span class="badge-subject">Copyright</span><span class="badge-value bg-blue">© 2020&nbsp;听风博客</span>
-</a>
-</div>
-&nbsp;|&nbsp;
-
-&nbsp;|&nbsp;
-<div class="github-badge">
-        <a href="https://www.hewenjie.cn/sitemap.xml" target="_blank">
-            <span class="badge-subject">网站地图</span><span class="badge-value bg-yellowgreen">Sitemap</span>
-         </a>
-    </div>
-&nbsp;|&nbsp;
-<div class="github-badge">
-        <a href="https://www.hewenjie.cn/ampindex" target="_blank">
-            <span class="badge-subject">AMP版</span><span class="badge-value bg-orange">手机首页</span>
-         </a>
-    </div></span>
-    </div>
-      <!--可以去除主题版权信息，最好保留版权信息或者添加主题信息到友链，谢谢你的理解-->
-            <script type="text/template" id="tmpl-customizer">
-          <div class="settings panel panel-default setting_body_panel" aria-hidden="true">
-              <button class="fix-padding btn btn-default no-shadow pos-abt border-radius-half-left"
-                      data-toggle="tooltip" data-placement="left" data-original-title="外观设置"
-                      data-toggle-class=".settings=active, .settings-icon=animate-spin">
-                  <i class="fontello fontello-gear settings-icon"></i>
-              </button>
-              <div class="panel-heading">
-                  <button class="pull-right btn btn-xs btn-rounded btn-danger " name="reset" data-toggle="tooltip"
-                          data-placement="left" data-original-title="恢复默认值" >重置</button>
-                  设置
-              </div>
-              <div class="setting_body">
-              <div class="panel-body">
-                  <# for ( var keys = _.keys( data.sections.settings ), i = 0, name; keys.length > i; ++i ) { #>
-                      <div<# if ( i !== ( keys.length - 1 ) ) print( ' class="m-b-sm"' ); else print(' id="mode_set"')
-                  #>>
-                          <label class="i-switch bg-info pull-right">
-                              <input type="checkbox" name="{{ keys[i] }}" <#
-                              print( ' value="'+handsome_UI.mode+data
-                              .defaults[keys[i]]+'"' )
-                              if ((data.defaults[keys[i]]=="auto" && handsome_UI.mode =="dark") || data
-                              .defaults[keys[i]] == true) print( ' checked="checked"' );
-                              #> /> 
-                                  <i></i>
-                          </label>
-
-                  <span> <# if(data.defaults[keys[i]]=="auto") print(LocalConst.DARK_MODE_AUTO); else if(data
-                      .sections.settings[keys[i]] == LocalConst.DARK_MODE) {print(LocalConst.DARK_MODE_FIXED)
-                      }else print(data.sections.settings[keys[i]]);#></span>
-       <# if ( i == ( keys.length - 1 ) ) {print( ' <small id="auto_info"'); if(data.defaults[keys[i]]!=="auto") print(' style="display:none"') ;print('><i class="glyphicon glyphicon-info-sign" data-toggle="tooltip" data-placement="bottom" data-original-title="网站深色模式自动依据您的设备关于深色模式的设置进行切换"></i></small>')}; #>
-              </div>
-              <# } #>
-          </div>
-          <div class="wrapper b-t b-light bg-light lter r-b">
-              <div class="row row-sm">
-                  <div class="col-xs-4">
-                      <#
-                              _.each( data.sections.colors, function( color, i ) {
-                              var newColumnBefore = ( i % 5 ) === 4;
-                              #>
-                          <label class="i-checks block<# if ( !newColumnBefore ) print( ' m-b-sm' ); #>">
-                              <input type="radio" name="color" value="{{ i }}"<# if ( data.defaults['color'] === i ) print( ' checked="checked"' ); #> />
-                                  <span class="block bg-light clearfix pos-rlt">
-								<span class="active pos-abt w-full h-full bg-black-opacity text-center">
-									<i class="fontello fontello-check text-md text-white m-t-xs"></i>
-								</span>
-								<b class="{{ color.navbarHeader }} header"></b>
-								<b class="{{ color.navbarCollapse }} header"></b>
-								<b class="{{ color.aside.replace( ' b-r', '' ) }}"></b>
-							</span>
-                          </label>
-                          <#
-                                  if ( newColumnBefore && ( i + 1 ) < data.sections.colors.length )
-                          print( '</div><div class="col-xs-4">' );
-                              } );
-                              #>
-                          </div>
-                  </div>
-              </div>
-          </div>
-          </div>
-      </script>
-
-
-      
-      <div class="topButton panel panel-default">
-          <button id="goToTop" class="fix-padding btn btn-default no-shadow pos-abt hide  border-radius-half-left"
-                  data-toggle="tooltip" data-placement="left" data-original-title="返回顶部">
-              <i class="fontello fontello-chevron-circle-up" aria-hidden="true"></i>
-          </button>
-      </div>
-  </footer>
-  </div><!--end of .app app-header-fixed-->
-
-
-
-
-        
-
-<!--定义全局变量-->
-
-
-
-<!--主题核心js-->
-<script>
-    SearchConfig = {
-        url: "https://www.hewenjie.cn/usr/plugins/Preference/cache/search.json"
-    }
-</script>
-
-
-
-    <script src="https://cdn.jsdelivr.net/gh/He-WenJie/Handsome@master/assets/js/function.min.js?v=7.3.12020081501"></script>
-
-    <script src="https://cdn.jsdelivr.net/gh/He-WenJie/Handsome@master/assets/js/core.min.js?v=7.3.12020081501"></script>
-
-
-
-    <!--全局播放器组件-->
-    <script>
-                var player = new skPlayer({"autoplay":false,"listshow":false,"mode":"listloop","music":{"type":"cloud","source":"888233349","media":"tencent"}});
-    </script>
-
-
-<script>
-    if ('serviceWorker' in navigator) {
-        if (LocalConst.USE_CACHE) {
-            navigator.serviceWorker.addEventListener('controllerchange', function (ev) {
-                try {
-                    $.message({
-                        title:"检测到本地缓存需要更新",
-                        message:"<a href='#' onclick='window.location.reload();'>点击刷新页面</a>更新本地缓存",
-                        type:'warning',
-                        time: '300000'
-                    });
-                }catch (e) {
-                }
-            });
-        }
-    }
-
-</script>
-
-<!--主题组件js加载-->
-    <script src="https://cdn.jsdelivr.net/gh/He-WenJie/Handsome@master/assets/js/features/jquery.pjax.min.js" type="text/javascript"></script>
-
-    <!--平滑滚动组件-->
-    <script src="https://cdn.jsdelivr.net/gh/He-WenJie/Handsome@master/assets/js/features/SmoothScroll.min.js"></script>
-
-
-<!--pjax动画组件-->
-    <script>
-        window.paceOptions = {
-            ajax: {
-                ignoreURLs: ['/.*Get.php.*/']
-            },//忽视音乐加载的ajax请求
-            restartOnPushState: false,
-            startOnPageLoad: false,
-            restartOnRequestAfter: false
-        };
-    </script>
-    <script src="https://cdn.jsdelivr.net/gh/He-WenJie/Handsome@master/assets/js/features/pace.min.js"></script>
-
-    <link href="https://cdn.jsdelivr.net/gh/He-WenJie/Handsome@master/assets/css/features/pjax/pace-theme-loading-bar.min.css"
-          rel="stylesheet">
-
-            <style>
-                        .pace .pace-progress{
-      background: #000000;
-      color: #000000;
+* {
+	padding: 0;
+	margin: 0;
 }
 
-.pace .pace-activity{
-    box-shadow: inset 0 0 0 2px #000000, inset 0 0 0 7px #FFF;
-}        </style>
-    
+/*翻译
+主页整体样式 
+文本对齐︰ 中心;
+背景色︰ #ffffff  使用夜间默认时修改为#000000即可
+}
+*/
+
+body {
+	text-align: center;
+	background-color: #ffffff;
+}
+
+/*翻译
+logo图标样式 
+宽度︰ 192px;
+高度︰ 108px;
+最大宽度︰ 250px;
+动画︰ flipInX 4s;
+-webkit 动画︰ flipInX 4s
+}*/
+
+
+img.smaller {
+	width: 192px;
+	height: 108px;
+	max-width: 250px;
+	animation: flipInX 4s;
+	-webkit-animation: flipInX 4s
+}
 
 
 
+/*翻译
+logo添加文字样式 
+字体大小︰ 2em;
+白色空间︰ 正常;
+自动换行︰ 断词;
+文本修饰︰ 无;
+颜色: #232323
+}*/
+
+.logo {
+	font-size: 2em;
+	white-space: normal;
+	word-wrap: break-word;
+	text-decoration: none;
+	color: #232323
+}
+
+/*翻译
+搜索栏字体样式 
+宽度︰ 90%;
+高度︰ 40px;
+背景颜色︰ 透明;
+边境︰ 无;
+大纲︰ 0;
+字体大小︰ 18px;
+字体颜色: #000000;
+填充︰ 0 20px;
+边界半径︰ 50px
+}*/
+
+#search_input {
+	width: 90%;
+	height: 40px;
+	background-color: transparent;
+	border: none;
+	outline: 0;
+	font-size: 18px;
+	color: #000000;
+	padding: 0 20px;
+	border-radius: 50px
+}
+
+/*翻译
+搜索框边距 
+下边距︰ 30px;
+上边距︰ 20px;
+*/
+
+.search_part {
+	margin-bottom: 30px;
+	margin-top: 20px;
+}
+
+/*翻译
+跨度样式
+显示︰ 阻止;
+溢出︰ 隐藏;
+左填充︰ 5px;
+垂直对齐︰ 居中;
+*/
+
+span {
+	display: block;
+	overflow: hidden;
+	padding-left: 5px;
+	vertical-align: middle;
+}
+
+/*翻译
+搜索栏框架样式 {
+框阴影︰ 0 0 18px rgba(70,70,40,.255);括号里的颜色为Rgb默认，可进入http://rgb.phpddt.com/查询
+-webkit 动画︰ fadeIn 2.5;
+动画︰ fadeIn 2.5;
+背景色︰ rgba(255,255,255,.100);
+边界半径︰ 50px;
+显示︰ 表;
+垂直对齐︰ 居中;
+宽度︰ 80%;根据你喜欢的宽度调整，目前我为了对齐图标使用80%
+高度︰ 40px;
+最大宽度︰ 400px;
+边距︰ 10px 默认布局;
+}
+*/
+
+.search_bar {
+	box-shadow: 0 0 18px rgba(70,70,40,.255);
+	-webkit-animation: fadeIn 2.5s;
+	animation: fadeIn 2.5s;
+	background-color: rgba(255,255,255,.100);
+	border-radius: 50px;
+	display: table;
+	vertical-align: middle;
+	width: 80%;
+	height: 40px;
+	max-width: 400px;
+	margin: 10px auto;
+}
+
+/*翻译
+搜索栏搜索目标确认图标样式，目前为米奇
+轮廓边框︰ 0;
+高度︰ 40px;
+浮标位置︰ 右;
+颜色: #000;
+字体大小︰ 16px;
+字体粗细︰ 700;
+边境︰ 无;
+背景颜色︰ 透明;
+填充︰ 0 13px 0 13px
+*/
+
+#search_submit {
+	outline: 0;
+	height: 40px;
+	float: right;
+	color: #000;
+	font-size: 16px;
+	font-weight: 700;
+	border: none;
+	background-color: transparent;
+	padding: 0 13px 0 13px
+}
+
+/*翻译
+书签图标排版目录样式 
+宽度︰ 100%;
+文本对齐︰ 中心;
+填充顶部︰ 15px;
+填充底部︰ 15px;
+*/
+
+#content {
+	width: 100%;
+	text-align: center;
+	padding-top: 15px;
+	padding-bottom: 15px;
+}
+
+/*翻译
+书签框架样式
+-webkit 动画︰ fadeInDown 1s;
+动画︰ fadeInDown 1s;
+位置︰ 相对应;
+显示︰ 显示在内部;
+宽度︰ 75px;
+边境︰ 0;
+*/
+
+.box {
+	-webkit-animation: fadeInDown 1s;
+	animation: fadeInDown 1s;
+	position: relative;
+	display: inline-block;
+	width: 75px;
+	border: 0;
+}
 
 
-<!--主题组件js加载结束-->
+/*翻译
+书签图标样式
+宽度︰ 100%;
+高度︰ 100%;
+位置︰ 不受限制;
+左︰ 0;
+顶︰ 0;
+*/
 
-<!--用户自定义js-->
-<script type="text/javascript">
-    <!--左侧彩色-->
-let leftHeader=document.querySelectorAll("span.nav-icon>svg,span.nav-icon>i");let leftHeaderColorArr=["#FF69B4","#58c7ea","#E066FF","#FF69B4","#FFA54F","#90EE90","#0043ff","#cc00ff","#878787","#A0522D","#FF7256","#FFA500","#8B0000","#7CFC00","#4EEE94","#00FFFF","#EE0000"];leftHeader.forEach(tag=>{tagsColor=leftHeaderColorArr[Math.floor(Math.random()*leftHeaderColorArr.length)];tag.style.color=tagsColor});  
-<!--复制提醒-->
-document.body.oncopy=function(){layer.msg('复制成功,若要转载请务必保留原文链接！');};
-<!--彩色标签云-->
-let tags = document.querySelectorAll("#tag_cloud-2 a");
-let infos = document.querySelectorAll(".badge");
-let colorArr = ["#428BCA", "#AEDCAE", "#ECA9A7", "#DA99FF", "#FFB380", "#D9B999"];
-tags.forEach(tag => {
-    tagsColor = colorArr[Math.floor(Math.random() * colorArr.length)];
-    tag.style.backgroundColor = tagsColor;
-});
-infos.forEach(info => {
-    infosColor = colorArr[Math.floor(Math.random() * colorArr.length)];
-    info.style.backgroundColor = infosColor;
-});</script>
+.box a {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	left: 0;
+	top: 0;
+}
 
-<!--全局文件-->
-<script src="https://lib.baomitu.com/layer/3.1.1/layer.js"></script>
+/*翻译
+书签字体样式
+颜色: #232323;使用夜间模式时修改为#eee或者#f2eada即可
+高度︰ 1.5em;
+线的高度︰ 1.5em;
+宽度︰ 72px;
+字体大小︰ 0.75em;
+白色空间︰ nowrap;
+溢出︰ 隐藏;
+边距︰ 默认布局;
+-webkit 边框顶部右半径︰ 5px;
+-webkit 边框底部右半径︰ 5px;
+文本溢出︰ 省略;
+-o 文本溢出︰ 省略;
+气相色谱-质谱-文本-溢出︰ 省略;
+填充顶部︰ 3px;
+填充底部︰ 8px;
+*/
+
+.url {
+	color: #232323;
+	height: 1.5em;
+	line-height: 1.5em;
+	width: 72px;
+	font-size: 0.75em;
+	white-space: nowrap;
+	overflow: hidden;
+	margin: auto;
+	-webkit-border-top-right-radius: 5px;
+	-webkit-border-bottom-right-radius: 5px;
+	text-overflow: ellipsis;
+	-o-text-overflow: ellipsis;
+	-ms-text-overflow: ellipsis;
+	padding-top: 3px;
+	padding-bottom: 8px;
+}
+
+/*翻译
+字体样式 
+宽度︰ 3em;
+高度︰ 3em;
+最大宽度︰ 72px;
+*/
+
+.icon {
+	width: 3em;
+	height: 3em;
+	max-width: 72px;
+}
+
+/*
+下方为动画样式，不懂的不要修改
+*/
+
+@-webkit-keyframes flipInX {
+	0% {
+		-webkit-transform: perspective(400px) rotateX(90deg);
+		transform: perspective(400px) rotateX(90deg);
+		opacity: 0
+	}
+
+	40% {
+		-webkit-transform: perspective(400px) rotateX(-10deg);
+		transform: perspective(400px) rotateX(-10deg)
+	}
+
+	70% {
+		-webkit-transform: perspective(400px) rotateX(10deg);
+		transform: perspective(400px) rotateX(10deg)
+	}
+
+	100% {
+		-webkit-transform: perspective(400px) rotateX(0);
+		transform: perspective(400px) rotateX(0);
+		opacity: 1
+	}
+}
+
+@keyframes flipInX {
+	0% {
+		-webkit-transform: perspective(400px) rotateX(90deg);
+		-ms-transform: perspective(400px) rotateX(90deg);
+		transform: perspective(400px) rotateX(90deg);
+		opacity: 0
+	}
+
+	40% {
+		-webkit-transform: perspective(400px) rotateX(-10deg);
+		-ms-transform: perspective(400px) rotateX(-10deg);
+		transform: perspective(400px) rotateX(-10deg)
+	}
+
+	70% {
+		-webkit-transform: perspective(400px) rotateX(10deg);
+		-ms-transform: perspective(400px) rotateX(10deg);
+		transform: perspective(400px) rotateX(10deg)
+	}
+
+	100% {
+		-webkit-transform: perspective(400px) rotateX(0);
+		-ms-transform: perspective(400px) rotateX(0);
+		transform: perspective(400px) rotateX(0);
+		opacity: 1
+	}
+}
+
+@-webkit-keyframes fadeIn {
+	0% {
+		opacity: 0
+	}
+
+	100% {
+		opacity: 1
+	}
+}
+
+@keyframes fadeIn {
+	0% {
+		opacity: 0
+	}
+
+	100% {
+		opacity: 1
+	}
+}
+
+@-webkit-keyframes fadeInDown {
+	0% {
+		opacity: 0;
+		-webkit-transform: translateY(-20px);
+		transform: translateY(-20px)
+	}
+
+	100% {
+		opacity: 1;
+		-webkit-transform: translateY(0);
+		transform: translateY(0)
+	}
+}
+
+@keyframes fadeInDown {
+	0% {
+		opacity: 0;
+		-webkit-transform: translateY(-20px);
+		-ms-transform: translateY(-20px);
+		transform: translateY(-20px)
+	}
+
+	100% {
+		opacity: 1;
+		-webkit-transform: translateY(0);
+		-ms-transform: translateY(0);
+		transform: translateY(0)
+	}
+}
+</style>
+
+<body>
+<div id="content">
+<br />
+<div class="search_part">
+<a class="logo" href="https://www.google.com">
+<img class="smaller" src="img/GoogleLogo.gif"></img>
+</a>
+<br />
+<form onsubmit="return search()" class="search_bar">
+<input type="submit" id="search_submit" value="Start" >
+<span><input class="search" type="text" value="" autocomplete="off" id="search_input" ></span>
+</form>
+</div>
+<br />
+
+<div class="box"> 
+<a href="https://www.google.com"></a>
+<p><img class="icon" src="img/Google.png" ></p>
+<p class="url">Google</p>
+</div>
+
+<div class="box">
+<a href="https://www.iqiyi.com"></a>
+<p><img class="icon" src="img/爱奇艺.png" ></p>
+<p class="url">爱奇艺</p>
+</div>
+
+<div class="box">
+<a href="http://m.bilibili.com/index.html"></a>
+<p><img class="icon" src="img/动漫.png" ></p>
+<p class="url">哔哩哔哩</p>
+</div>
+
+
+<div class="box">
+<a href="https://translate.google.cn/m/translate"></a>
+<p><img class="icon" src="img/翻译.png" ></p>
+<p class="url">翻译</p>
+</div>
+
+<div class="box">
+<a href="https://www.youku.com"></a>
+<p><a href="https://macimg.com/image/hto3C"><img src="https://s.im5i.com/2021/01/27/hto3C.th.jpg" alt="hto3C.jpg" border="0" /></a></p>
+<p class="url">优酷</p>
+</div>
+
+<div class="box">
+<a href="https://m.v.qq.com"></a>
+<p><img class="icon" src="img/腾讯视频.png" ></p>
+<p class="url">腾讯视频</p>
+</div>
+
+<div class="box">
+<a href="https://www.ted.com"></a>
+<p><img class="icon" src="img/Ted.png" ></p>
+<p class="url">Ted</p>
+</div>
+
+<div class="box">
+<a href="https://m.huya.com"></a>
+<p><img class="icon" src="img/虎牙.png" ></p>
+<p class="url">虎牙</p>
+</div>
+
+<div class="box">
+<a href="https://m.douyu.com/"></a>
+<p><img class="icon" src="img/斗鱼.png" ></p>
+<p class="url">斗鱼</p>
+</div>
+
+<div class="box">
+<a href="https://forum.xda-developers.com/"></a>
+<p><img class="icon" src="img/xda.png" ></p>
+<p class="url">XDA</p>
+</div>
+
+<div class="box">
+<a href="https://m.youtube.com"></a>
+<p><img class="icon" src="img/youtube2.png" ></p>
+<p class="url">Youtube</p>
+</div>
+
+<div class="box">
+<a href="https://tw.torrentkitty.tv/search/"></a>
+<p><img class="icon" src="img/磁力.png" ></p>
+<p class="url">磁力</p>
+</div>
+
+<div class="box">
+<a href="http://www.ghpym.com"></a>
+<p><img class="icon" src="img/果核剥壳.png" ></p>
+<p class="url">果核剥壳</p>
+</div>
+
+<div class="box">
+<a href="https://pan.baidu.com"></a>
+<p><img class="icon" src="img/百度云.png" ></p>
+<p class="url">百度云</p>
+</div>
+
+<div class="box">
+<a href="https://www.zhihu.com"></a>
+<p><img class="icon" src="img/知乎.png" ></p>
+<p class="url">知乎</p>
+</div>
+
+
+<!--
+如若要添加可复制一段
+<div class="box">
+<a href="地址"></a>
+<p><img class="icon" src="img/icon6.png" ></p>
+<p class="url">书签名称</p>
+</div>
+其中链接在href中如href="地址"建议填写folder://自己创建的文件夹地址，这样创建一次不必再修改
+图标文件放置在img文件夹中定义如src="img/icon6.png"
+显示的标题在<p class="url">书签名称</p>之间定义如<p class="url">酷安</p>
+下方window.location.href =主页搜索引擎地址，目前为自用Pc版百度内部搜索，加上浏览器的顶部搜索即为双搜索，使用更方便
+
+-->
+
+</div>
+
+<script type="text/javascript">function search(){if(document.getElementById("search_input").value != ""){window.location.href = "https://www.baidu.com/s?word=" + document.getElementById("search_input").value;document.getElementById("search_input").value = "";}return false;}</script>
 
 </body>
-</html><!--html end-->
-<!-- / footer -->
-
-
-
+</html>
